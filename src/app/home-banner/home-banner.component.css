@@ -1,0 +1,42 @@
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(135, 133, 133, 0.548) !important;
+  width: 50px; 
+  height: 50px; 
+  border-radius: 50%; 
+  top: 50%; 
+  transform: translateY(-50%);
+  box-shadow: 5px 1px 10px rgb(138, 137, 137);
+}
+
+/* Hover state */
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color:#1c799b !important;
+}
+
+@media screen and (max-width: 640px) {
+    .MainBannerBg {
+        height: 90vh;  
+    }
+    /* #BannerArrowDiv{} */
+}
+
+@media screen and (min-width: 640px) {
+    .MainBannerBg {
+        height: 90vh;
+    }
+}
+
+@media screen and (min-width: 1007px) {
+    .MainBannerBg {
+        height: 70vh;   
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .MainBannerBg {
+        height: 70vh;
+    }
+}

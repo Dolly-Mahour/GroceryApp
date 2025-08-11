@@ -1,0 +1,21 @@
+import { Component } from '@angular/core';
+import { ItemsListService } from '../items-list.service';
+import { ItemsClass } from '../Classes/ItemClass';
+import { NgFor } from '@angular/common';
+
+@Component({
+  selector: 'app-recomended-for-you',
+  imports: [NgFor],
+  templateUrl: './recomended-for-you.component.html',
+  styleUrl: './recomended-for-you.component.css'
+})
+export class RecomendedForYouComponent {
+  constructor(private S_ProductList: ItemsListService) {
+
+  }
+  ngOnInit(): void {
+    this.ProductList = this.S_ProductList.ProductsList
+    console.log("This is the result of the item list we are getting from the service--", this.ProductList);
+  }
+  ProductList: ItemsClass[] = [];
+}

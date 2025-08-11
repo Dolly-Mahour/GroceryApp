@@ -1,0 +1,109 @@
+#WholeNavBarDiv {
+    height: 30%;
+    /* box-shadow: 5px 1px 30px rgb(213, 217, 218); */
+}
+
+.bg-teal {
+    background-color: #1c799b;
+}
+
+.tealbar-text {
+    font-size: 13.5px;
+
+}
+
+.SearchCard {
+    border-radius: 5px;
+    border: 1px solid grey;
+}
+
+.SearchInput {
+    border: 0 !important;
+    outline: 0 !important;
+    font-size: 13px;
+    font-family: cursive;
+}
+
+.SearchIconDiv {
+    background-color: #1c799b;
+    border-radius: 5px;
+}
+
+.fs-14px {
+    font-size: 14px;
+}
+
+.fs-13px {
+    font-size: 13px;
+}
+
+.HoverTeal {
+    width: auto;
+}
+
+.HoverTeal:hover {
+    color: #1c799b;
+}
+
+.BrowseCategories {
+    background-color: #2abc79;
+    border-radius: 5px;
+    /* height: 300px; */
+}
+
+.CategoryMenu {
+    height: 300px;
+    width: 400px;
+}
+
+.h-10px {
+    height: 10px;
+}
+
+.dropdown-toggle::after {
+    content: none;
+}
+
+@keyframes ArrowMove {
+    50% {
+        transform: rotate(180deg);
+    }
+}
+
+.NavItemHoverArrowAnimate:hover .Arrow {
+    animation: ArrowMove 1s;
+}
+
+.Arrow:hover {
+    animation: ArrowMove 1s;
+}
+
+.ContactNumber {
+    color: #1c799b;
+    font-weight: bold;
+}
+
+.btn.dropdown-toggle:focus,
+.btn.dropdown-toggle:active,
+.btn.dropdown-toggle.active,
+.btn.dropdown-toggle.show {
+    outline: none !important;
+    /* box-shadow: none !important; */
+    border-color: transparent !important;
+}
+
+.btn.dropdown-toggle:focus-visible {
+    outline: none !important;
+    /* box-shadow: none !important; */
+}
+
+.CategoryItem {
+    width: auto;
+}
+
+.CategoryItem:hover {
+    background-color: #2a9bc538;
+    border-radius: 5px;
+    border: 1px solid #2a9cc574;
+    /* backface-visibility: ; */
+}

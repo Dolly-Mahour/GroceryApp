@@ -1,0 +1,266 @@
+.HotDealsMainDiv {
+    height: 70vh;
+}
+
+.FlashSalesCarouselDiv {
+    height: 60vh;
+    overflow-x: auto;
+}
+
+.DivOfCarousel {
+    width: 100%;
+}
+
+.FlashSalesCarouselDiv {
+    height: 60vh;
+    width: 95vw;
+    overflow-x: auto;
+}
+
+.CarouselSlideDiv {
+    width: 105vw;
+    height: 100%;
+}
+
+.FlashSalesCarouselDiv::-webkit-scrollbar {
+    display: none;
+}
+
+.FlashSalesCard {
+    height: 350px;
+    width: 175px;
+    border: 1px solid rgb(199, 192, 192);
+    border-radius: 10px;
+}
+
+.FlashSalesCard:hover {
+    border-color: #1c799b;
+}
+
+.ImageOfCard {
+    height: 130px;
+    transition: height 0.5s;
+}
+
+/* WHEN I HAVE TO GO HOVER WITH ANOTHER TRANSITION I WILL USE IT    --------------- */
+.FlashSalesCard:hover .ImageOfCard {
+    height: 150px;
+}
+
+.CountDownDiv {
+    border-radius: 10px;
+}
+
+.ShopNowbutton {
+    background: #1c799b;
+    border-radius: 30px;
+    height: 40px;
+    width: 130px;
+}
+
+.CountDownTimerDiv {
+    /* background-color: #1c799b; */
+    box-shadow: 1px 1px 20px rgb(188, 187, 187);
+    border-radius: 5px;
+    height: 35px;
+    width: auto;
+}
+
+.DivOfBasket {
+    height: 350px !important;
+}
+
+.DivOfCoupon {
+    height: 100px;
+    width: 100%;
+
+}
+
+.Coupon {
+    border-radius: 10px;
+    border: 1px dashed #1c799b;
+    background: #e9ffff;
+}
+
+@media screen and (max-width: 640px) {
+    .CountDownAdd {
+        height: 100vh;
+    }
+
+    .DivOfCoupon {
+        height: 20vh;
+    }
+
+    .HotDealsMainDiv {
+        height: 100vh;
+    }
+}
+
+.BrandsImages {
+    height: 130px;
+    width: auto;
+    transition: height 0.5s;
+}
+
+.carousel {
+    /* width: 90%; */
+    display: flex;
+    margin: auto;
+}
+
+.DivAfterHotDeal {
+    height: 100vh;
+}
+
+.CardOfDealsCarousel {
+    border-radius: 10px;
+    border: 1px solid rgb(171, 170, 170);
+}
+
+.Subscribe {
+    height: 52vh;
+    background-color: #e6e6e6;
+    border-radius: 15px;
+}
+
+.ProductProgressbar {
+    /* height: 20/%; */
+    background-color: #e8f4fc;
+}
+
+.CarouselSlide {
+    height: 420px;
+    width: 240px;
+    /* background-color: #1c799b; */
+}
+
+.ImageContainer {
+    height: 80px;
+    width: 80px;
+    border: 1px solid rgb(164, 162, 162);
+}
+
+@media screen and (max-width: 640px) {
+    .FruitsImage {
+        height: 150px;
+    }
+
+    .Subscribe {
+        height: 60vh;
+    }
+
+    .DivAfterHotDeal {
+        height: 300vh;
+    }
+}
+
+.ImageOfCard {
+    height: 160px;
+    transition: height 0.5s;
+}
+.DailyBestSellersDiv{
+    height: 80vh;
+}
+/* WHEN I HAVE TO GO HOVER WITH ANOTHER TRANSITION I WILL USE IT    --------------- */
+.CardOfDealsCarousel:hover .ImageOfCard {
+    height: 190px;
+}
+.Hover-Success:hover{
+    background-color: green !important;
+}
+.DivOfSellerCard{
+    border: 1px solid rgb(176, 176, 176);
+}
+.ImageHover{
+    height: 120px;
+    transition: height 0.5s;
+}
+.DivOfSellerCard:hover .ImageHover {
+    height: 130px;
+}
+@media screen and (max-width: 640px) {
+    .CountDownAdd {
+        height: 30vh;
+    }
+
+    .DivAfterHotDeal {
+        height: 320vh;
+    }
+
+    .Subscribe {
+        height: 60vh;
+    }
+
+    .FruitsImage {
+        height: 150px;
+    }
+    .DailyBestSellersDiv{
+        height: 200vh;
+    }
+}
+@media screen and (min-width: 640px) {
+    .CountDownAdd {
+        height: 30vh;
+    }
+
+    .DivAfterHotDeal {
+        height: 200vh;
+    }
+
+    .Subscribe {
+        height: 100vh;
+    }
+
+    .FruitsImage {
+        height: 300px;
+    }
+    .DailyBestSellersDiv{
+        height: 400vh;
+    }
+}
+
+@media screen and (min-width: 1007px) {
+    .CountDownAdd {
+        height: 20vh;
+    }
+
+    .FruitsImage {
+        height: 300px;
+    }
+
+    .Subscribe {
+        height: 52vh;
+    }
+
+    .DivAfterHotDeal {
+        height: 100vh;
+    }
+    .DailyBestSellersDiv{
+        height: 80vh;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .CountDownAdd {
+        height: 20vh;
+    }
+
+    .FruitsImage {
+        height: 200px;
+    }
+
+    .Subscribe {
+        height: 52vh;
+    }
+
+    .DivAfterHotDeal {
+        height: 100vh;
+    }
+
+    .FruitsImage {
+        height: 300px;
+    }
+    .DailyBestSellersDiv{
+        height: 80vh;
+    }
+}

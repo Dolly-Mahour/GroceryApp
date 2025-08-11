@@ -1,0 +1,106 @@
+<div class="container-fluid m-0 p-0 my-3 p-1 gx-0">
+    <div class="row my-5 w-100 m-0 p-0 gx-0 ">
+        <div class="col-lg-6 col-md-6 col-sm-12 d-flex align-items-center">
+            <h3>Recomended for you</h3>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 h-100px m-0 p-0 ">
+            <div class="w-100 h-100 d-flex align-items-center justify-content-between">
+                <div class="Recomended p-2 center-elements BgTeal text-white fs-12px">
+                    All
+                </div>
+                <div class="Recomended p-2 mx-1 center-elements fs-10px">
+                    Groceries
+                </div>
+                <div class="Recomended p-2 center-elements fs-10px">
+                    Fruits
+                </div>
+                <div class="Recomended p-2 mx-1 center-elements fs-10px">
+                    Juices
+                </div>
+                <div class="Recomended p-2 center-elements fs-10px">
+                    vegetables
+                </div>
+                <div class="Recomended p-2 mx-1 center-elements fs-10px">
+                    Snacks
+                </div>
+                <div class="Recomended p-2 center-elements fs-10px">
+                    Organic Foods
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row h-100 d-flex m-0 p-0 gx-0">
+        <div class="col mx-2 p-1 d-flex m-0 p-0" *ngFor="let p of ProductList">
+            <div class="FlashSalesCard p-1 BottomToTop">
+                <div class="h-10  d-flex justify-content-between">
+                    <div class="center-elements w-40 h-80 bg-danger"
+                        style="border-top-left-radius: 20px;border-bottom-right-radius: 20px;">
+                        <p class="fs-12px text-white italic fw-semibold">Sale 50%</p>
+                    </div>
+                    <div class="center-elements WishlistButton">
+                        <img class="img-fluid h-50" src="images/heart.png" alt="Like the image">
+                    </div>
+                </div>
+                <div class="h-50 center-elements">
+                    <img class="ImageOfCard" [src]="p.Img1" alt="Images">
+                </div>
+                <div class="p-2 h-50">
+                    <h6 class="HoverTextTeal h-25">{{p.Name}}</h6>
+                    <div class="d-flex ">
+                        <h6>₹56</h6>
+                        <h6 class="text-secondary">/Qty</h6>
+                        <h6 class="text-secondary text-decoration-line-through mx-2">₹68</h6>
+                    </div>
+                    <div class="d-flex w-40 justify-content-between align-items-center my-2">
+                        <p class="fw-bold fs-12px">78</p>
+                        <img class="h-10px" src="images/star.png" alt="">
+                        <p class="fw-bold fs-12px">(15k)</p>
+                    </div>
+                    <div class="AddToCartButton w-100 h-20 btn center-elements">
+                        <p class="TextTeal fs-12px TextWhiteOnHover">Add to cart</p>
+                        <img class="h-10px mx-1" src="images/shopping-cart.png" alt="cart">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="CountDownAdd my-5">
+        <div class="container-fluid h-100 w-100">
+            <div class="row h-100 w-100 justify-content-between m-0 p-0 ">
+                <div class="col mx-1 py-2">
+                    <div style="background-image: url('images/beerbg.png');"
+                        class="CountDownDiv h-100 w-100 BgImage p-2 px-5 d-flex justify-content-end align-items-center">
+                        <div>
+                            <div class="bg-white center-elements WhiteDiv80px">
+                                <img class="h-80" src="images/offer-logo.png" alt="offer logo">
+                            </div>
+                            <h3 class="italic">$5 off your first order</h3>
+                            <p class="text-secondary my-2">Delivery by 6:15am Expire Aug 5</p>
+
+                            <div class="ShopNowbutton center-elements Bg-Green">
+                                <h6 class="text-white">Shop Now</h6>
+                                <img class="h-20px ms-2" src="images/white-arrow-right.png" alt="arrow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mx-1 py-2">
+                    <div style="background-image: url('images/juicebg.png');"
+                        class="CountDownDiv h-100 w-100 BgImage p-2 px-5 d-flex justify-content-start align-items-center">
+                        <div>
+                            <div class="bg-white center-elements WhiteDiv80px">
+                                <img class="h-80" src="images/offer-logo.png" alt="offer logo">
+                            </div>
+                            <h3 class="italic">$5 off your first order</h3>
+                            <p class="text-secondary my-2">Delivery by 6:15am Expire Aug 5</p>
+                            <div class="ShopNowbutton center-elements bg-white">
+                                <h6>Shop Now</h6>
+                                <img class="h-20px ms-2" src="images/right-arrow-black.png" alt="arrow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
