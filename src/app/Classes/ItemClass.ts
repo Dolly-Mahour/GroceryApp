@@ -10,6 +10,6 @@
     IsAdded:boolean=false;
     QuantityAddedToCart:number=0;
     isWishlisted:boolean=false;
-    ProductTypeId:number=0;
+    CategoryId:number=0;
     ProductId:number=0;
 }

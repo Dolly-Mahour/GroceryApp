@@ -38,13 +38,13 @@
 }
 
 .ImageOfCard {
-    height: 130px;
+    height: 110px !important;
     transition: height 0.5s;
 }
 
 /* WHEN I HAVE TO GO HOVER WITH ANOTHER TRANSITION I WILL USE IT    --------------- */
 .FlashSalesCard:hover .ImageOfCard {
-    height: 150px;
+    height: 130px !important;
 }
 
 .CountDownDiv {

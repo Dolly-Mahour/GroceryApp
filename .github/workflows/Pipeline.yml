@@ -31,20 +31,20 @@ jobs:
         run: npm install
     # STEP 3 BUILD THE APPLICATION ---------
       - name: Build Angular App
-        run: npx ng build GroceryApp --configuration production --base-href=/GroceryApp/
+        run: npx ng build --configuration production --base-href=/GroceryApp/
     # STEP 4 COPIES THE INDEX.HTML TO 404.HTML----
       - name: SPA fallback for GitHub Pages
-        run: cp dist/ecommerce-app/browser/index.html dist/grocery-app/browser/404.html
+        run: cp dist/grocery-app/index.html dist/grocery-app/404.html
     # STEP 5 TO CHECK WHAT IS THE DIST FOLDER RETURNING --------
       - name: Check dist output
-        run: ls -R dist/ecommerce-app/browser
+        run: ls -R dist/grocery-app/browser
     # STEP 6 AND FINAL STEP TO DEPLOY ON GITHUB PAGES ----
       - name: Deploy to GitHub Pages
         run: |
           npx angular-cli-ghpages \
             --dir=dist/grocery-app/browser \
-            --name="GitHub Actions" \
-            --email="actions@github.com" \
+            --name="Dolly-Mahour" \
+            --email="dollymahour282@gmail.com" \
             --repo=https://x-access-token:${{ secrets.MyGroceryAppDeployment }}@github.com/Dolly-Mahour/GroceryApp.git \
             --branch=gh-pages \
             --no-silent

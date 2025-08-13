@@ -30,8 +30,8 @@
         </div>
     </div>
     <div class="row h-100 d-flex m-0 p-0 gx-0">
-        <div class="col mx-2 p-1 d-flex m-0 p-0" *ngFor="let p of ProductList">
-            <div class="FlashSalesCard p-1 BottomToTop">
+        <div class="col mx-4 p-1 d-flex m-0 p-0" *ngFor="let p of ProductList">
+            <div *ngIf="p.ProductId > 0 && 13 > p.ProductId " class="FlashSalesCard p-1 BottomToTop">
                 <div class="h-10  d-flex justify-content-between">
                     <div class="center-elements w-40 h-80 bg-danger"
                         style="border-top-left-radius: 20px;border-bottom-right-radius: 20px;">
@@ -42,7 +42,7 @@
                     </div>
                 </div>
                 <div class="h-50 center-elements">
-                    <img class="ImageOfCard" [src]="p.Img1" alt="Images">
+                    <img class="ImageOfCard img-fluid" [src]="p.Img1" alt="Images">
                 </div>
                 <div class="p-2 h-50">
                     <h6 class="HoverTextTeal h-25">{{p.Name}}</h6>

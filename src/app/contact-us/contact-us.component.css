@@ -1,0 +1,74 @@
+.DivOfContactPage {
+    height: 150vh;
+}
+
+.DivOfCards {
+    height: 85vh;
+}
+
+.InputDiv {
+    border: 1px solid rgb(218, 216, 216) !important;
+}
+
+.InputDiv:focus {
+    border: 1px solid #1c799b !important;
+}
+
+.GreayBorderCircle {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.h-w-30 {
+    height: 30px;
+    width: 30px;
+}
+
+.Bg-Blue {
+    background-color: #e3f4fa;
+}
+
+.Bg-Blue:hover {
+    background-color: #c8e9f5 !important;
+}
+
+@media screen and (max-width: 640px) {
+    .DivOfContactPage {
+        height: 200vh;
+    }
+
+    .GetInTouchDiv {
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .DivOfContactPage {
+        height: 250vh;
+    }
+
+    .GetInTouchDiv {
+        height: 600px;
+    }
+}
+
+@media screen and (min-width: 1007px) {
+    .DivOfContactPage {
+        height: 150vh;
+    }
+
+    .GetInTouchDiv {
+        height: 500px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .DivOfContactPage {
+        height: 150vh;
+    }
+
+    .GetInTouchDiv {
+        height: 400px;
+    }
+}

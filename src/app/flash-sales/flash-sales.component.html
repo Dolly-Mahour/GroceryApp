@@ -6,22 +6,22 @@
 <div class="DivOfCarousel center-elements my-3">
     <div class="FlashSalesCarouselDiv p-2">
         <div class="CarouselSlideDiv d-flex align-items-center">
-            <ngx-slick-carousel class="carousel w-100" [config]="slideConfig">
+            <ngx-slick-carousel class="carousel w-100" [config]="slideConfig" aria-hidden="false">
                 <div ngxSlickItem *ngFor="let p of ProductList" class="slide">
 
-                    <div class="FlashSalesCard mx-1 p-1">
+                    <div (click)="ProductDetails(p)" class="FlashSalesCard mx-1 p-1">
                         <div class="h-15 d-flex justify-content-end align-items-center">
-                            <div class="AddToCartButton w-50 h-50 btn center-elements">
+                            <div (click)="AddItemToCart(p)" class="AddToCartButton w-50 h-50 btn center-elements">
                                 <p class="TextTeal fs-12px TextWhiteOnHover">Add </p>
                                 <img class="h-10px mx-1" src="images/shopping-cart.png" alt="cart">
                             </div>
                         </div>
                         <div class="h-40 center-elements">
-                            <img class="ImageOfCard" [src]="p.Img1" alt="Images">
+                            <img class="ImageOfCard img-fluid" [src]="p.Img1" alt="Images">
                         </div>
                         <div class="p-2 h-50">
                             <div class="d-flex ">
-                                <h6>₹56</h6>
+                                <h6>₹{{p.Price}}</h6>
                                 <h6 class="text-secondary">/Qty</h6>
                                 <h6 class="text-secondary text-decoration-line-through mx-2">₹68</h6>
                             </div>

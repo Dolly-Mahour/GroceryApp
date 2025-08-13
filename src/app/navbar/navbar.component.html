@@ -145,20 +145,25 @@
         <div class="h-100 w-20 d-flex justify-content-around align-items-center">
             <div class="h-100 center-elements d-sm-flex d-md-flex d-lg-none">
                 <img class="h-15 mx-1" src="images/searchIcon.png" alt="profileIcon">
-                <!-- <p class="HoverTeal d-lg-flex d-none">Profile</p> -->
             </div>
-            <div class="h-100 center-elements">
-                <img class="h-20px mx-1" src="images/profile-outline.png" alt="profileIcon">
-                <p class="HoverTeal d-lg-flex d-none">Profile</p>
-            </div>
-            <div class="h-100 center-elements">
-                <img class="h-15px mx-1" src="images/like.png" alt="profileIcon">
-                <p class="HoverTeal d-lg-flex d-none">Wishlist</p>
-            </div>
-            <div class="h-100 center-elements">
-                <img class="h-15px mx-1" src="images/shopping-cart.png" alt="profileIcon">
-                <p class="HoverTeal d-lg-flex d-none">Cart</p>
-            </div>
+            <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black" [routerLink]="['profile']">
+                <div class="h-100 center-elements">
+                    <img class="h-20px mx-1" src="images/profile-outline.png" alt="profileIcon">
+                    <p class="HoverTeal d-lg-flex d-none">Profile</p>
+                </div>
+            </a>
+            <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black" [routerLink]="['wishlist']">
+                <div class="h-100 center-elements">
+                    <img class="h-20px mx-1" src="images/profile-outline.png" alt="profileIcon">
+                    <p class="HoverTeal d-lg-flex d-none">Wishlist</p>
+                </div>
+            </a>
+            <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black" [routerLink]="['cart']">
+                <div class="h-100 center-elements">
+                    <img class="h-20px mx-1" src="images/profile-outline.png" alt="profileIcon">
+                    <p class="HoverTeal d-lg-flex d-none">cart</p>
+                </div>
+            </a>
         </div>
     </div>
     <hr class="m-0">
@@ -264,9 +269,9 @@
                         <img class="h-10px mx-1 Arrow" src="images/down-grey.png" alt="dropdownarrow">
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['/']">Home Grocery</a></li>
+                        <li><a class="dropdown-item" href="#">Home Electronics</a></li>
+                        <li><a class="dropdown-item" href="#">Home Fashion</a></li>
                     </ul>
                 </div>
             </div>
@@ -277,9 +282,9 @@
                         <img class="h-10px mx-1 Arrow" src="images/down-grey.png" alt="dropdownarrow">
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Shop</a></li>
+                        <li><a class="dropdown-item" href="#">Shop Details</a></li>
+                        <li><a class="dropdown-item" href="#">Shop Details Two</a></li>
                     </ul>
                 </div>
             </div>
@@ -290,9 +295,11 @@
                         <img class="h-10px mx-1 Arrow" src="images/down-grey.png" alt="dropdownarrow">
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Cart</a></li>
+                        <li><a class="dropdown-item" href="#">Wishlist</a></li>
+                        <li><a class="dropdown-item" href="#">Checkout</a></li>
+                        <li><a class="dropdown-item" href="#">Become Seller</a></li>
+                        <li><a class="dropdown-item" [routerLink]="['profile']">Account</a></li>
                     </ul>
                 </div>
             </div>
@@ -303,9 +310,10 @@
                         <img class="h-10px mx-1 Arrow" src="images/down-grey.png" alt="dropdownarrow">
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Vendor</a></li>
+                        <li><a class="dropdown-item" href="#">Vendor Details</a></li>
+                        <li><a class="dropdown-item" href="#">Vendor Two</a></li>
+                        <li><a class="dropdown-item" href="#">Vendor Two Details</a></li>
                     </ul>
                 </div>
             </div>
@@ -316,16 +324,16 @@
                         <img class="h-10px mx-1 Arrow" src="images/down-grey.png" alt="dropdownarrow">
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Blog</a></li>
+                        <li><a class="dropdown-item" href="#">Blog Details</a></li>
                     </ul>
                 </div>
             </div>
             <div>
                 <div class="dropdown NavItemHoverArrowAnimate">
                     <!-- <button class="btn dropdown-toggle center-elements" type="button" data-bs-toggle="dropdown"> -->
-                        <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black" [routerLink]="['contact']"> Contact us</a>
+                    <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black" [routerLink]="['contact']">
+                        Contact us</a>
                     <!-- </button>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">Action</a></li>

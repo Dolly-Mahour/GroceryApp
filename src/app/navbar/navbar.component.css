@@ -1,6 +1,6 @@
 #WholeNavBarDiv {
     height: 30%;
-    /* box-shadow: 5px 1px 30px rgb(213, 217, 218); */
+    box-shadow: 5px 1px 30px rgb(213, 217, 218);
 }
 
 .bg-teal {
@@ -88,13 +88,13 @@
 .btn.dropdown-toggle.active,
 .btn.dropdown-toggle.show {
     outline: none !important;
-    /* box-shadow: none !important; */
+    box-shadow: none !important;
     border-color: transparent !important;
 }
 
 .btn.dropdown-toggle:focus-visible {
     outline: none !important;
-    /* box-shadow: none !important; */
+    box-shadow: none !important;
 }
 
 .CategoryItem {

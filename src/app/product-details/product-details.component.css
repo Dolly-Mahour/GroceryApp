@@ -1,0 +1,10 @@
+.ProductDetails{
+    height: 140vh;
+}
+.StoreDetails{
+    height: 120vh;
+    background-color: #f3faf2;
+}
+.ProductImageDiv{
+    height: 500px;
+}

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { ItemsListService } from '../items-list.service';
 import { ItemsClass } from '../Classes/ItemClass';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-recomended-for-you',
-  imports: [NgFor],
+  imports: [NgFor,NgIf],
   templateUrl: './recomended-for-you.component.html',
   styleUrl: './recomended-for-you.component.css'
 })

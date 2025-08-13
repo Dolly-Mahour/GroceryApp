@@ -10,6 +10,9 @@ body {
 .HoverTealBorder:hover{
     border-color: #1c799b !important;
 }
+/* .HoverTeal:hover{
+    background-color: #1c799b !important;
+} */
 input{
     outline: 0 !important;
     border: 0 !important;
@@ -243,6 +246,14 @@ a {
     width: 80px;
     border-radius: 50%;
 }
+.WhiteDiv60px {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+}
+.Bg-Blue{
+    background-color: #e3f4fa;
+}
 .WhiteDiv40px {
     height: 40px;
     width: 40px;
@@ -251,7 +262,6 @@ a {
 }
 .HoverBGTeal:hover {
     background: #1c799b !important;
-    /* color: #1c799b; */
 }
 .Bg-SkyBlue{
     background-color: #e9ffff !important;
@@ -264,6 +274,25 @@ a {
 }
 .h-80px {
     height: 80px;
+}
+.h-70px {
+    height: 70px;
+}
+.h-130px{
+    height: 130px;
+}
+.w-120px{
+    width: 120px;
+}
+.Bordergrey{
+    border: 1px solid rgb(218, 216, 216);
+}
+hr{
+    margin: 0px !important;
+    padding: 0px !important;
+}
+.Bg-LightBlue{
+    background-color: #e9eefb !important;
 }
 /* .h-600px{
     height: 600px;

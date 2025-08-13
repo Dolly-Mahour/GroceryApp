@@ -5,6 +5,8 @@ import { CommonModule } from '@angular/common';
 import { CountdownModule } from 'ngx-countdown';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SlickCarouselService } from '../slick-carousel.service';
+import { log } from 'console';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-flash-sales',
@@ -14,7 +16,7 @@ import { SlickCarouselService } from '../slick-carousel.service';
   
 })
 export class FlashSalesComponent {
-  constructor(private S_ProductList: ItemsListService,private S_carousel :SlickCarouselService) {
+  constructor(private S_ProductList: ItemsListService,private S_carousel :SlickCarouselService,private router: Router) {
 
   }
   ngOnInit(): void {
@@ -24,4 +26,13 @@ export class FlashSalesComponent {
   }
   slideConfig :any;
   ProductList: ItemsClass[] = [];
+  AddItemToCart(p:any){
+    console.log("ADDING THE ITEM TO CART IS --",p);
+    // this.S_ProductList.UpdateItemsInCart(p);
+    // this.router.navigate(['cart']);
+  }
+  ProductDetails(p:any){
+    console.log("Navigating to product details page --",p);
+    this.router.navigate(['ProductDetails',p.ProductId]);
+  }
 }

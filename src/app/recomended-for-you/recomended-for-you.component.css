@@ -18,7 +18,7 @@
     transition: height width 0.5s;
 }
 .FlashSalesCard{
-    height: 350px;
+    height: 360px;
     width: 175px;
     border: 1px solid rgb(199, 192, 192);
     border-radius: 10px;
