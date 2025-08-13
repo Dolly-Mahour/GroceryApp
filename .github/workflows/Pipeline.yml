@@ -34,7 +34,7 @@ jobs:
         run: npx ng build --configuration production --base-href=/GroceryApp/
     # STEP 4 COPIES THE INDEX.HTML TO 404.HTML----
       - name: SPA fallback for GitHub Pages
-        run: cp dist/grocery-app/index.html dist/grocery-app/404.html
+        run: cp dist/grocery-app/browser/index.html dist/grocery-app/browser/404.html
     # STEP 5 TO CHECK WHAT IS THE DIST FOLDER RETURNING --------
       - name: Check dist output
         run: ls -R dist/grocery-app/browser
