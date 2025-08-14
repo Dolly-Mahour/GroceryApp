@@ -7,10 +7,11 @@ import { support } from 'jquery';
 import { SupportLineComponent } from '../support-line/support-line.component';
 import { ItemCategoriesService } from '../item-categories.service';
 import { ItemsCategoriesClass } from '../Classes/ItemsCategories';
+import { CategoriesCrouselComponent } from '../categories-crousel/categories-crousel.component';
 
 @Component({
   selector: 'app-search-via-categories',
-  imports: [NgFor,RouterLink,SupportLineComponent],
+  imports: [NgFor,RouterLink,SupportLineComponent,CategoriesCrouselComponent],
   templateUrl: './search-via-categories.component.html',
   styleUrl: './search-via-categories.component.css'
 })

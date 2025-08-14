@@ -15,41 +15,186 @@
         </div>
     </div>
 </div>
-<div class="ProductDetails Bg-SkyBlue py-5 p-2">
+<div class="ProductDetails bg-white  p-2">
     <div class="row gx-0 p-0 m-0 h-100">
-        <div class="col-4 p-3">
+        <div class="col-lg-4 col-md-6 col-sm-12 p-3">
             <div class="ProductImageDiv Bordergrey rounded-5 center-elements">
-                <img class="h-50 img-fluid" src="{{Product.Img1}}" alt="Product image">
+                <img class="h-60 img-fluid" src="{{Product.Img1}}" alt="Product image">
             </div>
             <div class="h-150px">
                 <div class="row gx-0 p-0 m-0 h-100">
                     <div class="col-3 px-1 py-3">
-                        <div class="h-100 Bordergrey rounded-4 center-elements p-3">
+                        <div class="h-100px Bordergrey rounded-4 center-elements p-2">
                             <img class="h-80px img-fluid" src="{{Product.Img1}}" alt="Product Image1">
                         </div>
                     </div>
                     <div class="col-3 px-1 py-3">
-                        <div class="h-100 Bordergrey rounded-4 center-elements p-3">
+                        <div class="h-100px Bordergrey rounded-4 center-elements p-2">
                             <img class="h-80px img-fluid" src="{{Product.Img2}}" alt="Product Image1">
                         </div>
                     </div>
                     <div class="col-3 px-1 py-3">
-                        <div class="h-100 Bordergrey rounded-4 center-elements p-3">
+                        <div class="h-100px Bordergrey rounded-4 center-elements p-2">
                             <img class="h-80px img-fluid" src="{{Product.Img3}}" alt="Product Image1">
                         </div>
                     </div>
                     <div class="col-3 px-1 py-3">
-                        <div class="h-100 Bordergrey rounded-4 center-elements p-3">
+                        <div class="h-100px Bordergrey rounded-4 center-elements p-2">
                             <img class="h-80px img-fluid" src="{{Product.Img4}}" alt="Product Image1">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="col-5">
-            <p>{{Product.Description}}</p>
+        <div class="col-lg-5 col-md-6 col-sm-12 p-3">
+            <h2>{{Product.Name}}</h2>
+            <div class="d-flex align-items-center justify-content-around w-75">
+                <div class="d-flex align-items-center justify-content-around w-25">
+                    <img class="h-10px" src="images/star.png" alt="">
+                    <img class="h-10px" src="images/star.png" alt="">
+                    <img class="h-10px" src="images/star.png" alt="">
+                    <img class="h-10px" src="images/star.png" alt="">
+                    <img class="h-10px" src="images/star.png" alt="">
+                </div>
+                <p>4.7 Star Rating</p>
+                <p class="text-body-secondary">(21,671)</p>
+                <p>|</p>
+                <p>SKU:</p>
+                <p>EB4DRP</p>
+            </div>
+            <hr class="my-5">
+            <p class="h-50px align-items-center d-flex">{{Product.Description}}</p>
+            <div class="d-flex align-items-center">
+                <h2>₹{{Product.Price}}.00</h2>
+                <p class="text-body-secondary mx-2">₹90</p>
+                <div class="h-50px BgTeal w-200px rounded-pill center-elements">
+                    <p class="text-white fw-semibold">Order on Whats'app</p>
+                </div>
+            </div>
+            <hr class="my-5">
+            <div class="h-100px Bg-LightGreen p-2 rounded-3">
+                <div class="d-flex align-items-center">
+                    <p class="TextTeal">Special Offer : </p>
+                    <div class="d-flex ">
+                        <div
+                            class="CountDownTimerDiv center-elements my-2 p-2 mx-1 center-elements bg-white Bordergrey rounded-3">
+                            <countdown [config]="{leftTime: 69120000, format: ' dd '}">
+                            </countdown>
+                            <p>D</p>
+                        </div>
+                        <div
+                            class="CountDownTimerDiv center-elements my-2 p-2 mx-1 center-elements bg-white Bordergrey rounded-3">
+                            <countdown [config]="{leftTime: 69120000, format: ' HH '}">
+                            </countdown>
+                            <p>H</p>
+                        </div>
+                        <div
+                            class="CountDownTimerDiv center-elements my-2 p-2 mx-1 center-elements bg-white Bordergrey rounded-3">
+                            <countdown [config]="{leftTime: 69120000, format: ' mm '}">
+                            </countdown>
+                            <p>M</p>
+                        </div>
+                        <div
+                            class="CountDownTimerDiv center-elements my-2 p-2 mx-1 center-elements bg-white Bordergrey rounded-3">
+                            <countdown [config]="{leftTime: 69120000, format: ' ss '}">
+                            </countdown>
+                            <p>S</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="fs-12px">Remains untill the end of the offer</p>
+            </div>
+            <div class="h-150px py-3 px-2">
+                <div class="d-flex align-items-center">
+                    <div class="WhiteDiv40px bg-white center-elements">
+                        <div class="TextTeal">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                    d="M4 4a2 2 0 0 0-2 2v9a1 1 0 0 0 1 1h.535a3.5 3.5 0 1 0 6.93 0h3.07a3.5 3.5 0 1 0 6.93 0H21a1 1 0 0 0 1-1v-4a.999.999 0 0 0-.106-.447l-2-4A1 1 0 0 0 19 6h-5a2 2 0 0 0-2-2H4Zm14.192 11.59.016.02a1.5 1.5 0 1 1-.016-.021Zm-10 0 .016.02a1.5 1.5 0 1 1-.016-.021Zm5.806-5.572v-2.02h4.396l1 2.02h-5.396Z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p class="fw-semibolds mx-2">Products are almost sold out</p>
+                </div>
+                <div class="progress h-10px my-2 ">
+                    <div class="progress-bar BgTeal" role="progressbar" style="width: 25%" aria-valuenow="25"
+                        aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <p class="text-body-secondary">Available only:45</p>
+            </div>
+            <div class="h-200px py-3 px-2">
+                <p>Quantity :</p>
+                <div class="d-flex align-items-center my-2">
+                    <div
+                        class="w-120px h-50px Bordergrey rounded-pill d-flex align-items-center justify-content-around">
+                        <p class="fs-1">-</p>
+                        <p class="fs-4">1</p>
+                        <p class="fs-3">+</p>
+                    </div>
+                    <div class="w-200px h-50px BgTeal mx-3 rounded-pill center-elements p-3">
+                        <img class="h-20px" src="images/cart-white.png" alt="">
+                        <p class="text-white mx-3">Add to Cart</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center my-3">
+                    <div class="WhiteDiv50px HoverBGTeal Bg-SkyBlue mx-2 center-elements">
+                        <div class="TextTealToWhiteOnHover">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="WhiteDiv50px HoverBGTeal Bg-SkyBlue mx-2 center-elements">
+                        <div class="TextTealToWhiteOnHover">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M13.484 9.166 15 7h5m0 0-3-3m3 3-3 3M4 17h4l1.577-2.253M4 7h4l7 10h5m0 0-3 3m3-3-3-3" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="WhiteDiv50px HoverBGTeal Bg-SkyBlue mx-2 center-elements">
+                        <div class="TextTealToWhiteOnHover">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                    d="M7.926 10.898 15 7.727m-7.074 5.39L15 16.29M8 12a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm12 5.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Zm0-11a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0Z" />
+                            </svg>
+
+                        </div>
+                    </div>
+                </div>
+                <hr class="my-2">
+            </div>
+            <div class="h-40px d-flex justify-content-between align-items-center p-2 rounded-3 CouponBorder">
+                <div class="d-flex align-items-center">
+                    <div class="text-black">
+                        <svg class="w-3 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"
+                                d="M12 7.757v8.486M7.757 12h8.486M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </div>
+                    <p class="fs-12px fw-semibold">Mfr. coupon. $3.00 off 5</p>
+                </div>
+                <a class="fs-12px" href="#">View Details</a>
+            </div>
+            <ul class="my-3">
+                <li>Buy 1, Get 1 FREE</li>
+                <li>Buy 1, Get 1 FREE</li>
+            </ul>
         </div>
-        <div class="col-3">
+        <div class="col-lg-3 col-md-6 col-sm-12 p-3">
             <div class="StoreDetails Bordergrey rounded-4">
                 <div class="row h-130px gx-0 center-elements m-0 bg-white rounded-top-4 d-flex p-4">
                     <div class="row gx-0 p-2 m-0 h-100 w-100 BgTeal rounded-pill">

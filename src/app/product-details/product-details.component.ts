@@ -3,10 +3,11 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Init } from 'v8';
 import { ItemsClass } from '../Classes/ItemClass';
 import { ItemsListService } from '../items-list.service';
+import { CountdownModule } from 'ngx-countdown';
 
 @Component({
   selector: 'app-product-details',
-  imports: [RouterLink],
+  imports: [RouterLink,CountdownModule],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
 })

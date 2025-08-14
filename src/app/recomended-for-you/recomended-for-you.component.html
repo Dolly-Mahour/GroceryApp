@@ -31,7 +31,7 @@
     </div>
     <div class="row h-100 d-flex m-0 p-0 gx-0">
         <div class="col mx-4 p-1 d-flex m-0 p-0" *ngFor="let p of ProductList">
-            <div *ngIf="p.ProductId > 0 && 13 > p.ProductId " class="FlashSalesCard p-1 BottomToTop">
+            <div *ngIf="p.ProductId > 0 && 13 > p.ProductId " (click)="ProductDetails(p)" class="FlashSalesCard p-1 BottomToTop">
                 <div class="h-10  d-flex justify-content-between">
                     <div class="center-elements w-40 h-80 bg-danger"
                         style="border-top-left-radius: 20px;border-bottom-right-radius: 20px;">

@@ -7,6 +7,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SlickCarouselService } from '../slick-carousel.service';
 import { log } from 'console';
 import { Route, Router } from '@angular/router';
+import { ItemsInCartService } from '../items-in-cart.service';
 
 @Component({
   selector: 'app-flash-sales',
@@ -16,20 +17,26 @@ import { Route, Router } from '@angular/router';
   
 })
 export class FlashSalesComponent {
-  constructor(private S_ProductList: ItemsListService,private S_carousel :SlickCarouselService,private router: Router) {
+  constructor(private S_ProductList: ItemsListService,private S_carousel :SlickCarouselService,private router: Router, private S_Cart :ItemsInCartService) {
 
   }
   ngOnInit(): void {
     this.ProductList = this.S_ProductList.ProductsList
     this.slideConfig = this.S_carousel.slideConfig;
-    console.log("This is the result of the item list we are getting from the service--", this.ProductList);
+    // console.log("This is the result of the item list we are getting from the service--", this.ProductList);
   }
   slideConfig :any;
   ProductList: ItemsClass[] = [];
   AddItemToCart(p:any){
     console.log("ADDING THE ITEM TO CART IS --",p);
-    // this.S_ProductList.UpdateItemsInCart(p);
-    // this.router.navigate(['cart']);
+    if(!p.IsAdded){
+      console.log("THIS ITEM IS NOT ADDED TO CART --------------")
+      this.S_Cart.AddToCart(p);
+    }
+    else{
+      console.log("THIS ITEM IS ALREADY ADDED TO CART --------------")
+    }
+    this.router.navigate(['cart']);
   }
   ProductDetails(p:any){
     console.log("Navigating to product details page --",p);

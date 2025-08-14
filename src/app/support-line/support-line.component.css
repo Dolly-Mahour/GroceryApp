@@ -1,0 +1,30 @@
+
+@media screen and (max-width: 575px) {
+    .SupportLineDiv {
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .SupportLineDiv {
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .SupportLineDiv {
+        height: 100vh;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .SupportLineDiv {
+        height: 50vh;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .SupportLineDiv {
+        height: 40vh;
+    }
+}

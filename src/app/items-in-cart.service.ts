@@ -8,7 +8,7 @@ import { ItemsListService } from './items-list.service';
 })
 export class ItemsInCartService {
 
-  constructor(private S_ItemsList:ItemsListService) { }
+  constructor(private S_ItemsList: ItemsListService) { }
 
   ItemListAtCartInService: ItemsClass[] = [];
   TotalNumberOfItemsInCart: number = 0;
@@ -19,9 +19,7 @@ export class ItemsInCartService {
     localStorage.setItem('ItemsAddedAtCart', JSON.stringify(CartList));
   }
   GetNumberOfItems(count: number) {
-
     this.TotalNumberOfItemsInCart = count
-
   }
 
   // synchronous function to track the live changes in the cart  ------------------
@@ -31,7 +29,6 @@ export class ItemsInCartService {
   sendData(data: any) {
     this._NumberOfItemsInCart.next(data);
   }
-  // ----------------------------------------------------------------------
 
   GetCartFromStorage(): ItemsClass[] {
     const storedCart = localStorage.getItem('ItemsAddedAtCart');
@@ -44,9 +41,10 @@ export class ItemsInCartService {
       return [];
     }
   }
-  SearchItemsViaCategories(): ItemsClass[] {
-    const filteredItems = this.S_ItemsList.ProductsList.filter(item => item.CategoryId === 1);
-    console.log(filteredItems);
-    return filteredItems
+  NumberOfItemsInTheCart :number =0;
+  AddToCart(p: any) {
+    this.ItemListAtCartInService.splice(this.NumberOfItemsInTheCart, 0, p);
+    localStorage.setItem('ItemsAddedAtCart', JSON.stringify(this.ItemListAtCartInService))
+
   }
 }

@@ -260,6 +260,12 @@ a {
     border-radius: 50%;
     box-shadow: 0px 1px 20px rgb(208, 207, 207);
 }
+.WhiteDiv50px {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    /* box-shadow: 0px 1px 20px rgb(208, 207, 207); */
+}
 .HoverBGTeal:hover {
     background: #1c799b !important;
 }
@@ -268,6 +274,9 @@ a {
 }
 .text-SkyBlue{
     color: #6c9b9b !important;
+}
+.CouponBorder{
+    border: 1px dashed #1c799b;
 }
 .h-50px {
     height: 50px;
@@ -284,6 +293,12 @@ a {
 .w-120px{
     width: 120px;
 }
+.w-150px{
+    width: 150px;
+}
+.w-200px{
+    width: 200px;
+}
 .Bordergrey{
     border: 1px solid rgb(218, 216, 216);
 }
@@ -294,9 +309,9 @@ hr{
 .Bg-LightBlue{
     background-color: #e9eefb !important;
 }
-/* .h-600px{
-    height: 600px;
-} */
+.Bg-LightGreen{
+    background-color: #f3faf2 !important;
+}
 .h-500px{
     height: 500px;
 }
@@ -317,6 +332,12 @@ hr{
 }
 .h-200px{
     height:200px;
+}
+.h-250px{
+    height:250px;
+}
+.h-300px{
+    height:300px;
 }
 .fs-10px{
     font-size: 10px;

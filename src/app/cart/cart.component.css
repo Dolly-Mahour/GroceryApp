@@ -1,0 +1,16 @@
+.ItemsInCartDiv {
+    height: 100vh;
+}
+
+.ExtraWidthItemsDiv {
+    width: 1200px;
+    height: 100vh;
+}
+
+.DivOfOverflow::-webkit-scrollbar {
+    display: none;
+}
+
+.DeleteDiv{
+    width: 1500px;
+}

@@ -5,10 +5,11 @@ import { CommonModule, ViewportScroller } from '@angular/common';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SlickCarouselService } from '../slick-carousel.service';
 import { Router } from '@angular/router'
+import { AddAfterCarouselComponent } from '../add-after-carousel/add-after-carousel.component';
 // import { ItemsListService } from '../items-list.service';
 @Component({
   selector: 'app-categories-crousel',
-  imports: [CommonModule, SlickCarouselModule],
+  imports: [CommonModule, SlickCarouselModule,AddAfterCarouselComponent],
   templateUrl: './categories-crousel.component.html',
   styleUrl: './categories-crousel.component.css'
 })
