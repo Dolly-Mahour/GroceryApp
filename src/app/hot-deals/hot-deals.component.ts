@@ -18,7 +18,9 @@ export class HotDealsComponent {
 
   }
   ngOnInit(): void {
-    this.ProductList = this.S_ProductList.ProductsList
+    this.S_ProductList.ProductObservableList$.subscribe(products =>{
+      this.ProductList = products
+    })
     this.slideConfig = this.S_carousel.slideConfig;
     // console.log("This is the result of the item list we are getting from the service--", this.ProductList);
   }

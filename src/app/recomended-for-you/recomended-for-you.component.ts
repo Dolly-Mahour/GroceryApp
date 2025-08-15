@@ -12,11 +12,13 @@ import { Router } from '@angular/router';
   styleUrl: './recomended-for-you.component.css'
 })
 export class RecomendedForYouComponent {
-  constructor(private S_ProductList: ItemsListService,private router:Router) {
+  constructor(private S_ProductList: ItemsListService, private router: Router) {
 
   }
   ngOnInit(): void {
-    this.ProductList = this.S_ProductList.ProductsList
+    this.S_ProductList.ProductObservableList$.subscribe(products => {
+      this.ProductList = products;
+    })
     // console.log("This is the result of the item list we are getting from the service--", this.ProductList);
   }
   ProductList: ItemsClass[] = [];

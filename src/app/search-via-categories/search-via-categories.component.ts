@@ -21,7 +21,10 @@ export class SearchViaCategoriesComponent implements OnInit {
   }
   ngOnInit(): void {
     this.IdOfTheCategory = Number(this.route.snapshot.paramMap.get('id'))
-    this.ListOfProductWithCategory = this.S_ProductList.ProductsList.filter(product => product.CategoryId === this.IdOfTheCategory);
+    this.S_ProductList.ProductObservableList$.subscribe(products => {
+      this.ListOfProductWithCategory = products.filter(product => product.CategoryId === this.IdOfTheCategory);
+    })
+    // this.ListOfProductWithCategory = this.S_ProductList.ProductsList.filter(product => product.CategoryId === this.IdOfTheCategory);
     this.WholeCategory = this.S_CategoriesList.Categories.find(category => category.CategoryId === this.IdOfTheCategory)
     this.CategoryName = this.WholeCategory?.CategoryName;
     console.log("FROM THE SEARCH CATEGORY PAGE --- ",this.IdOfTheCategory,"\nITEMS WITH THE CATEGORY---",this.ListOfProductWithCategory);

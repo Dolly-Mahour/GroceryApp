@@ -16,17 +16,74 @@
     </div>
 </div>
 <div class="ItemsInCartDiv">
-    <div class="row g-0 p-0 m-0 my-5 p-2 ">
+    <div class="row g-0 p-0 m-0 my-5 p-2">
         <div class="col-8 mx-4 rounded-3 DivOfOverflow Bordergrey overflow-x-auto">
             <div class="ExtraWidthItemsDiv">
-                <div class="d-flex  ">
-                    <div class="DeleteDiv bg-warning">
-                        delete xy
+                <div class="row align-items-center h-100px w-100 p-3 pe-0">
+                    <div class="col-3  m-0 ps-4">
+                        <h5>Delete</h5>
                     </div>
-                    <p class="w-100">Product Name</p>
-                    <p class="w-100">Price</p>
-                    <p class="w-100">Quantity</p>
-                    <p class="w-100">Subtotal</p>
+                    <div class="col-3">
+                        <h5>Product Name</h5>
+                    </div>
+                    <div class="col-2 m-0 p-0  d-flex justify-content-center">
+                        <h5>Price</h5>
+                    </div>
+                    <div class="col-2 m-0 p-0  d-flex justify-content-center">
+                        <h5>Quantity</h5>
+                    </div>
+                    <div class="col-2 m-0 p-0  d-flex justify-content-center">
+                        <h5>Subtotal</h5>
+                    </div>
+                </div>
+                <div *ngFor="let p of ItemsInCart">
+                    <div class="row g-0 p-0 m-0 align-items-center h-250px bg-white">
+                        <div class="col-3 align-items-center d-flex p-2">
+                            <div class="col-6 center-elements">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                    viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="1" d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                </svg>
+                                <p>Remove</p>
+                            </div>
+                            <div class="col-6 h-150px center-elements Bordergrey rounded-3">
+                                <img class="h-75" [src]="p.Img1" alt="Product images">
+                            </div>
+                        </div>
+                        <div class="col-3 bg-white h-150px px-3">
+                            <p class="my-2 fw-semibold">{{p.Name}}</p>
+                            <div class="d-flex align-items-center my-3">
+                                <img class="h-15px mx-1" src="images/star.png" alt="ratings">
+                                <p class="fw-semibold fs-14px">4.8</p>
+                                <p class="mx-2">|</p>
+                                <p class="text-body-secondary">128 Reviews</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <div class="h-40px BgGrey w-85px rounded-3 center-elements BlackToWhiteOnHover-Text">
+                                    Camera
+                                </div>
+                                <div
+                                    class="mx-2 h-40px BgGrey w-85px rounded-3 center-elements BlackToWhiteOnHover-Text">
+                                    Videos
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2 h-150px center-elements">
+                            <h5>₹{{p.Price}}</h5>
+                        </div>
+                        <div class="col-2 h-150px  center-elements">
+                            <div class="row g-0 p-0 m-0 h-40px w-120px Bordergrey rounded-3">
+                                <div (click)="DecreaseQuantity(p)" class="col-4 center-elements HoverBGTeal rounded-start BlackToWhiteOnHover-Text">-</div>
+                                <div class="col-4 center-elements border-start">{{p.QuantityAddedToCart}}</div>
+                                <div (click)="IncreaseQuantity(p)" class="col-4 center-elements border-start HoverBGTeal rounded-end BlackToWhiteOnHover-Text">+</div>
+                            </div>
+                        </div>
+                        <div class="col-2 h-150px center-elements">
+                            <h5>₹500</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

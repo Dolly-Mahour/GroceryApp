@@ -11,9 +11,16 @@
 
                     <div (click)="ProductDetails(p)" class="FlashSalesCard mx-1 p-1">
                         <div class="h-15 d-flex justify-content-end align-items-center">
-                            <div (click)="AddItemToCart(p)" class="AddToCartButton w-50 h-50 btn center-elements">
+                            <div *ngIf="!p.IsAdded" (click)="AddItemToCart(p); $event.stopPropagation()"
+                                class="AddToCartButton w-50 h-50 btn center-elements">
                                 <p class="TextTeal fs-12px TextWhiteOnHover">Add </p>
                                 <img class="h-10px mx-1" src="images/shopping-cart.png" alt="cart">
+                            </div>
+                            <div *ngIf="p.IsAdded"
+                                class="row gx-0 p-0 m-0 bg-white w-50 h-50 rounded-pill center-elements border-1 BorderTeal">
+                                <div (click)="DecreaseQuantity(p); $event.stopPropagation()" class="col-4 center-elements HoverBGTeal rounded-start-circle BlackToWhiteOnHover-Text">-</div>
+                                <div class="col-4 center-elements border-start fs-12px">{{p.QuantityAddedToCart}}</div>
+                                <div (click)="IncreaseQuantity(p); $event.stopPropagation()" class="col-4 center-elements border-start HoverBGTeal rounded-end-circle BlackToWhiteOnHover-Text">+</div>
                             </div>
                         </div>
                         <div class="h-40 center-elements">

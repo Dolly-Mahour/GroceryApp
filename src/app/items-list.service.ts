@@ -1,14 +1,17 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { ItemsClass } from './Classes/ItemClass';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, of } from 'rxjs';
+import { ItemsInCartService } from './items-in-cart.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class ItemsListService {
+export class ItemsListService implements OnInit {
 
   constructor() { }
-  ProductsList: ItemsClass[] = [
+  ngOnInit(): void {
+  }
+  private P_ProductsList = new BehaviorSubject<ItemsClass[]>([
     {
       'Name': "Lays Chilli Chips",
       'Description': "Crunch into happiness with Red Lays — bold flavor, perfect crisp, and pure snacking joy!",
@@ -311,7 +314,35 @@ export class ItemsListService {
       'ProductId': 20,
     },
 
-  ];
-
+  ]);
+  ProductObservableList$: Observable<ItemsClass[]> = this.P_ProductsList.asObservable();
+  ItemsInCart: ItemsClass[] = []
+  updateProduct(CurrentProduct: ItemsClass) {
+    const products = this.P_ProductsList.value;
+    const UpdatedProducts = [...products];
+    UpdatedProducts[CurrentProduct.ProductId - 1] = CurrentProduct;
+    this.P_ProductsList.next(UpdatedProducts);
+  }
+  GetTheListOfProducts(): void {
+    const storedCart = localStorage.getItem('ItemsAddedAtCart');
+    const CartItems: ItemsClass[] = storedCart ? JSON.parse(storedCart) : [];
+    const CurrentProducts = this.P_ProductsList.value;
+    const UpdatedProducts = CurrentProducts.map(product => {
+      const CartItem = CartItems.find(item => item.ProductId === product.ProductId);
+      if (CartItem) {
+        return {
+          ...product,
+          IsAdded: true,
+          QuantityAddedToCart: CartItem.QuantityAddedToCart
+        };
+      }
+      return {
+        ...product,
+        IsAdded: false,
+        QuantityAddedToCart: 0
+      };
+    });
+    this.P_ProductsList.next(UpdatedProducts);
+  }
 
 }

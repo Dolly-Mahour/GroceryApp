@@ -7,44 +7,75 @@ import { ItemsListService } from './items-list.service';
   providedIn: 'root'
 })
 export class ItemsInCartService {
-
-  constructor(private S_ItemsList: ItemsListService) { }
-
   ItemListAtCartInService: ItemsClass[] = [];
-  TotalNumberOfItemsInCart: number = 0;
-
-
-  UpdateItemsInCart(CartList: ItemsClass[]) {
-    this.ItemListAtCartInService = CartList;
-    localStorage.setItem('ItemsAddedAtCart', JSON.stringify(CartList));
+  constructor(private S_ItemsList: ItemsListService) {
+    const LocalStorageCart = JSON.parse(localStorage.getItem('ItemsAddedAtCart') || '[]');
+    this._CartItems.next(LocalStorageCart);
   }
-  GetNumberOfItems(count: number) {
-    this.TotalNumberOfItemsInCart = count
-  }
+  // OBSERVABLE PROPERTY FOR ASYNCRONOUS DATA UPDATION IN CARRT ITEMS ------------------------------------
+  private _CartItems = new BehaviorSubject<ItemsClass[]>([]);
+  cartItems$ = this._CartItems.asObservable();
 
-  // synchronous function to track the live changes in the cart  ------------------
-  private _NumberOfItemsInCart = new BehaviorSubject<any>(null);
-  currentData$: Observable<any> = this._NumberOfItemsInCart.asObservable();
 
-  sendData(data: any) {
-    this._NumberOfItemsInCart.next(data);
-  }
+  // PROPERTY FOR AYNCRONOUS UPDATION IN NUMBER OF ITEMS PRESENT IN THE CART-------------------------------
+  private _NumberOfItemsInCart = new BehaviorSubject<number>(0);
+  CurrentData$: Observable<number> = this._NumberOfItemsInCart.asObservable();
 
+
+
+  // RETURNING THE LIST OF ITEM IN THE LOCAL STORAGE ----------------------------------------------------------
   GetCartFromStorage(): ItemsClass[] {
-    const storedCart = localStorage.getItem('ItemsAddedAtCart');
     try {
-      const parsed = JSON.parse(storedCart || '[]');
-      this.TotalNumberOfItemsInCart = parsed.length;
-      return parsed;
+      const LisOfItemsInLocalStorageCart = JSON.parse(localStorage.getItem('ItemsAddedAtCart') || '[]');
+      this._NumberOfItemsInCart.next(LisOfItemsInLocalStorageCart.length);
+      return LisOfItemsInLocalStorageCart;
     } catch (e) {
       console.error('Error parsing cart from localStorage:', e);
       return [];
     }
   }
-  NumberOfItemsInTheCart :number =0;
-  AddToCart(p: any) {
-    this.ItemListAtCartInService.splice(this.NumberOfItemsInTheCart, 0, p);
-    localStorage.setItem('ItemsAddedAtCart', JSON.stringify(this.ItemListAtCartInService))
 
+  // UPDATING THE CART THAT PASSED AS THE PARAMETER IN THE FUNCTION ----------------------------------------------------------
+  UpdateCart(cart: ItemsClass[]) {
+    localStorage.setItem('ItemsAddedAtCart', JSON.stringify(cart));
+    this._CartItems.next([...cart]);
+    this._NumberOfItemsInCart.next(cart.length);
+  }
+
+  // ADDING A PRODUCT IN PARAMETER TO THE CART  AND THEN UPDATING THE LOCAL STORAGE ---------------------------------------------
+  AddToCart(CurrentProduct: ItemsClass) {
+    CurrentProduct.IsAdded = true;
+    CurrentProduct.QuantityAddedToCart = CurrentProduct.QuantityAddedToCart + 1;
+    // this.S_ItemsList.ProductObservableList$.subscribe(products => {
+    //   console.log('Got updated products:', products);
+    // });
+    let cart = this.GetCartFromStorage();
+    cart.push(CurrentProduct);
+    this.UpdateCart(cart);
+  }
+
+  // ADDING THE PRODUCT QUANTITY--------------------------------------------------
+  AddProductQuantity(CurrentProduct: ItemsClass) {
+    let cart = this.GetCartFromStorage();
+    let index = cart.findIndex(x => x.ProductId === CurrentProduct.ProductId);
+    if (index !== -1) {
+      cart[index].QuantityAddedToCart++;
+    }
+    this.UpdateCart(cart);
+  }
+  // DECRESING THE QUANTITY OF THE PRODUCT-------------------------------------------------------------------------
+  DecreaseProductQuantity(CurrentProduct: ItemsClass) {
+    let cart = this.GetCartFromStorage();
+    let index = cart.findIndex(x => x.ProductId === CurrentProduct.ProductId);
+    if (index !== -1) {
+      cart[index].QuantityAddedToCart--;
+      if (cart[index].QuantityAddedToCart <= 0) {
+        cart[index].IsAdded = false;
+        cart.splice(index, 1);
+      }
+    }
+    this.UpdateCart(cart);
+    CurrentProduct.QuantityAddedToCart = CurrentProduct.QuantityAddedToCart--;
+    this.S_ItemsList.updateProduct(CurrentProduct);
   }
 }

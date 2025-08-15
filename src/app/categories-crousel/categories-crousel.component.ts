@@ -9,7 +9,7 @@ import { AddAfterCarouselComponent } from '../add-after-carousel/add-after-carou
 // import { ItemsListService } from '../items-list.service';
 @Component({
   selector: 'app-categories-crousel',
-  imports: [CommonModule, SlickCarouselModule,AddAfterCarouselComponent],
+  imports: [CommonModule, SlickCarouselModule],
   templateUrl: './categories-crousel.component.html',
   styleUrl: './categories-crousel.component.css'
 })

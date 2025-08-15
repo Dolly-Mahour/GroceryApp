@@ -7,7 +7,7 @@ import { MainContentPageComponent } from './main-content-page/main-content-page.
 
 @Component({
   selector: 'app-root',
-  imports: [NavbarComponent,FooterComponent,HomeComponent,RouterOutlet,MainContentPageComponent],
+  imports: [NavbarComponent,FooterComponent,MainContentPageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
   standalone:true, 

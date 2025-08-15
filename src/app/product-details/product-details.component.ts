@@ -7,18 +7,20 @@ import { CountdownModule } from 'ngx-countdown';
 
 @Component({
   selector: 'app-product-details',
-  imports: [RouterLink,CountdownModule],
+  imports: [RouterLink, CountdownModule],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
 })
 export class ProductDetailsComponent implements OnInit {
-  constructor(private route: ActivatedRoute, private S_Productlist: ItemsListService) {
+  constructor(private route: ActivatedRoute, private S_ProductList: ItemsListService) {
     console.log('ActivatedRoute in constructor:', this.route);
   }
   ngOnInit(): void {
     this.IdOfProduct = Number(this.route.snapshot.paramMap.get('ProductId'))
-    
-    this.Product = this.S_Productlist.ProductsList.find(p => p.ProductId === this.IdOfProduct)!;
+    this.S_ProductList.ProductObservableList$.subscribe(products => {
+      this.Product = products.find(p => p.ProductId === this.IdOfProduct)!;
+    })
+    // this.Product = this.S_Productlist.ProductsList.find(p => p.ProductId === this.IdOfProduct)!;
     console.log("PRODUCT IS -----", this.Product);
   }
   IdOfProduct!: number;
