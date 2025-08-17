@@ -17,7 +17,7 @@ export class ProductDetailsComponent implements OnInit {
   }
   ngOnInit(): void {
     this.IdOfProduct = Number(this.route.snapshot.paramMap.get('ProductId'))
-    this.S_ProductList.ProductObservableList$.subscribe(products => {
+    this.S_ProductList.ProductObservableList.subscribe(products => {
       this.Product = products.find(p => p.ProductId === this.IdOfProduct)!;
     })
     // this.Product = this.S_Productlist.ProductsList.find(p => p.ProductId === this.IdOfProduct)!;

@@ -315,31 +315,51 @@ export class ItemsListService implements OnInit {
     },
 
   ]);
-  ProductObservableList$: Observable<ItemsClass[]> = this.P_ProductsList.asObservable();
+  ProductObservableList: Observable<ItemsClass[]> = this.P_ProductsList.asObservable();
   ItemsInCart: ItemsClass[] = []
-  updateProduct(CurrentProduct: ItemsClass) {
+  UpdateProduct(CurrentProduct: ItemsClass) {
     const products = this.P_ProductsList.value;
-    const UpdatedProducts = [...products];
+    const UpdatedProducts = products.slice();
     UpdatedProducts[CurrentProduct.ProductId - 1] = CurrentProduct;
     this.P_ProductsList.next(UpdatedProducts);
   }
   GetTheListOfProducts(): void {
-    const storedCart = localStorage.getItem('ItemsAddedAtCart');
-    const CartItems: ItemsClass[] = storedCart ? JSON.parse(storedCart) : [];
+    const StoredCart = localStorage.getItem('ItemsAddedAtCart');
+    const CartItems: ItemsClass[] = StoredCart ? JSON.parse(StoredCart) : [];
     const CurrentProducts = this.P_ProductsList.value;
     const UpdatedProducts = CurrentProducts.map(product => {
       const CartItem = CartItems.find(item => item.ProductId === product.ProductId);
       if (CartItem) {
         return {
-          ...product,
+          Name: product.Name,
+          Description: product.Description,
+          Price: product.Price,
+          AwailableQuantity: product.AwailableQuantity,
+          Img1: product.Img1,
+          Img2: product.Img2,
+          Img3: product.Img3,
+          Img4: product.Img4,
+          isWishlisted: false,
+          CategoryId: 1,
+          ProductId: 20,
           IsAdded: true,
           QuantityAddedToCart: CartItem.QuantityAddedToCart
         };
       }
       return {
-        ...product,
-        IsAdded: false,
-        QuantityAddedToCart: 0
+        Name: product.Name,
+          Description: product.Description,
+          Price: product.Price,
+          AwailableQuantity: product.AwailableQuantity,
+          Img1: product.Img1,
+          Img2: product.Img2,
+          Img3: product.Img3,
+          Img4: product.Img4,
+          isWishlisted: false,
+          CategoryId: 1,
+          ProductId: 20,
+          IsAdded: false,
+          QuantityAddedToCart: 0
       };
     });
     this.P_ProductsList.next(UpdatedProducts);

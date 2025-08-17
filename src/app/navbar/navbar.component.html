@@ -159,7 +159,8 @@
                 </div>
             </a>
             <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black" [routerLink]="['cart']">
-                <div class="h-100 center-elements">
+                <div class="h-100 center-elements position-relative">
+                    <div class="h-20px w-20px BgTeal rounded-circle center-elements text-white position-absolute mb-4">{{TotalNumberOFItemsInCart}}</div>
                     <img class="h-20px mx-1" src="images/shopping-cart.png" alt="profileIcon">
                     <p class="HoverTeal d-lg-flex d-none">cart</p>
                 </div>
@@ -343,7 +344,7 @@
                 </div>
             </div>
         </div>
-        <div class="h-100 w-auto center-elements">
+        <div class="h-100 w-auto center-elements d-lg-flex d-none">
             <div>
                 <p class="fw-semibold fs-14px">Need Any Help! Call Us</p>
                 <a class="text-decoration-none ContactNumber" href="#">+(2) 76576xzxzx</a>

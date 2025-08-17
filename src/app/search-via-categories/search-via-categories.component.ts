@@ -21,7 +21,7 @@ export class SearchViaCategoriesComponent implements OnInit {
   }
   ngOnInit(): void {
     this.IdOfTheCategory = Number(this.route.snapshot.paramMap.get('id'))
-    this.S_ProductList.ProductObservableList$.subscribe(products => {
+    this.S_ProductList.ProductObservableList.subscribe(products => {
       this.ListOfProductWithCategory = products.filter(product => product.CategoryId === this.IdOfTheCategory);
     })
     // this.ListOfProductWithCategory = this.S_ProductList.ProductsList.filter(product => product.CategoryId === this.IdOfTheCategory);

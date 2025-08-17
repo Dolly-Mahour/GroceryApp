@@ -1,6 +1,6 @@
 .MainBannerBg {
     height: 70vh;
-    width: 100%;
+    /* width: 100%; */
     background-color: #e9ffff;
     border-radius: 15px;
 }
@@ -74,7 +74,7 @@
 @media screen and (max-width: 640px) {
     .MainBannerBg {
         height: 90vh;
-        width: 100%;
+        /* width: 100%; */
         background-color: #e9ffff;
         border-radius: 15px;
     }
@@ -87,7 +87,7 @@
 @media screen and (min-width: 640px) {
     .MainBannerBg {
         height: 90vh;
-        width: 100%;
+        /* width: 100%; */
         background-color: #e9ffff;
         border-radius: 15px;
     }
@@ -100,7 +100,7 @@
 @media screen and (min-width: 1007px) {
     .MainBannerBg {
         height: 70vh;
-        width: 100%;
+        /* width: 100%; */
         background-color: #e9ffff;
         border-radius: 15px;
     }
@@ -113,7 +113,7 @@
 @media screen and (min-width: 1400px) {
     .MainBannerBg {
         height: 70vh;
-        width: 100%;
+        /* width: 100%; */
         background-color: #e9ffff;
         border-radius: 15px;
     }

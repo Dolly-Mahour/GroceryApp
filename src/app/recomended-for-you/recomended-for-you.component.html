@@ -31,7 +31,8 @@
     </div>
     <div class="row h-100 d-flex m-0 p-0 gx-0">
         <div class="col mx-4 p-1 d-flex m-0 p-0" *ngFor="let p of ProductList">
-            <div *ngIf="p.ProductId > 0 && 13 > p.ProductId " (click)="ProductDetails(p)" class="FlashSalesCard p-1 BottomToTop">
+            <div *ngIf="p.ProductId > 0 && 13 > p.ProductId " (click)="ProductDetails(p)"
+                class="FlashSalesCard p-1 BottomToTop">
                 <div class="h-10  d-flex justify-content-between">
                     <div class="center-elements w-40 h-80 bg-danger"
                         style="border-top-left-radius: 20px;border-bottom-right-radius: 20px;">
@@ -56,9 +57,19 @@
                         <img class="h-10px" src="images/star.png" alt="">
                         <p class="fw-bold fs-12px">(15k)</p>
                     </div>
-                    <div class="AddToCartButton w-100 h-20 btn center-elements">
+                    <div *ngIf="p.QuantityAddedToCart==0" (click)="AddItemToCart(p)" class="AddToCartButton w-100 h-20 btn center-elements">
                         <p class="TextTeal fs-12px TextWhiteOnHover">Add to cart</p>
                         <img class="h-10px mx-1" src="images/shopping-cart.png" alt="cart">
+                    </div>
+                    <div *ngIf="p.QuantityAddedToCart>0"
+                        class="row gx-0 p-0 m-0 center-elements border-1 BorderTeal rounded-pill w-100 h-20  center-elements">
+                        <div (click)="DecreaseQuantity(p); $event.stopPropagation()"
+                            class="col-4 h-100 center-elements HoverBGTeal rounded-start-pill BlackToWhiteOnHover-Text">-
+                        </div>
+                        <div class="col-4 center-elements border-start fs-12px">{{p.QuantityAddedToCart}}</div>
+                        <div (click)="IncreaseQuantity(p); $event.stopPropagation()"
+                            class="col-4 h-100 center-elements border-start HoverBGTeal rounded-end-pill BlackToWhiteOnHover-Text">
+                            +</div>
                     </div>
                 </div>
             </div>

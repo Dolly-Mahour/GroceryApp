@@ -20,7 +20,7 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     console.log("ITEMS IN CART THROUGH CART PAGE---",)
 
-    this.S_Cart.cartItems$.subscribe(items => {
+    this.S_Cart.CartItems.subscribe(items => {
       this.ItemsInCart = items;
     });
     // console.log("ITEMS IN CART----------- FROM LOCALSTORAGE ", localStorage.getItem('ItemsAddedAtCart'));

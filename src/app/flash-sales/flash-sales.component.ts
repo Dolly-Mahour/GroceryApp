@@ -22,7 +22,7 @@ export class FlashSalesComponent {
   }
   ngOnInit(): void {
     this.S_ProductList.GetTheListOfProducts();
-    this.S_ProductList.ProductObservableList$.subscribe(products => {
+    this.S_ProductList.ProductObservableList.subscribe(products => {
       this.ProductList = products;
     });
     this.slideConfig = this.S_carousel.slideConfig;
@@ -42,13 +42,15 @@ export class FlashSalesComponent {
     this.router.navigate(['cart']);
   }
   IncreaseQuantity(product: any) {
+
+    this.S_Cart.AddProductQuantity(product)
     product.QuantityAddedToCart++;
-    this.S_ProductList.updateProduct(product);
+    this.S_ProductList.UpdateProduct(product);
   }
   DecreaseQuantity(product: any) {
-    if (product.QuantityAddedToCart > 0) {
       this.S_Cart.DecreaseProductQuantity(product);
-    }
+      product.QuantityAddedToCart--;
+      this.S_ProductList.UpdateProduct(product);
   }
   ProductDetails(p: any) {
     console.log("Navigating to product details page --", p);
