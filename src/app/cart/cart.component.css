@@ -7,10 +7,21 @@
     /* height: 100vh; */
 }
 
-.DivOfOverflow::-webkit-scrollbar {
-    display: none;
+.DivOfOverflow {
+    overflow-x: scroll;
+    scrollbar-color: rgb(33, 33, 33);
 }
 
-.DeleteDiv{
+.DivOfOverflow::-webkit-scrollbar {
+    /* width: 10px; */
+    height: 5px;
+    background-color: rgb(236, 236, 236);
+
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(190, 189, 189); 
+  border-radius: 10px;
+}
+.DeleteDiv {
     width: 1500px;
 }

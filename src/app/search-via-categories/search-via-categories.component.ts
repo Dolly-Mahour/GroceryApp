@@ -24,7 +24,7 @@ export class SearchViaCategoriesComponent implements OnInit {
     this.S_ProductList.ProductObservableList.subscribe(products => {
       this.ListOfProductWithCategory = products.filter(product => product.CategoryId === this.IdOfTheCategory);
     })
-    // this.ListOfProductWithCategory = this.S_ProductList.ProductsList.filter(product => product.CategoryId === this.IdOfTheCategory);
+    this.CategoriesList = this.S_CategoriesList.Categories;
     this.WholeCategory = this.S_CategoriesList.Categories.find(category => category.CategoryId === this.IdOfTheCategory)
     this.CategoryName = this.WholeCategory?.CategoryName;
     console.log("FROM THE SEARCH CATEGORY PAGE --- ",this.IdOfTheCategory,"\nITEMS WITH THE CATEGORY---",this.ListOfProductWithCategory);
@@ -33,5 +33,6 @@ export class SearchViaCategoriesComponent implements OnInit {
   IdOfTheCategory!:number;
   ListOfProductWithCategory!:ItemsClass[]|undefined;
   WholeCategory!: ItemsCategoriesClass|undefined;
+  CategoriesList!: ItemsCategoriesClass[]|undefined;
   CategoryName!:string|undefined;
 }

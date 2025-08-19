@@ -37,9 +37,9 @@
     font-size: 13px;
 }
 
-.HoverTeal {
+/* .HoverTeal {
     width: auto;
-}
+} */
 
 .HoverTeal:hover {
     color: #1c799b;
@@ -96,10 +96,10 @@
     outline: none !important;
     box-shadow: none !important;
 }
-
+/* 
 .CategoryItem {
     width: auto;
-}
+} */
 
 .CategoryItem:hover {
     background-color: #2a9bc538;

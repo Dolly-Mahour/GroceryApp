@@ -45,7 +45,7 @@ export class ItemsInCartService {
   // UPDATING THE CART THAT PASSED AS THE PARAMETER IN THE FUNCTION ----------------------------------------------------------
   UpdateCart(cart: ItemsClass[]) {
     localStorage.setItem('ItemsAddedAtCart', JSON.stringify(cart));
-    this._CartItems.next(cart.slice());
+    this._CartItems.next([...cart]);
     this._NumberOfItemsInCart.next(cart.length);
   }
 
@@ -81,6 +81,20 @@ export class ItemsInCartService {
         cart[index].IsAdded = false;
         cart.splice(index, 1);
       }
+    }
+    this.UpdateCart(cart);
+    CurrentProduct.QuantityAddedToCart = CurrentProduct.QuantityAddedToCart--;
+    this.S_ItemsList.UpdateProduct(CurrentProduct);
+  }
+  RemoveProductFromCart(CurrentProduct:ItemsClass){
+    let cart = this.GetCartFromStorage();
+    let index = cart.findIndex(x => x.ProductId === CurrentProduct.ProductId);
+    if (index != -1) {
+      cart[index].QuantityAddedToCart--;
+      // if (cart[index].QuantityAddedToCart <= 0) {
+        cart[index].IsAdded = false;
+        cart.splice(index, 1);
+      // }
     }
     this.UpdateCart(cart);
     CurrentProduct.QuantityAddedToCart = CurrentProduct.QuantityAddedToCart--;

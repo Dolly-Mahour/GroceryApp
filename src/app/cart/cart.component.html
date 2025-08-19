@@ -16,78 +16,122 @@
     </div>
 </div>
 <div class="ItemsInCartDiv">
-    <div class="row g-0 p-0 m-0 my-5 p-2">
-        <div class="col-8 mx-4 rounded-3 DivOfOverflow Bordergrey overflow-x-auto">
-            <div class="ExtraWidthItemsDiv">
-                <div class="row align-items-center h-100px w-100 p-3 pe-0">
-                    <div class="col-3  m-0 ps-4">
-                        <h5>Delete</h5>
-                    </div>
-                    <div class="col-3">
-                        <h5>Product Name</h5>
-                    </div>
-                    <div class="col-2 m-0 p-0  d-flex justify-content-center">
-                        <h5>Price</h5>
-                    </div>
-                    <div class="col-2 m-0 p-0  d-flex justify-content-center">
-                        <h5>Quantity</h5>
-                    </div>
-                    <div class="col-2 m-0 p-0  d-flex justify-content-center">
-                        <h5>Subtotal</h5>
-                    </div>
-                </div>
-                <div *ngFor="let p of ItemsInCart">
-                    <div class="row g-0 p-0 m-0 align-items-center h-250px bg-white">
-                        <div class="col-3 align-items-center d-flex p-2">
-                            <div class="col-6 center-elements">
-                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
-                                    viewBox="0 0 24 24">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                                </svg>
-                                <p>Remove</p>
-                            </div>
-                            <div class="col-6 h-150px center-elements Bordergrey rounded-3">
-                                <img class="h-75" [src]="p.Img1" alt="Product images">
-                            </div>
+    <div class="row g-0 p-0 m-0 my-5 p-2 center-elements">
+        <div class="col-lg-8 col-md-12 col-sm-12 mx-4 rounded-3 Bordergrey  my-2">
+            <div class="overflow-x-auto DivOfOverflow">
+                <div class="ExtraWidthItemsDiv">
+                    <div class="row align-items-center h-100px w-100 p-3 pe-0">
+                        <div class="col-3  m-0 ps-4">
+                            <h5>Delete</h5>
                         </div>
-                        <div class="col-3 bg-white h-150px px-3">
-                            <p class="my-2 fw-semibold">{{p.Name}}</p>
-                            <div class="d-flex align-items-center my-3">
-                                <img class="h-15px mx-1" src="images/star.png" alt="ratings">
-                                <p class="fw-semibold fs-14px">4.8</p>
-                                <p class="mx-2">|</p>
-                                <p class="text-body-secondary">128 Reviews</p>
-                            </div>
-                            <div class="d-flex align-items-center">
-                                <div class="h-40px BgGrey w-85px rounded-3 center-elements BlackToWhiteOnHover-Text">
-                                    Camera
+                        <div class="col-3">
+                            <h5>Product Name</h5>
+                        </div>
+                        <div class="col-2 m-0 p-0  d-flex justify-content-center">
+                            <h5>Price</h5>
+                        </div>
+                        <div class="col-2 m-0 p-0  d-flex justify-content-center">
+                            <h5>Quantity</h5>
+                        </div>
+                        <div class="col-2 m-0 p-0  d-flex justify-content-center">
+                            <h5>Subtotal</h5>
+                        </div>
+                    </div>
+                    <div *ngFor="let p of ItemsInCart">
+                        <div class="row g-0 p-0 m-0 align-items-center h-250px bg-white">
+                            <div class="col-3 align-items-center d-flex p-2">
+                                <div (click)="RemoveItemFromCart(p)" class="col-6 text-danger center-elements">
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="1" d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    <p class="text-danger">Remove</p>
                                 </div>
-                                <div
-                                    class="mx-2 h-40px BgGrey w-85px rounded-3 center-elements BlackToWhiteOnHover-Text">
-                                    Videos
+                                <div class="col-6 h-150px center-elements Bordergrey rounded-3">
+                                    <img class="h-75" [src]="p.Img1" alt="Product images">
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-2 h-150px center-elements">
-                            <h5>₹{{p.Price}}</h5>
-                        </div>
-                        <div class="col-2 h-150px  center-elements">
-                            <div class="row g-0 p-0 m-0 h-40px w-120px Bordergrey rounded-3">
-                                <div (click)="DecreaseQuantity(p)" class="col-4 center-elements HoverBGTeal rounded-start BlackToWhiteOnHover-Text">-</div>
-                                <div class="col-4 center-elements border-start">{{p.QuantityAddedToCart}}</div>
-                                <div (click)="IncreaseQuantity(p)" class="col-4 center-elements border-start HoverBGTeal rounded-end BlackToWhiteOnHover-Text">+</div>
+                            <div class="col-3 bg-white h-150px px-3">
+                                <p class="my-2 fw-semibold">{{p.Name}}</p>
+                                <div class="d-flex align-items-center my-3">
+                                    <img class="h-15px mx-1" src="images/star.png" alt="ratings">
+                                    <p class="fw-semibold fs-14px">4.8</p>
+                                    <p class="mx-2">|</p>
+                                    <p class="text-body-secondary">128 Reviews</p>
+                                </div>
+                                <div class="d-flex align-items-center">
+                                    <div
+                                        class="h-40px BgGrey w-85px rounded-3 center-elements BlackToWhiteOnHover-Text">
+                                        Camera
+                                    </div>
+                                    <div
+                                        class="mx-2 h-40px BgGrey w-85px rounded-3 center-elements BlackToWhiteOnHover-Text">
+                                        Videos
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-2 h-150px center-elements">
-                            <h5>₹500</h5>
+                            <div class="col-2 h-150px center-elements">
+                                <h5>₹{{p.Price}}</h5>
+                            </div>
+                            <div class="col-2 h-150px  center-elements">
+                                <div class="row g-0 p-0 m-0 h-40px w-120px Bordergrey rounded-3">
+                                    <div (click)="DecreaseQuantity(p)"
+                                        class="col-4 center-elements HoverBGTeal rounded-start BlackToWhiteOnHover-Text">
+                                        -</div>
+                                    <div class="col-4 center-elements border-start">{{p.QuantityAddedToCart}}</div>
+                                    <div (click)="IncreaseQuantity(p)"
+                                        class="col-4 center-elements border-start HoverBGTeal rounded-end BlackToWhiteOnHover-Text">
+                                        +</div>
+                                </div>
+                            </div>
+                            <div class="col-2 h-150px center-elements">
+                                <h5>₹{{p.Price}}</h5>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="h-150px d-flex align-items-center justify-content-between p-3">
+                <div class="d-flex align-items-center">
+                    <div class="w-200px h-50px Bordergrey rounded-3 center-elements">
+                    <p class="text-body-secondary">Coupon Code</p>
+                </div>
+                <div class="w-200px h-50px Bordergrey BgTeal rounded-3 center-elements mx-2">
+                    <p class="fw-semibold text-white">Apply Coupon</p>
+                </div>
+                </div>
+                <h5 class="text-body-secondary fw-normal">Update Cart</h5>
+            </div>
         </div>
-        <div class="col-3 mx-4 rounded-3 Bordergrey"></div>
+        <div class="col-lg-3 col-md-12 col-sm-12 h-500px mx-4 rounded-3 Bordergrey p-3 my-2">
+            <div class="h-100">
+                <h4 class="py-3">Cart Tools</h4>
+                <div class="h-200px Bg-Grey rounded-3 Bordergrey my-3 p-3">
+                    <div class="d-flex justify-content-between align-items-center my-4">
+                        <p>Subtotal</p>
+                        <h6>₹{{SubtotalOfCart}}</h6>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center my-4">
+                        <p>Estimated Delevery</p>
+                        <h6>Free</h6>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center my-4">
+                        <p>Estimated Taxes</p>
+                        <h6>₹10.00</h6>
+                    </div>
+                </div>
+                <div
+                    class="h-100px Bg-Grey p-3 rounded-3 Bordergrey mb-3 d-flex justify-content-between align-items-center">
+                    <h4>Total</h4>
+                    <h4>₹{{SubtotalOfCart +10}}</h4>
+                </div>
+                <div class="h-50px BgTeal rounded-3 Bordergrey center-elements">
+                    <p class="text-white fw-semibold">Proceed to checkout</p>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <app-support-line></app-support-line>

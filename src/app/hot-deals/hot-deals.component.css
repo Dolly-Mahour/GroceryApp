@@ -142,7 +142,7 @@
 
 @media screen and (max-width: 640px) {
     .FruitsImage {
-        height: 150px;
+        height: 130px;
     }
 
     .Subscribe {
@@ -158,26 +158,33 @@
     height: 160px;
     transition: height 0.5s;
 }
-.DailyBestSellersDiv{
+
+.DailyBestSellersDiv {
     height: 80vh;
 }
+
 /* WHEN I HAVE TO GO HOVER WITH ANOTHER TRANSITION I WILL USE IT    --------------- */
 .CardOfDealsCarousel:hover .ImageOfCard {
     height: 190px;
 }
-.Hover-Success:hover{
+
+.Hover-Success:hover {
     background-color: green !important;
 }
-.DivOfSellerCard{
+
+.DivOfSellerCard {
     border: 1px solid rgb(176, 176, 176);
 }
-.ImageHover{
+
+.ImageHover {
     height: 120px;
     transition: height 0.5s;
 }
+
 .DivOfSellerCard:hover .ImageHover {
     height: 130px;
 }
+
 @media screen and (max-width: 640px) {
     .CountDownAdd {
         height: 30vh;
@@ -192,12 +199,14 @@
     }
 
     .FruitsImage {
-        height: 150px;
+        height: 130px;
     }
-    .DailyBestSellersDiv{
+
+    .DailyBestSellersDiv {
         height: 200vh;
     }
 }
+
 @media screen and (min-width: 640px) {
     .CountDownAdd {
         height: 30vh;
@@ -212,9 +221,10 @@
     }
 
     .FruitsImage {
-        height: 300px;
+        height: 200px;
     }
-    .DailyBestSellersDiv{
+
+    .DailyBestSellersDiv {
         height: 400vh;
     }
 }
@@ -235,7 +245,8 @@
     .DivAfterHotDeal {
         height: 100vh;
     }
-    .DailyBestSellersDiv{
+
+    .DailyBestSellersDiv {
         height: 80vh;
     }
 }
@@ -260,7 +271,8 @@
     .FruitsImage {
         height: 300px;
     }
-    .DailyBestSellersDiv{
+
+    .DailyBestSellersDiv {
         height: 80vh;
     }
 }

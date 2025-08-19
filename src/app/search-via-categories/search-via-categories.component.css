@@ -1,29 +1,85 @@
-
-.WishlistButton{
+.WishlistButton {
     height: 35px;
     width: 35px;
     border: 1px solid rgb(161, 159, 159);
-    border-radius: 50%; 
+    border-radius: 50%;
     transition: height width 0.5s;
 }
-.FlashSalesCard{
-    height: 350px;
-    width: 175px;
+
+.CategoriesCard {
+    height: 450px;
+    width: 230px;
     border: 1px solid rgb(199, 192, 192);
     border-radius: 10px;
 }
-.FlashSalesCard:hover{
+
+.CategoriesCard:hover {
     border-color: #1c799b;
 }
-.ImageOfCard{
-    height: 130px;
+
+.ImageOfCard {
+    height: 150px;
     transition: height 0.5s;
 }
-/* WHEN I HAVE TO GO HOVER WITH ANOTHER TRANSITION I WILL USE IT    --------------- */
-.FlashSalesCard:hover .ImageOfCard {
- height: 150px;
+
+/* WHEN I HAVE TO GO HOVER WITH ANOTHER TRANSITION I WILL USE IT --------------- */
+.CategoriesCard:hover .ImageOfCard {
+    height: 180px;
 }
-.FlashSalesCard:hover .WishlistButton {
- height: 40px;
- width: 40px;
+
+.CategoriesCard:hover .WishlistButton {
+    height: 40px;
+    width: 40px;
+}
+
+.DivOfOverflow {
+    overflow-x: scroll;
+    scrollbar-color: rgb(33, 33, 33);
+}
+
+.DivOfOverflow::-webkit-scrollbar {
+    width: 5px;
+    height: 0;
+    background-color: rgb(236, 236, 236);
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(190, 189, 189);
+    border-radius: 10px;
+}
+
+.BlackInput:checked {
+    background-color: #000;
+    border-color: #000 !important;
+}
+
+.GreyInput:checked {
+    background-color: #808080;
+    border-color: #808080;
+}
+
+.GreenInput:checked {
+    background-color: #1cc02c;
+    border-color: #1cc02c !important;
+}
+
+.RedInput:checked {
+    background-color: #9a0707;
+    border-color: #9a0707 !important;
+}
+
+.WhiteInput:checked {
+    background-color: #bfbec0;
+    border-color: #b6b5b6;
+}
+
+.PurpleInput:checked {
+    background-color: #600970;
+    border-color: #600970;
+}
+
+.TealInput:checked{
+    background-color: #1c799b !important;
+    /* border-color: #1c799b; */
 }

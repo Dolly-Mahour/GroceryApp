@@ -3,6 +3,7 @@
 body {
     height: 100vh;
     background-color: white;
+    overflow-x: hidden !important;
 }
 
 p,
@@ -23,7 +24,7 @@ hr {
 
 input {
     outline: 0 !important;
-    border: 0 !important;
+    /* border: 0 !important; */
 }
 
 /* HEIGHT AND WIDTHS OF DIFFERENT SIZES USING  */
@@ -88,11 +89,21 @@ input {
 .h-300px {
     height: 300px;
 }
-
+.h-400px {
+    height: 400px;
+}
 .h-500px {
     height: 500px;
 }
-
+.h-560px {
+    height: 560px;
+}
+.h-600px {
+    height: 600px;
+}
+.h-700px{
+    height: 700px;
+}
 /* Heights in % */
 .h-10 {
     height: 10%;
@@ -164,6 +175,9 @@ input {
 
 .w-200px {
     width: 200px;
+}
+.w-900px {
+    width: 900px;
 }
 
 /* Widths in % */
@@ -239,7 +253,9 @@ input {
 .TextTeal {
     color: #1c799b !important;
 }
-
+/* .Text-Bg-teal{
+    
+} */
 .HoverTextTeal:hover {
     color: #1c799b !important;
 }
@@ -285,9 +301,12 @@ input {
 }
 
 .BgGrey {
-    background-color: rgb(215, 214, 214);
+    background-color: rgb(239, 239, 239);
 }
 
+.Bg-Grey{
+    background-color: rgb(227, 227, 227);
+}
 .BgGrey:hover {
     background-color: #1c799b;
 }

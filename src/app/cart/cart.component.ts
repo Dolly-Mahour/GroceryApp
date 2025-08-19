@@ -23,10 +23,14 @@ export class CartComponent implements OnInit {
     this.S_Cart.CartItems.subscribe(items => {
       this.ItemsInCart = items;
     });
+    for(let i=0;i<this.ItemsInCart.length;i++ ){
+      this.SubtotalOfCart = this.ItemsInCart[i].Price + this.SubtotalOfCart;
+    }
     // console.log("ITEMS IN CART----------- FROM LOCALSTORAGE ", localStorage.getItem('ItemsAddedAtCart'));
     // console.log("Items in the list of the itemslist in the service -- ", this.S_Cart.ItemListAtCartInService);
   }
   ItemsInCart: ItemsClass[] = [];
+  SubtotalOfCart:number=0;
   IncreaseQuantity(p: any) {
     console.log("CALLING THE ADD QUANTITY FUNCTION-----")
     this.S_Cart.AddProductQuantity(p);
@@ -35,5 +39,9 @@ export class CartComponent implements OnInit {
   DecreaseQuantity(p: any) {
     this.S_Cart.DecreaseProductQuantity(p);
     this.router.navigate(['cart']);
+  }
+  RemoveItemFromCart(p:any){
+    console.log("Removing Item from the cart------");
+    this.S_Cart.RemoveProductFromCart(p);
   }
 }

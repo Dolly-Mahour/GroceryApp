@@ -104,10 +104,7 @@
     </div>
     <!-- SEARCH BAR WITH THE LOGO OF THE GROCERY SHOP ------------------------ -->
     <div class="h-50 d-flex justify-content-around align-items-center">
-        <div class="h-100 w-auto center-elements justify-content-start">
-            <img class="h-50" src="images/fruits-and-vegetables.png" alt="fruits-and-vegetables">
-            <p class="mx-1" id="Logo">MarketPro</p>
-        </div>
+        <app-logo></app-logo>
         <div class="h-100 w-60 center-elements p-2 d-lg-flex d-none">
             <div class="h-60 w-100 SearchCard center-elements">
                 <div class="w-20 h-100">
@@ -153,7 +150,8 @@
                 </div>
             </a>
             <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black" [routerLink]="['wishlist']">
-                <div class="h-100 center-elements">
+                <div class="h-100 center-elements position-relative">
+                    <div class="h-20px w-20px BgTeal rounded-circle center-elements text-white position-absolute mb-4 me-4">{{TotalNumberOFItemsInWishlist}}</div>
                     <img class="h-20px mx-1" src="images/heart.png" alt="profileIcon">
                     <p class="HoverTeal d-lg-flex d-none">Wishlist</p>
                 </div>
@@ -266,7 +264,7 @@
             <div>
                 <div class="dropdown NavItemHoverArrowAnimate">
                     <button class="btn dropdown-toggle center-elements" type="button" data-bs-toggle="dropdown">
-                        <p class="fs-14px HoverTeal fw-semibold">Home</p>
+                        <p class="HoverTeal fw-semibold">Home</p>
                         <img class="h-10px mx-1 Arrow" src="images/down-grey.png" alt="dropdownarrow">
                     </button>
                     <ul class="dropdown-menu">
@@ -279,7 +277,7 @@
             <div>
                 <div class="dropdown NavItemHoverArrowAnimate">
                     <button class="btn dropdown-toggle center-elements" type="button" data-bs-toggle="dropdown">
-                        <p class="fs-14px HoverTeal fw-semibold">Shop</p>
+                        <p class="HoverTeal fw-semibold">Shop</p>
                         <img class="h-10px mx-1 Arrow" src="images/down-grey.png" alt="dropdownarrow">
                     </button>
                     <ul class="dropdown-menu">
@@ -292,7 +290,7 @@
             <div>
                 <div class="dropdown NavItemHoverArrowAnimate">
                     <button class="btn dropdown-toggle center-elements" type="button" data-bs-toggle="dropdown">
-                        <p class="fs-14px HoverTeal fw-semibold">Pages</p>
+                        <p class="HoverTeal fw-semibold">Pages</p>
                         <img class="h-10px mx-1 Arrow" src="images/down-grey.png" alt="dropdownarrow">
                     </button>
                     <ul class="dropdown-menu">
@@ -307,7 +305,7 @@
             <div>
                 <div class="dropdown NavItemHoverArrowAnimate">
                     <button class="btn dropdown-toggle center-elements" type="button" data-bs-toggle="dropdown">
-                        <p class="fs-14px HoverTeal fw-semibold">Vendor</p>
+                        <p class="HoverTeal fw-semibold">Vendor</p>
                         <img class="h-10px mx-1 Arrow" src="images/down-grey.png" alt="dropdownarrow">
                     </button>
                     <ul class="dropdown-menu">
@@ -321,7 +319,7 @@
             <div>
                 <div class="dropdown NavItemHoverArrowAnimate">
                     <button class="btn dropdown-toggle center-elements" type="button" data-bs-toggle="dropdown">
-                        <p class="fs-14px HoverTeal fw-semibold">Blog</p>
+                        <p class="HoverTeal fw-semibold">Blog</p>
                         <img class="h-10px mx-1 Arrow" src="images/down-grey.png" alt="dropdownarrow">
                     </button>
                     <ul class="dropdown-menu">
@@ -332,15 +330,8 @@
             </div>
             <div>
                 <div class="dropdown NavItemHoverArrowAnimate">
-                    <!-- <button class="btn dropdown-toggle center-elements" type="button" data-bs-toggle="dropdown"> -->
                     <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black" [routerLink]="['contact']">
                         Contact us</a>
-                    <!-- </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                    </ul> -->
                 </div>
             </div>
         </div>

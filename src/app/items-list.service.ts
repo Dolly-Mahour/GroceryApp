@@ -319,47 +319,42 @@ export class ItemsListService implements OnInit {
   ItemsInCart: ItemsClass[] = []
   UpdateProduct(CurrentProduct: ItemsClass) {
     const products = this.P_ProductsList.value;
-    const UpdatedProducts = products.slice();
+    const UpdatedProducts = [...products];
     UpdatedProducts[CurrentProduct.ProductId - 1] = CurrentProduct;
     this.P_ProductsList.next(UpdatedProducts);
   }
   GetTheListOfProducts(): void {
     const StoredCart = localStorage.getItem('ItemsAddedAtCart');
+    const StoredWishlist = localStorage.getItem('ItemsAddedAtWishlist');
     const CartItems: ItemsClass[] = StoredCart ? JSON.parse(StoredCart) : [];
+    const WishlistItems: ItemsClass[] = StoredWishlist ? JSON.parse(StoredWishlist) : [];
     const CurrentProducts = this.P_ProductsList.value;
-    const UpdatedProducts = CurrentProducts.map(product => {
+    let UpdatedProducts = CurrentProducts.map(product => {
       const CartItem = CartItems.find(item => item.ProductId === product.ProductId);
       if (CartItem) {
         return {
-          Name: product.Name,
-          Description: product.Description,
-          Price: product.Price,
-          AwailableQuantity: product.AwailableQuantity,
-          Img1: product.Img1,
-          Img2: product.Img2,
-          Img3: product.Img3,
-          Img4: product.Img4,
-          isWishlisted: false,
-          CategoryId: 1,
-          ProductId: 20,
+          ...product,
           IsAdded: true,
           QuantityAddedToCart: CartItem.QuantityAddedToCart
         };
       }
       return {
-        Name: product.Name,
-          Description: product.Description,
-          Price: product.Price,
-          AwailableQuantity: product.AwailableQuantity,
-          Img1: product.Img1,
-          Img2: product.Img2,
-          Img3: product.Img3,
-          Img4: product.Img4,
-          isWishlisted: false,
-          CategoryId: 1,
-          ProductId: 20,
-          IsAdded: false,
-          QuantityAddedToCart: 0
+        ...product,
+        IsAdded: false,
+        QuantityAddedToCart: 0
+      };
+    });
+     UpdatedProducts = CurrentProducts.map(product => {
+      const WishlistItem = WishlistItems.find(item => item.ProductId === product.ProductId);
+      if (WishlistItem) {
+        return {
+          ...product,
+          isWishlisted: true,
+        };
+      }
+      return {
+        ...product,
+        isWishlisted: false,
       };
     });
     this.P_ProductsList.next(UpdatedProducts);

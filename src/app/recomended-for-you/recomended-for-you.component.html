@@ -4,7 +4,7 @@
             <h3>Recomended for you</h3>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12 h-100px m-0 p-0 ">
-            <div class="w-100 h-100 d-flex align-items-center justify-content-between">
+            <!-- <div class="w-100 h-100 d-flex align-items-center justify-content-between">
                 <div class="Recomended p-2 center-elements BgTeal text-white fs-12px">
                     All
                 </div>
@@ -26,27 +26,45 @@
                 <div class="Recomended p-2 center-elements fs-10px">
                     Organic Foods
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
     <div class="row h-100 d-flex m-0 p-0 gx-0">
-        <div class="col mx-4 p-1 d-flex m-0 p-0" *ngFor="let p of ProductList">
-            <div *ngIf="p.ProductId > 0 && 13 > p.ProductId " (click)="ProductDetails(p)"
-                class="FlashSalesCard p-1 BottomToTop">
-                <div class="h-10  d-flex justify-content-between">
+        <div class="col p-1 mx-1 d-flex m-0 p-0 " *ngFor="let p of HalfProductList">
+            <div (click)="ProductDetails(p)" class="FlashSalesCard  p-2 BottomToTop ">
+                <div class="h-10 d-flex justify-content-between">
                     <div class="center-elements w-40 h-80 bg-danger"
                         style="border-top-left-radius: 20px;border-bottom-right-radius: 20px;">
                         <p class="fs-12px text-white italic fw-semibold">Sale 50%</p>
                     </div>
-                    <div class="center-elements WishlistButton">
-                        <img class="img-fluid h-50" src="images/heart.png" alt="Like the image">
+                    <div (click)="ProductIntoWishlist(p); $event.stopPropagation()"
+                        class="center-elements WishlistButton HoverTealBorder">
+                        <div class="ColorOfTheHeartIcon text-black">
+                            <div *ngIf="p.isWishlisted" #HeartFilled id="HeartFilled" class=" text-danger">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="m12.75 20.66 6.184-7.098c2.677-2.884 2.559-6.506.754-8.705-.898-1.095-2.206-1.816-3.72-1.855-1.293-.034-2.652.43-3.963 1.442-1.315-1.012-2.678-1.476-3.973-1.442-1.515.04-2.825.76-3.724 1.855-1.806 2.201-1.915 5.823.772 8.706l6.183 7.097c.19.216.46.34.743.34a.985.985 0 0 0 .743-.34Z" />
+                                </svg>
+                            </div>
+                            <svg *ngIf="!p.isWishlisted" #HeartEmpty id="HeartEmpty"
+                                class=" w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                viewBox="0 0 24 24">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="1"
+                                    d="M12.01 6.001C6.5 1 1 8 5.782 13.001L12.011 20l6.23-7C23 8 17.5 1 12.01 6.002Z" />
+                            </svg>
+
+                        </div>
                     </div>
                 </div>
                 <div class="h-50 center-elements">
                     <img class="ImageOfCard img-fluid" [src]="p.Img1" alt="Images">
                 </div>
                 <div class="p-2 h-50">
-                    <h6 class="HoverTextTeal h-25">{{p.Name}}</h6>
+                    <h5 class="HoverTextTeal h-25">{{p.Name}}</h5>
                     <div class="d-flex ">
                         <h6>₹56</h6>
                         <h6 class="text-secondary">/Qty</h6>
@@ -57,14 +75,20 @@
                         <img class="h-10px" src="images/star.png" alt="">
                         <p class="fw-bold fs-12px">(15k)</p>
                     </div>
-                    <div *ngIf="p.QuantityAddedToCart==0" (click)="AddItemToCart(p)" class="AddToCartButton w-100 h-20 btn center-elements">
+                    <div class="d-flex align-items-center my-1">
+                        <img class="h-10px mx-1" src="images/shop.png" alt="shop">
+                        <p class="fs-10px text-secondary fw-semibold"> By Dolly supermart</p>
+                    </div>
+                    <div *ngIf="p.QuantityAddedToCart==0" (click)="AddItemToCart(p)"
+                        class="AddToCartButton w-100 h-30px btn center-elements">
                         <p class="TextTeal fs-12px TextWhiteOnHover">Add to cart</p>
                         <img class="h-10px mx-1" src="images/shopping-cart.png" alt="cart">
                     </div>
                     <div *ngIf="p.QuantityAddedToCart>0"
-                        class="row gx-0 p-0 m-0 center-elements border-1 BorderTeal rounded-pill w-100 h-20  center-elements">
+                        class="row gx-0 p-0 m-0 center-elements border-1 BorderTeal rounded-pill w-100 h-30px  center-elements">
                         <div (click)="DecreaseQuantity(p); $event.stopPropagation()"
-                            class="col-4 h-100 center-elements HoverBGTeal rounded-start-pill BlackToWhiteOnHover-Text">-
+                            class="col-4 h-100 center-elements HoverBGTeal rounded-start-pill BlackToWhiteOnHover-Text">
+                            -
                         </div>
                         <div class="col-4 center-elements border-start fs-12px">{{p.QuantityAddedToCart}}</div>
                         <div (click)="IncreaseQuantity(p); $event.stopPropagation()"
@@ -73,40 +97,41 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="CountDownAdd my-5">
-        <div class="container-fluid h-100 w-100">
-            <div class="row h-100 w-100 justify-content-between m-0 p-0 ">
-                <div class="col mx-1 py-2">
-                    <div style="background-image: url('images/beerbg.png');"
-                        class="CountDownDiv h-100 w-100 BgImage p-2 px-5 d-flex justify-content-end align-items-center">
-                        <div>
-                            <div class="bg-white center-elements WhiteDiv80px">
-                                <img class="h-80" src="images/offer-logo.png" alt="offer logo">
-                            </div>
-                            <h3 class="italic">$5 off your first order</h3>
-                            <p class="text-secondary my-2">Delivery by 6:15am Expire Aug 5</p>
 
-                            <div class="ShopNowbutton center-elements Bg-Green">
-                                <h6 class="text-white">Shop Now</h6>
-                                <img class="h-20px ms-2" src="images/white-arrow-right.png" alt="arrow">
+        </div>
+        <div class="CountDownAdd my-5">
+            <div class="container-fluid h-100 w-100">
+                <div class="row h-100 w-100 justify-content-between m-0 p-0 ">
+                    <div class="col mx-1 py-2">
+                        <div style="background-image: url('images/beerbg.png');"
+                            class="CountDownDiv h-100 w-100 BgImage p-2 px-5 d-flex justify-content-end align-items-center">
+                            <div>
+                                <div class="bg-white center-elements WhiteDiv80px">
+                                    <img class="h-80" src="images/offer-logo.png" alt="offer logo">
+                                </div>
+                                <h3 class="italic">$5 off your first order</h3>
+                                <p class="text-secondary my-2">Delivery by 6:15am Expire Aug 5</p>
+
+                                <div class="ShopNowbutton center-elements Bg-Green">
+                                    <h6 class="text-white">Shop Now</h6>
+                                    <img class="h-20px ms-2" src="images/white-arrow-right.png" alt="arrow">
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col mx-1 py-2">
-                    <div style="background-image: url('images/juicebg.png');"
-                        class="CountDownDiv h-100 w-100 BgImage p-2 px-5 d-flex justify-content-start align-items-center">
-                        <div>
-                            <div class="bg-white center-elements WhiteDiv80px">
-                                <img class="h-80" src="images/offer-logo.png" alt="offer logo">
-                            </div>
-                            <h3 class="italic">$5 off your first order</h3>
-                            <p class="text-secondary my-2">Delivery by 6:15am Expire Aug 5</p>
-                            <div class="ShopNowbutton center-elements bg-white">
-                                <h6>Shop Now</h6>
-                                <img class="h-20px ms-2" src="images/right-arrow-black.png" alt="arrow">
+                    <div class="col mx-1 py-2">
+                        <div style="background-image: url('images/juicebg.png');"
+                            class="CountDownDiv h-100 w-100 BgImage p-2 px-5 d-flex justify-content-start align-items-center">
+                            <div>
+                                <div class="bg-white center-elements WhiteDiv80px">
+                                    <img class="h-80" src="images/offer-logo.png" alt="offer logo">
+                                </div>
+                                <h3 class="italic">$5 off your first order</h3>
+                                <p class="text-secondary my-2">Delivery by 6:15am Expire Aug 5</p>
+                                <div class="ShopNowbutton center-elements bg-white">
+                                    <h6>Shop Now</h6>
+                                    <img class="h-20px ms-2" src="images/right-arrow-black.png" alt="arrow">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -114,4 +139,3 @@
             </div>
         </div>
     </div>
-</div>
