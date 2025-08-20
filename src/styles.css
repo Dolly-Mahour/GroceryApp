@@ -176,8 +176,20 @@ input {
 .w-200px {
     width: 200px;
 }
+.w-250px {
+    width: 250px;
+}
+.w-500px {
+    width: 500px;
+}
+.w-300px {
+    width: 300px;
+}
 .w-900px {
     width: 900px;
+}
+.w-1500px {
+    width: 1500px;
 }
 
 /* Widths in % */

@@ -31,7 +31,7 @@ export class ItemsInCartService {
 
 
   // RETURNING THE LIST OF ITEM IN THE LOCAL STORAGE ----------------------------------------------------------
-  GetCartFromStorage(): ItemsClass[] {
+  SyncProductlistWithCartStorage(): ItemsClass[] {
     try {
       const LisOfItemsInLocalStorageCart = JSON.parse(localStorage.getItem('ItemsAddedAtCart') || '[]');
       this._NumberOfItemsInCart.next(LisOfItemsInLocalStorageCart.length);
@@ -56,7 +56,7 @@ export class ItemsInCartService {
     // this.S_ItemsList.ProductObservableList.subscribe(products => {
     //   console.log('Got Updated products:', products);
     // });
-    let cart = this.GetCartFromStorage();
+    let cart = this.SyncProductlistWithCartStorage();
     cart.push(CurrentProduct);
     this.UpdateCart(cart);
     // this.CurrentItemsInCart.next(this._NumberOfItemsInCart++;)
@@ -64,7 +64,7 @@ export class ItemsInCartService {
 
   // ADDING THE PRODUCT QUANTITY--------------------------------------------------
   AddProductQuantity(CurrentProduct: ItemsClass) {
-    let cart = this.GetCartFromStorage();
+    let cart = this.SyncProductlistWithCartStorage();
     let index = cart.findIndex(x => x.ProductId === CurrentProduct.ProductId);
     if (index != -1) {
       cart[index].QuantityAddedToCart++;
@@ -73,7 +73,7 @@ export class ItemsInCartService {
   }
   // DECRESING THE QUANTITY OF THE PRODUCT-------------------------------------------------------------------------
   DecreaseProductQuantity(CurrentProduct: ItemsClass) {
-    let cart = this.GetCartFromStorage();
+    let cart = this.SyncProductlistWithCartStorage();
     let index = cart.findIndex(x => x.ProductId === CurrentProduct.ProductId);
     if (index != -1) {
       cart[index].QuantityAddedToCart--;
@@ -87,7 +87,7 @@ export class ItemsInCartService {
     this.S_ItemsList.UpdateProduct(CurrentProduct);
   }
   RemoveProductFromCart(CurrentProduct:ItemsClass){
-    let cart = this.GetCartFromStorage();
+    let cart = this.SyncProductlistWithCartStorage();
     let index = cart.findIndex(x => x.ProductId === CurrentProduct.ProductId);
     if (index != -1) {
       cart[index].QuantityAddedToCart--;

@@ -27,7 +27,7 @@ export class ItemsInWishlistService {
   CurrentItemsInWishlist: Observable<number> = this._NumberOfItemsInWishlist.asObservable();
 
   // RETURNING THE LIST OF ITEM IN THE LOCAL STORAGE ----------------------------------------------------------
-  GetWishlistFromStorage(): ItemsClass[] {
+  SyncProductlistWithWishlistStorage(): ItemsClass[] {
     try {
       const LisOfItemsInLocalStorageWishlist = JSON.parse(localStorage.getItem('ItemsAddedAtWishlist') || '[]');
       this._NumberOfItemsInWishlist.next(LisOfItemsInLocalStorageWishlist.length);
@@ -48,7 +48,7 @@ export class ItemsInWishlistService {
   // ADDING A PRODUCT IN PARAMETER TO THE Wishlist  AND THEN UPDATING THE LOCAL STORAGE ---------------------------------------------
   AddToWishlist(CurrentProduct: ItemsClass) {
     CurrentProduct.isWishlisted = true;
-    let Wishlist = this.GetWishlistFromStorage();
+    let Wishlist = this.SyncProductlistWithWishlistStorage();
     Wishlist.push(CurrentProduct);
     this.UpdateWishlist(Wishlist);
   }
@@ -57,14 +57,14 @@ export class ItemsInWishlistService {
   AddProductToWishlist(CurrentProduct: ItemsClass) {
     CurrentProduct.IsAdded = true;
     CurrentProduct.isWishlisted = true;
-    let cart = this.GetWishlistFromStorage();
+    let cart = this.SyncProductlistWithWishlistStorage();
     cart.push(CurrentProduct);
     this.UpdateWishlist(cart);
     // this.CurrentItemsInWishlist.next(this.num++;)
   }
 
   RemoveProductFromWishlist(CurrentProduct: ItemsClass) {
-    let Wishlist = this.GetWishlistFromStorage();
+    let Wishlist = this.SyncProductlistWithWishlistStorage();
     let index = Wishlist.findIndex(x => x.ProductId === CurrentProduct.ProductId);
     if (index != -1) {
       Wishlist[index].isWishlisted = false;

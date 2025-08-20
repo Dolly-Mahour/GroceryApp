@@ -23,7 +23,7 @@ export class WishlistComponent implements OnInit {
     this.S_ProductList.ProductObservableList.subscribe(products => {
       this.ListOfProductWithCategory = products
     })
-    // this.ListOfProductWithCategory=this.S_Wishlist.GetWishlistFromStorage()
+    // this.ListOfProductWithCategory=this.S_Wishlist.SyncProductlistWithWishlistStorage()
     console.log("THIS IS THE PRODUCT LIST THAT ARE WISHLISTED --->",this.ListOfProductWithCategory)
   }
     ListOfProductWithCategory!:ItemsClass[]|undefined;
