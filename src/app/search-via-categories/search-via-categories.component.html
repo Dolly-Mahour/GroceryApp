@@ -1,22 +1,6 @@
-<div class="h-100px Bg-LightBlue p-2">
-    <div class="d-flex h-100 justify-content-between align-items-center">
-        <h5>Search With Category {{CategoryName}}</h5>
-        <div class="d-flex align-items-center">
-            <a class="text-decoration-none text-black" [routerLink]="['/']">
-                <div class="d-flex align-items-center">
-                    <img class="h-15px mx-1" src="images/home.png" alt="home">
-                    <p class="fs-12px fw-semibold">Home</p>
-                </div>
-            </a>
-            <div class="d-flex align-items-center ">
-                <img class="h-20px mx-2" src="images/arrow.png" alt="home">
-                <p class="TextTeal fs-12px fw-semibold">Category Search</p>
-            </div>
-        </div>
-    </div>
+<div *ngIf="(IdForTopBar!=100)" >
+    <app-search-categories-topbar></app-search-categories-topbar>
 </div>
-
-
 <div class="row d-flex m-0 p-0 gx-0 my-5">
     <div class="col-lg-3 col-md-12 col-sm-12 p-2 d-lg-flex d-none">
         <div>
@@ -423,7 +407,7 @@
                 </div>
             </div>
         </div>
-        <div class="d-lg-flex d-md-flex d-sm-block">
+        <div class="d-lg-flex d-md-flex d-sm-block flex-wrap ">
             <div class="col-lg-3 col-md-3 col-sm-6 d-flex justify-content-center align-items-center px-2 p-1 m-0 "
                 *ngFor="let p of ListOfProductWithCategory">
                 <div class="CategoriesCard p-2 BottomToTop">
@@ -432,10 +416,10 @@
                             style="border-top-left-radius: 20px;border-bottom-right-radius: 20px;">
                             <p class="fs-12px text-white italic fw-semibold">Sale 50%</p>
                         </div>
-                      
+
                     </div>
                     <div class="h-50 center-elements">
-                        <img class="ImageOfCard" [src]="p.Img1" alt="Images">
+                        <img class="ImageOfCard img-fluid" [src]="p.Img1" alt="Images">
                     </div>
                     <div class="p-2 h-50">
                         <h6 class="HoverTextTeal h-25">{{p.Name}}</h6>

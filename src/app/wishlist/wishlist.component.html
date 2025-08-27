@@ -22,16 +22,16 @@
     <div class="overflow-x-auto">
         <div class="d-flex">
             <div class="h-50px d-flex">
-                <div class="w-200px center-elements Bordergrey">
+                <div class="w-150px center-elements Bordergrey">
                     <h5>Delete</h5>
                 </div>
                 <div class="w-500px center-elements Bordergrey ">
                     <h5>Product Name</h5>
                 </div>
-                <div class="w-200px center-elements Bordergrey">
+                <div class="w-150px center-elements Bordergrey">
                     <h5>Unit Price</h5>
                 </div>
-                <div class="w-200px center-elements Bordergrey">
+                <div class="w-150px center-elements Bordergrey">
                     <h5>Stock Status</h5>
                 </div>
                 <div class="w-250px center-elements Bordergrey">
@@ -41,7 +41,7 @@
         </div>
         <div class="d-flex" *ngFor="let p of ListOfProductWithCategory">
             <div *ngIf="p.isWishlisted" class="h-200px d-flex">
-                <div class="w-200px center-elements Bordergrey">
+                <div class="w-150px center-elements Bordergrey">
                     <div (click)="RemoveFromWishlist(p)" class="col-6 text-danger center-elements">
                         <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -71,10 +71,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="w-200px center-elements Bordergrey">
+                <div class="w-150px center-elements Bordergrey">
                     <h6>₹{{p.Price}}</h6>
                 </div>
-                <div class="w-200px center-elements Bordergrey">
+                <div class="w-150px center-elements Bordergrey">
                     <h6>In Stock</h6>
                 </div>
                 <div class="w-250px center-elements Bordergrey">

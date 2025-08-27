@@ -1,5 +1,5 @@
 #WholeNavBarDiv {
-    height: 30%;
+    /* height: 35%; */
     box-shadow: 5px 1px 30px rgb(213, 217, 218);
 }
 
@@ -41,9 +41,7 @@
     width: auto;
 } */
 
-.HoverTeal:hover {
-    color: #1c799b;
-}
+
 
 .BrowseCategories {
     background-color: #2abc79;
@@ -52,7 +50,7 @@
 }
 
 .CategoryMenu {
-    height: 300px;
+    height: 270px;
     width: 400px;
 }
 
@@ -60,19 +58,6 @@
     height: 10px;
 }
 
-.dropdown-toggle::after {
-    content: none;
-}
-
-@keyframes ArrowMove {
-    50% {
-        transform: rotate(180deg);
-    }
-}
-
-.NavItemHoverArrowAnimate:hover .Arrow {
-    animation: ArrowMove 1s;
-}
 
 .Arrow:hover {
     animation: ArrowMove 1s;
@@ -83,27 +68,53 @@
     font-weight: bold;
 }
 
-.btn.dropdown-toggle:focus,
-.btn.dropdown-toggle:active,
-.btn.dropdown-toggle.active,
-.btn.dropdown-toggle.show {
-    outline: none !important;
-    box-shadow: none !important;
-    border-color: transparent !important;
-}
 
-.btn.dropdown-toggle:focus-visible {
-    outline: none !important;
-    box-shadow: none !important;
-}
-/* 
+
 .CategoryItem {
-    width: auto;
-} */
+    width: 110px;
+}
 
 .CategoryItem:hover {
     background-color: #2a9bc538;
     border-radius: 5px;
     border: 1px solid #2a9cc574;
-    /* backface-visibility: ; */
+}
+hr{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+@media screen and (max-width: 575px) {
+    .NavbarTealPart{
+        height: 30%;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    .NavbarTealPart{
+        height: 30%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .NavbarTealPart{
+        height: 15%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .NavbarTealPart{
+        height: 15%;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+   .NavbarTealPart{
+        height: 20%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .NavbarTealPart{
+        height: 20%;
+    }
 }

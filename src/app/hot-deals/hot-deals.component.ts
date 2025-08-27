@@ -7,18 +7,23 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SlickCarouselService } from '../slick-carousel.service';
 import { Router } from '@angular/router';
 import { ItemsInCartService } from '../items-in-cart.service';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-hot-deals',
-  imports: [CountdownModule, NgFor, SlickCarouselModule,NgIf],
+  imports: [CountdownModule, NgFor, SlickCarouselModule, NgIf],
   templateUrl: './hot-deals.component.html',
   styleUrl: './hot-deals.component.css'
 })
 export class HotDealsComponent {
-  constructor(private S_ProductList: ItemsListService, private S_carousel: SlickCarouselService, private router: Router,private S_Cart :ItemsInCartService) {
+  constructor(private S_ProductList: ItemsListService, private S_carousel: SlickCarouselService, private router: Router, private S_Cart: ItemsInCartService) {
 
   }
   ngOnInit(): void {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
     this.S_ProductList.ProductObservableList.subscribe(products => {
       this.ProductList = products
     })
@@ -28,7 +33,7 @@ export class HotDealsComponent {
   Brands: string[] = ["images/brand1.png", "images/brand2.png", "images/brand3.png", "images/brand4.png", "images/brand5.png"]
   slideConfig: any;
   ProductList: ItemsClass[] = [];
-  ListOfThreeCarousel:string[]=["Featured Products","Top Selling Products","On-sale Products"]
+  ListOfThreeCarousel: string[] = ["Featured Products", "Top Selling Products", "On-sale Products"]
   AddItemToCart(p: any) {
     console.log("ADDING THE ITEM TO CART IS --", p);
     if (!p.IsAdded) {

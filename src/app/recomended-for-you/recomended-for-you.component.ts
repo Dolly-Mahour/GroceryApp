@@ -5,6 +5,7 @@ import { NgFor, NgIf } from '@angular/common';
 import { Router } from '@angular/router';
 import { ItemsInCartService } from '../items-in-cart.service';
 import { ItemsInWishlistService } from '../items-in-wishlist.service';
+import AOS from 'aos';
 // import { Router } from 'express';
 
 @Component({
@@ -14,11 +15,15 @@ import { ItemsInWishlistService } from '../items-in-wishlist.service';
   styleUrl: './recomended-for-you.component.css'
 })
 export class RecomendedForYouComponent {
-  constructor(private S_ProductList: ItemsListService, private router: Router, private S_Cart: ItemsInCartService,private S_Wishlist :ItemsInWishlistService) {
+  constructor(private S_ProductList: ItemsListService, private router: Router, private S_Cart: ItemsInCartService, private S_Wishlist: ItemsInWishlistService) {
 
   }
   ngOnInit(): void {
-    this.S_ProductList.GetTheListOfProducts()
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+    this.S_ProductList.GetProductFromCart()
     this.S_ProductList.ProductObservableList.subscribe(products => {
       this.ProductList = products;
     })
@@ -28,8 +33,8 @@ export class RecomendedForYouComponent {
   HalfProductList: ItemsClass[] = [];
   @ViewChild('HeartFilled') HeartFilled!: ElementRef;
   @ViewChild('HeartEmpty') HeartEmpty!: ElementRef;
-  ProductsIntoWishlistNumber:number = 0;
-  
+  ProductsIntoWishlistNumber: number = 0;
+
   AddItemToCart(p: any) {
     console.log("ADDING THE ITEM TO CART IS --", p);
     if (!p.IsAdded) {
@@ -64,9 +69,9 @@ export class RecomendedForYouComponent {
       // console.log("product--p--",p)
       this.S_Wishlist.AddProductToWishlist(p)
     }
-    else{
+    else {
       this.S_Wishlist.RemoveProductFromWishlist(p);
     }
-    console.log("LOCALSTORAGE WISHLIST IN RECOMENDED-",JSON.parse(localStorage.getItem('ItemsAddedAtWishlist') || '[]'))
+    console.log("LOCALSTORAGE WISHLIST IN RECOMENDED-", JSON.parse(localStorage.getItem('ItemsAddedAtWishlist') || '[]'))
   }
 }

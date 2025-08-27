@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LogoComponent } from '../logo/logo.component';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-footer',
@@ -7,6 +8,11 @@ import { LogoComponent } from '../logo/logo.component';
   templateUrl: './footer.component.html',
   styleUrl: './footer.component.css'
 })
-export class FooterComponent {
-
+export class FooterComponent implements OnInit {
+  ngOnInit(): void {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  }
 }

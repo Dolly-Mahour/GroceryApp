@@ -1,0 +1,25 @@
+<div>
+    <!-- BLUE HEADING ------------- AND PAGE NAVIGATION TO THE HOME PAGE BAR  -->
+    <div class="h-100px Bg-LightBlue p-2">
+        <div class="d-flex h-100 justify-content-between align-items-center">
+            <h5>Shop</h5>
+            <div class="d-flex align-items-center">
+                <a class="text-decoration-none text-black" [routerLink]="['/']">
+                    <div class="d-flex align-items-center">
+                        <img class="h-15px mx-1" src="images/home.png" alt="home">
+                        <p class="fs-12px fw-semibold">Home</p>
+                    </div>
+                </a>
+                <div class="d-flex align-items-center ">
+                    <img class="h-20px mx-2" src="images/arrow.png" alt="home">
+                    <p class="TextTeal fs-12px fw-semibold">Shop</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN SHOP PAGE WITH ALL THE CATEGORIES--- -->
+    <app-search-via-categories [id]="'100'"></app-search-via-categories>
+    <!-- BLUE SUPPORT LINE COMPONENT -->
+    <!-- <app-support-line></app-support-line> -->
+</div>

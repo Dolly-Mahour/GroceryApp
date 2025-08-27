@@ -5,7 +5,7 @@ import { CommonModule, NgIf } from '@angular/common';
 import { CountdownModule } from 'ngx-countdown';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SlickCarouselService } from '../slick-carousel.service';
-import { log } from 'console';
+import AOS from 'aos';
 import { Route, Router } from '@angular/router';
 import { ItemsInCartService } from '../items-in-cart.service';
 
@@ -21,7 +21,11 @@ export class FlashSalesComponent {
 
   }
   ngOnInit(): void {
-    this.S_ProductList.GetTheListOfProducts();
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+    this.S_ProductList.GetProductFromCart();
     this.S_ProductList.ProductObservableList.subscribe(products => {
       this.ProductList = products;
     });
@@ -48,9 +52,9 @@ export class FlashSalesComponent {
     this.S_ProductList.UpdateProduct(product);
   }
   DecreaseQuantity(product: any) {
-      this.S_Cart.DecreaseProductQuantity(product);
-      product.QuantityAddedToCart--;
-      this.S_ProductList.UpdateProduct(product);
+    this.S_Cart.DecreaseProductQuantity(product);
+    product.QuantityAddedToCart--;
+    this.S_ProductList.UpdateProduct(product);
   }
   ProductDetails(p: any) {
     console.log("Navigating to product details page --", p);

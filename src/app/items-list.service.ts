@@ -323,40 +323,36 @@ export class ItemsListService implements OnInit {
     UpdatedProducts[CurrentProduct.ProductId - 1] = CurrentProduct;
     this.P_ProductsList.next(UpdatedProducts);
   }
-  GetTheListOfProducts(): void {
+
+  GetProductFromCart(): void {
     const StoredCart = localStorage.getItem('ItemsAddedAtCart');
     const StoredWishlist = localStorage.getItem('ItemsAddedAtWishlist');
     const CartItems: ItemsClass[] = StoredCart ? JSON.parse(StoredCart) : [];
     const WishlistItems: ItemsClass[] = StoredWishlist ? JSON.parse(StoredWishlist) : [];
     const CurrentProducts = this.P_ProductsList.value;
-    let UpdatedProducts = CurrentProducts.map(product => {
+    const UpdatedProducts = CurrentProducts.map(product => {
       const CartItem = CartItems.find(item => item.ProductId === product.ProductId);
-      if (CartItem) {
-        return {
-          ...product,
-          IsAdded: true,
-          QuantityAddedToCart: CartItem.QuantityAddedToCart
-        };
-      }
-      return {
-        ...product,
-        IsAdded: false,
-        QuantityAddedToCart: 0
-      };
-    });
-     UpdatedProducts = CurrentProducts.map(product => {
       const WishlistItem = WishlistItems.find(item => item.ProductId === product.ProductId);
-      if (WishlistItem) {
-        return {
-          ...product,
-          isWishlisted: true,
-        };
+      let isInCart = false;
+      let cartQuantity = 0;
+      let isInWishlist = false;
+      if (CartItem) {
+        isInCart = true;
+        cartQuantity = CartItem.QuantityAddedToCart;
       }
+
+      if (WishlistItem) {
+        isInWishlist = true;
+      }
+
       return {
         ...product,
-        isWishlisted: false,
+        IsAdded: isInCart,
+        QuantityAddedToCart: cartQuantity,
+        isWishlisted: isInWishlist
       };
     });
+
     this.P_ProductsList.next(UpdatedProducts);
   }
 

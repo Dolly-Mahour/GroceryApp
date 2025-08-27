@@ -7,34 +7,36 @@
 .RegisterButton:hover{
     background-color: #165c75;
 }
-/* .modal-dialog {
+/* .ModalStyle{
     max-width: 600px;dialog
     height: 800px;
 } */
-
+.modal-content::-webkit-scrollbar {
+    display: none;
+}
 @media screen and (max-width: 575px) {
-    .modal-dialog {
-    width: 400px ;
-    height: 500px ;
+    .ModalStyle{
+    width: 80vw ;
+    height: 80vh ;
 }
 }
 
 @media screen and (min-width: 576px) {
-    .modal-dialog {
-    width: 400px ;
+    .ModalStyle{
+    width: 300px ;
     height: 700px ;
 }
 }
 
 @media screen and (min-width: 768px) {
-    .modal-dialog {
+    .ModalStyle{
     max-width: 600px;
     height: 700px;
 }
 }
 
 @media screen and (min-width: 992px) {
-    .modal-dialog {
+    .ModalStyle{
     width: 600px;
     /* background-color: rebeccapurple; */
     height: 700px;
@@ -42,15 +44,16 @@
 }
 
 @media screen and (min-width: 1200px) {
-    .modal-dialog {
+    .ModalStyle{
     width: 600px;
-    height: 800px;
+    height: 700px;
 }
 }
 
 @media screen and (min-width: 1400px) {
-    .modal-dialog {
+    .ModalStyle{
     width: 650px;
-    height: 800px;
+    height: 650px;
+    overflow-x: auto;
 }
 }

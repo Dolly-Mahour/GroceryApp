@@ -1,0 +1,66 @@
+.CurvedDiv {
+    -webkit-mask-composite: destination-in;
+    mask-composite: intersect;
+    background-clip: content-box;
+    outline: 0;
+    border: 0;
+    -webkit-mask: url('/images/CurvedDivImage.png') no-repeat center;
+    -webkit-mask-size: 100% 100%;
+
+    mask: url('/images/CurvedDivImage.png') no-repeat center;
+    mask-size: 100% 100%;
+
+    background-color: currentColor;
+}
+
+@media screen and (max-width: 640px) {
+    .FruitsImage {
+        height: 130px;
+    }
+
+    .SubscribeDiv {
+        height: 400px;
+    }
+    .PillDiv{
+        border-radius: 20px;
+    }
+}
+
+@media screen and (min-width: 640px) {
+    .FruitsImage {
+        height: 200px;
+    }
+
+    .SubscribeDiv {
+        height: 400px;
+    }
+    .PillDiv{
+        border-radius: 50px;
+    }
+}
+
+@media screen and (min-width: 1007px) {
+    .FruitsImage {
+        height: 300px;
+    }
+
+    .SubscribeDiv {
+        height: 500px;
+    }
+    .PillDiv{
+        border-radius: 50px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .FruitsImage {
+        height: 200px;
+    }
+
+    .SubscribeDiv {
+        height: 400px;
+    }
+    .PillDiv{
+        border-radius: 50px;
+    }
+}

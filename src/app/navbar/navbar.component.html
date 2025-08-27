@@ -1,25 +1,45 @@
 <div class="bg-white" id="WholeNavBarDiv">
     <!-- UPPER PART OF THE TAEL COLOR SHOWING THE TIMER ------------------- -->
-    <div class="h-15 bg-teal">
-        <div class="h-100 w-100 d-flex justify-content-around align-items-center">
-            <div class="w-auto center-elements">
-                <h6 class="text-white tealbar-text">Untill the sale ends : </h6>
-                <countdown class="text-white tealbar-text ms-1" [config]="{leftTime: 360000000, format: ' dd HH:mm:ss'}">
-                </countdown>
-
+    <div class="p-1 bg-teal d-flex align-items-center justify-content-between w-100">
+        <div class="row g-0 p-0 m-0 w-100 justify-content-around">
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex justify-content-start align-items-center">
+                <h6 class="text-white tealbar-text fs-13px">Untill the sale ends : </h6>
+                <div class="d-flex">
+                    <div class=" fs-13px center-elements text-white mx-1 center-elements">
+                        <countdown [config]="{leftTime: 69120000, format: ' dd '}">
+                        </countdown>
+                        <p>D</p>
+                    </div>
+                    <div class=" fs-13px center-elements text-white mx-1 center-elements">
+                        <countdown [config]="{leftTime: 69120000, format: ' HH '}">
+                        </countdown>
+                        <p>H</p>
+                    </div>
+                    <div class=" fs-13px center-elements text-white mx-1 center-elements">
+                        <countdown [config]="{leftTime: 69120000, format: ' mm '}">
+                        </countdown>
+                        <p>M</p>
+                    </div>
+                    <div class=" fs-13px center-elements text-white mx-1 center-elements">
+                        <countdown [config]="{leftTime: 69120000, format: ' ss '}">
+                        </countdown>
+                        <p>S</p>
+                    </div>
+                </div>
             </div>
-            <div class="h-100 w-40 justify-content-center align-items-center d-lg-flex d-none">
+            <!-- </div> -->
+            <div class="col-lg-5 col-md-0 col-sm-0 justify-content-center align-items-center d-lg-flex d-none">
                 <p class="text-white tealbar-text">Buy one get one free on</p>
                 <p class="tealbar-text mx-1 text-warning">first order | </p>
-                <img class="h-50 m-0 p-0 " src="images/white-truck.png" alt="deliverytruck">
+                <img class="h-10px m-0 p-0 " src="images/white-truck.png" alt="deliverytruck">
                 <p class="text-white tealbar-text"> Track your order</p>
             </div>
-            <div class="w-auto center-elements">
+            <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-end">
                 <p class="text-white tealbar-text mx-2 d-lg-flex d-none">Order Tracking</p>
                 <p class="text-white tealbar-text mx-2 d-lg-flex d-none">About us</p>
-                <div class="dropdown NavItemHoverArrowAnimate">
-                    <button class="text-white tealbar-text mx-2 btn dropdown-toggle center-elements" type="button"
-                        data-bs-toggle="dropdown">
+                <div class="dropdown NavItemHoverArrowAnimate m-0 p-0 g-0">
+                    <button class="text-white tealbar-text mx-2 btn m-0 p-0  dropdown-toggle center-elements"
+                        type="button" data-bs-toggle="dropdown">
                         <p class="text-white">Eng</p>
                         <img class="h-10px mx-1 Arrow" src="images/down-white.png" alt="dropdownarrow">
                     </button>
@@ -59,8 +79,8 @@
                     </ul>
                 </div>
                 <div class="dropdown NavItemHoverArrowAnimate">
-                    <button class="text-white tealbar-text mx-2 btn dropdown-toggle center-elements" type="button"
-                        data-bs-toggle="dropdown">
+                    <button class="text-white tealbar-text mx-2 btn p-0 m-0 dropdown-toggle center-elements"
+                        type="button" data-bs-toggle="dropdown">
                         <p class="text-white">USD</p>
                         <img class="h-10px mx-1 Arrow" src="images/down-white.png" alt="dropdownarrow">
                     </button>
@@ -103,7 +123,7 @@
         </div>
     </div>
     <!-- SEARCH BAR WITH THE LOGO OF THE GROCERY SHOP ------------------------ -->
-    <div class="h-50 d-flex justify-content-around align-items-center">
+    <div class="h-100px d-flex justify-content-around align-items-center">
         <app-logo></app-logo>
         <div class="h-100 w-60 center-elements p-2 d-lg-flex d-none">
             <div class="h-60 w-100 SearchCard center-elements">
@@ -139,7 +159,7 @@
                 </div>
             </div>
         </div>
-        <div class="h-100 w-20 d-flex justify-content-around align-items-center">
+        <div class="h-100 d-flex justify-content-around align-items-center">
             <div class="h-100 center-elements d-sm-flex d-md-flex d-lg-none">
                 <img class="h-15 mx-1" src="images/searchIcon.png" alt="profileIcon">
             </div>
@@ -151,14 +171,17 @@
             </a>
             <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black" [routerLink]="['wishlist']">
                 <div class="h-100 center-elements position-relative">
-                    <div class="h-20px w-20px BgTeal rounded-circle center-elements text-white position-absolute mb-4 me-4">{{TotalNumberOFItemsInWishlist}}</div>
+                    <div
+                        class="h-20px w-20px BgTeal rounded-circle center-elements text-white position-absolute mb-4 me-4">
+                        {{TotalNumberOFItemsInWishlist}}</div>
                     <img class="h-20px mx-1" src="images/heart.png" alt="profileIcon">
                     <p class="HoverTeal d-lg-flex d-none">Wishlist</p>
                 </div>
             </a>
             <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black" [routerLink]="['cart']">
                 <div class="h-100 center-elements position-relative">
-                    <div class="h-20px w-20px BgTeal rounded-circle center-elements text-white position-absolute mb-4">{{TotalNumberOFItemsInCart}}</div>
+                    <div class="h-20px w-20px BgTeal rounded-circle center-elements text-white position-absolute mb-4">
+                        {{TotalNumberOFItemsInCart}}</div>
                     <img class="h-20px mx-1" src="images/shopping-cart.png" alt="profileIcon">
                     <p class="HoverTeal d-lg-flex d-none">cart</p>
                 </div>
@@ -167,92 +190,27 @@
     </div>
     <hr class="m-0">
     <!-- BROWSING CATEGORIES AND PAGES NAVIGATION  -->
-    <div class="h-35 d-flex justify-content-around">
+    <div class="d-flex justify-content-around py-2">
         <div class="h-100 w-auto center-elements">
-            <div class="BgHoverGreen h-70 w-100 BrowseCategories dropdown center-elements p-3">
+            <div class="BgHoverGreen h-50px w-100 BrowseCategories dropdown center-elements p-3">
                 <button class="btn m-0 p-0 h-100 w-100 center-elements dropdown-toggle text-white" type="button"
                     data-bs-toggle="dropdown">
-                    <img class="h-75 me-1" src="images/categories-white.png" alt="categories">
+                    <img class="h-20px me-1" src="images/categories-white.png" alt="categories">
                     <p class="text-white fs-14px">Browse Categories</p>
-                    <img class="h-75 mx-1 Arrow" src="images/down-white.png" alt="dropdownarrow">
+                    <img class="h-20px mx-1 Arrow" src="images/down-white.png" alt="dropdownarrow">
                 </button>
                 <div class="dropdown-menu m-0 p-2 CategoryMenu">
                     <div class="container-fluid h-100">
-                        <div class="row h-33">
-                            <div class="col CategoryItem h-100">
-                                <div class="center-elements h-60 w-100">
-                                    <img class="h-80" src="images/vegetable.png" alt="Item1">
-                                </div>
-                                <div class="center-elements align-items-start h-60 w-100">
-                                    <p class="fs-13px fw-bold">Vegetables</p>
-                                </div>
-                            </div>
-                            <div class="col CategoryItem h-100">
-                                <div class="center-elements h-60 w-100">
-                                    <img class="h-80" src="images/milk.png" alt="Item1">
-                                </div>
-                                <div class="center-elements align-items-start h-60 w-100">
-                                    <p class="fs-13px fw-bold">Milk & Cake</p>
-                                </div>
-                            </div>
-                            <div class="col CategoryItem h-100">
-                                <div class="center-elements h-60 w-100">
-                                    <img class="h-80" src="images/shopping-bag.png" alt="Item1">
-                                </div>
-                                <div class="center-elements align-items-start h-60 w-100">
-                                    <p class="fs-13px fw-bold">Grocery</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row h-33">
-                            <div class="col CategoryItem h-100">
-                                <div class="center-elements h-60 w-100">
-                                    <img class="h-80" src="images/beauty-product.png" alt="Item1">
-                                </div>
-                                <div class="center-elements align-items-start h-60 w-100">
-                                    <p class="fs-13px fw-bold">Beauty</p>
-                                </div>
-                            </div>
-                            <div class="col CategoryItem h-100">
-                                <div class="center-elements h-60 w-100">
-                                    <img class="h-80" src="images/drinking.png" alt="Item1">
-                                </div>
-                                <div class="center-elements align-items-start h-60 w-100">
-                                    <p class="fs-13px fw-bold">Wine And Drinks</p>
-                                </div>
-                            </div>
-                            <div class="col CategoryItem h-100">
-                                <div class="center-elements h-60 w-100">
-                                    <img class="h-80" src="images/fast-food.png" alt="Item1">
-                                </div>
-                                <div class="center-elements align-items-start h-60 w-100">
-                                    <p class="fs-13px fw-bold">Snacks</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row h-33">
-                            <div class="col CategoryItem h-100">
-                                <div class="center-elements h-60 w-100">
-                                    <img class="h-80" src="images/orange-juice.png" alt="Item1">
-                                </div>
-                                <div class="center-elements align-items-start h-60 w-100">
-                                    <p class="fs-13px fw-bold">Juice</p>
-                                </div>
-                            </div>
-                            <div class="col CategoryItem h-100">
-                                <div class="center-elements h-60 w-100">
-                                    <img class="h-80" src="images/fruit.png" alt="Item1">
-                                </div>
-                                <div class="center-elements align-items-start h-60 w-100">
-                                    <p class="fs-13px fw-bold">Fruits</p>
-                                </div>
-                            </div>
-                            <div class="col CategoryItem h-100">
-                                <div class="center-elements h-60 w-100">
-                                    <img class="h-80" src="images/tea-time.png" alt="Item1">
-                                </div>
-                                <div class="center-elements align-items-start h-60 w-100">
-                                    <p class="fs-13px fw-bold">Tea and Coffee</p>
+                        <div>
+                            <div *ngFor="let category of Categorieslist"
+                                class="col CategoryItem d-inline-block m-1">
+                                <div (click)="SearchingWithCategory(category)">
+                                    <div class="center-elements">
+                                        <img class="h-50px w-60px img-fluid" [src]="category.CategoryImg" alt="Item1">
+                                    </div>
+                                    <div class="center-elements align-items-start">
+                                        <p class="fs-13px fw-bold">{{category.CategoryName}}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -261,76 +219,14 @@
             </div>
         </div>
         <div class="h-100 w-60 d-flex align-items-center d-lg-flex d-none">
+            <app-home-dropdown></app-home-dropdown>
+            <app-shop-dropdown></app-shop-dropdown>
+            <app-pages-dropdown></app-pages-dropdown>
+            <app-venders-dropdown></app-venders-dropdown>
+            <app-blog-dropdown></app-blog-dropdown>
             <div>
                 <div class="dropdown NavItemHoverArrowAnimate">
-                    <button class="btn dropdown-toggle center-elements" type="button" data-bs-toggle="dropdown">
-                        <p class="HoverTeal fw-semibold">Home</p>
-                        <img class="h-10px mx-1 Arrow" src="images/down-grey.png" alt="dropdownarrow">
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" [routerLink]="['/']">Home Grocery</a></li>
-                        <li><a class="dropdown-item" href="#">Home Electronics</a></li>
-                        <li><a class="dropdown-item" href="#">Home Fashion</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <div class="dropdown NavItemHoverArrowAnimate">
-                    <button class="btn dropdown-toggle center-elements" type="button" data-bs-toggle="dropdown">
-                        <p class="HoverTeal fw-semibold">Shop</p>
-                        <img class="h-10px mx-1 Arrow" src="images/down-grey.png" alt="dropdownarrow">
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Shop</a></li>
-                        <li><a class="dropdown-item" href="#">Shop Details</a></li>
-                        <li><a class="dropdown-item" href="#">Shop Details Two</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <div class="dropdown NavItemHoverArrowAnimate">
-                    <button class="btn dropdown-toggle center-elements" type="button" data-bs-toggle="dropdown">
-                        <p class="HoverTeal fw-semibold">Pages</p>
-                        <img class="h-10px mx-1 Arrow" src="images/down-grey.png" alt="dropdownarrow">
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Cart</a></li>
-                        <li><a class="dropdown-item" href="#">Wishlist</a></li>
-                        <li><a class="dropdown-item" href="#">Checkout</a></li>
-                        <li><a class="dropdown-item" href="#">Become Seller</a></li>
-                        <li><a class="dropdown-item" [routerLink]="['profile']">Account</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <div class="dropdown NavItemHoverArrowAnimate">
-                    <button class="btn dropdown-toggle center-elements" type="button" data-bs-toggle="dropdown">
-                        <p class="HoverTeal fw-semibold">Vendor</p>
-                        <img class="h-10px mx-1 Arrow" src="images/down-grey.png" alt="dropdownarrow">
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Vendor</a></li>
-                        <li><a class="dropdown-item" href="#">Vendor Details</a></li>
-                        <li><a class="dropdown-item" href="#">Vendor Two</a></li>
-                        <li><a class="dropdown-item" href="#">Vendor Two Details</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <div class="dropdown NavItemHoverArrowAnimate">
-                    <button class="btn dropdown-toggle center-elements" type="button" data-bs-toggle="dropdown">
-                        <p class="HoverTeal fw-semibold">Blog</p>
-                        <img class="h-10px mx-1 Arrow" src="images/down-grey.png" alt="dropdownarrow">
-                    </button>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Blog</a></li>
-                        <li><a class="dropdown-item" href="#">Blog Details</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div>
-                <div class="dropdown NavItemHoverArrowAnimate">
-                    <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black" [routerLink]="['contact']">
+                    <a class="text-decoration-none fs-15px fw-semibold Text-Black HoverTeal" [routerLink]="['contact']">
                         Contact us</a>
                 </div>
             </div>
@@ -340,19 +236,35 @@
                 <p class="fw-semibold fs-14px">Need Any Help! Call Us</p>
                 <a class="text-decoration-none ContactNumber" href="#">+(2) 76576xzxzx</a>
             </div>
-            <div class="d-lg-none d-md-flex d-sm-flex">
-                <img class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
-                    aria-controls="offcanvasWithBothOptions" style="height: 70px;" src="images/hamburger.png"
-                    alt="hamburger">
+        </div>
+        <div class="d-lg-none d-md-flex d-sm-flex">
+            <img class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions" style="height: 70px;" src="images/hamburger.png"
+                alt="hamburger">
+        </div>
+        <div class="offcanvas offcanvas-start w-75" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+                <app-logo></app-logo>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas offcanvas-start w-75" data-bs-scroll="true" tabindex="-1"
-                id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <p>Try scrolling the rest of the page to see this option in action.</p>
+            <div class="offcanvas-body">
+                <app-home-dropdown></app-home-dropdown>
+                <hr>
+                <app-shop-dropdown></app-shop-dropdown>
+                <hr>
+                <app-pages-dropdown></app-pages-dropdown>
+                <hr>
+                <app-venders-dropdown></app-venders-dropdown>
+                <hr>
+                <app-blog-dropdown></app-blog-dropdown>
+                <hr>
+                <div class="ms-1">
+                    <div class="NavItemHoverArrowAnimate mx-2">
+                        <a class="text-decoration-none fs-15px fw-semibold Text-Black HoverTeal"
+                            [routerLink]="['contact']">
+                            Contact us</a>
+                    </div>
                 </div>
             </div>
         </div>

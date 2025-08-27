@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import AOS from 'aos';
 
 @Component({
   selector: 'app-support-line',
@@ -6,6 +7,11 @@ import { Component } from '@angular/core';
   templateUrl: './support-line.component.html',
   styleUrl: './support-line.component.css'
 })
-export class SupportLineComponent {
-
+export class SupportLineComponent implements OnInit {
+  ngOnInit(): void {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  }
 }

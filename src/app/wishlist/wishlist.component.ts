@@ -19,7 +19,7 @@ export class WishlistComponent implements OnInit {
   }
   ngOnInit(): void {
     // this.IdOfTheCategory = Number(this.route.snapshot.paramMap.get('id'))
-    this.S_ProductList.GetTheListOfProducts();
+    this.S_ProductList.GetProductFromCart();
     this.S_ProductList.ProductObservableList.subscribe(products => {
       this.ListOfProductWithCategory = products
     })
