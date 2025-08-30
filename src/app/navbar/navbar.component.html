@@ -195,21 +195,21 @@
         <div class="h-100 w-auto center-elements">
             <div class="BgHoverGreen h-50px w-100 BrowseCategories dropdown center-elements p-3">
                 <button class="btn m-0 p-0 h-100 w-100 center-elements dropdown-toggle text-white" type="button"
-                    data-bs-toggle="dropdown">
+                    data-bs-toggle="dropdown" data-bs-display="static">
                     <img class="h-20px me-1" src="images/categories-white.png" alt="categories">
                     <p class="text-white fs-14px">Browse Categories</p>
                     <img class="h-20px mx-1 Arrow" src="images/down-white.png" alt="dropdownarrow">
                 </button>
-                <div class="dropdown-menu m-0 p-2 CategoryMenu">
-                    <div class="container-fluid h-100">
-                        <div>
-                            <div *ngFor="let category of Categorieslist" class="CategoryItem d-inline-block m-1">
+                <div class="dropdown-menu m-0 p-2">
+                    <div class="container-fluid h-100 center-elements">
+                        <div class="CategoryMenu center-elements flex-wrap">
+                            <div *ngFor="let category of Categorieslist" class="CategoryItem d-inline-block">
                                 <div (click)="SearchingWithCategory(category)">
                                     <div class="center-elements">
-                                        <img class="h-50px w-40px img-fluid" [src]="category.CategoryImg" alt="Item1">
+                                        <img class="h-40px img-fluid" [src]="category.CategoryImg" alt="Item1">
                                     </div>
                                     <div class="center-elements align-items-start">
-                                        <p class="fs-13px fw-bold">{{category.CategoryName}}</p>
+                                        <p class="fs-10px fw-bold">{{category.CategoryName}}</p>
                                     </div>
                                 </div>
                             </div>
@@ -226,7 +226,7 @@
             <app-blog-dropdown></app-blog-dropdown>
             <div>
                 <div class="dropdown NavItemHoverArrowAnimate">
-                    <a class="text-decoration-none fs-15px fw-semibold Text-Black HoverTeal" [routerLink]="['contact']">
+                    <a class="text-decoration-none fs-15px fw-semibold Text-Black HoverTeal" data-bs-dismiss="offcanvas" [routerLink]="['contact']">
                         Contact us</a>
                 </div>
             </div>
@@ -261,7 +261,7 @@
                 <hr>
                 <div class="ms-1">
                     <div class="NavItemHoverArrowAnimate mx-2">
-                        <a class="text-decoration-none fs-15px fw-semibold Text-Black HoverTeal"
+                        <a class="text-decoration-none fs-15px fw-semibold Text-Black HoverTeal" data-bs-dismiss="offcanvas"
                             [routerLink]="['contact']">
                             Contact us</a>
                     </div>

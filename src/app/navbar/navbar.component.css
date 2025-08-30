@@ -43,12 +43,6 @@
     /* height: 300px; */
 }
 
-.CategoryMenu {
-    height: 270px;
-    width: 400px;
-}
-
-
 .h-10px {
     height: 10px;
 }
@@ -71,8 +65,13 @@
     left: auto;
 }
 
+.CategoryMenu {
+    height: 250px;
+    width: 280px;
+}
+
 .CategoryItem {
-    width: 110px;
+    width: 90px;
     border: 1px solid transparent;
 }
 
