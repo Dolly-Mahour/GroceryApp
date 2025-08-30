@@ -4,7 +4,7 @@ import { SupportLineComponent } from '../support-line/support-line.component';
 
 @Component({
   selector: 'app-contact-us',
-  imports: [RouterLink,SupportLineComponent],
+  imports: [RouterLink, SupportLineComponent],
   templateUrl: './contact-us.component.html',
   styleUrl: './contact-us.component.css'
 })

@@ -6,12 +6,12 @@ import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-vendor-page',
-  imports: [SupportLineComponent,NgFor,NgIf,RouterLink],
+  imports: [SupportLineComponent, NgFor, NgIf, RouterLink],
   templateUrl: './vendor-page.component.html',
   styleUrl: './vendor-page.component.css'
 })
 export class VendorPageComponent {
-  Vendorslist:Vendors[]=[
+  Vendorslist: Vendors[] = [
     {
       Name: 'Organic Market',
       Img: 'images/VImg1.png',

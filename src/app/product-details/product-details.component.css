@@ -14,33 +14,3 @@
 .TextTealToWhiteOnHover:hover {
     color: white;
 }
-
-@media screen and (max-width: 575px) {
-    .ProductDetails {
-        height: 500vh;
-    }
-}
-
-@media screen and (min-width: 576px) {
-    .ProductDetails {
-        height: 400vh;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .ProductDetails {
-        height: 340vh;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .ProductDetails {
-        height: 150vh;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .ProductDetails {
-        height: 140vh;
-    }
-}

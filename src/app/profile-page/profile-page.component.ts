@@ -5,7 +5,7 @@ import { LogoComponent } from '../logo/logo.component';
 
 @Component({
   selector: 'app-profile-page',
-  imports: [RouterLink,SupportLineComponent,LogoComponent],
+  imports: [RouterLink, SupportLineComponent, LogoComponent],
   templateUrl: './profile-page.component.html',
   styleUrl: './profile-page.component.css'
 })

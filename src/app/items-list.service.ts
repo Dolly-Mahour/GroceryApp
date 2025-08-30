@@ -324,7 +324,7 @@ export class ItemsListService implements OnInit {
     this.P_ProductsList.next(UpdatedProducts);
   }
 
-  GetProductFromCart(): void {
+  BindWIthLocalstorage(): void {
     const StoredCart = localStorage.getItem('ItemsAddedAtCart');
     const StoredWishlist = localStorage.getItem('ItemsAddedAtWishlist');
     const CartItems: ItemsClass[] = StoredCart ? JSON.parse(StoredCart) : [];

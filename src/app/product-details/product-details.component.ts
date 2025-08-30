@@ -20,7 +20,6 @@ export class ProductDetailsComponent implements OnInit {
     this.S_ProductList.ProductObservableList.subscribe(products => {
       this.Product = products.find(p => p.ProductId === this.IdOfProduct)!;
     })
-    // this.Product = this.S_Productlist.ProductsList.find(p => p.ProductId === this.IdOfProduct)!;
     console.log("PRODUCT IS -----", this.Product);
   }
   IdOfProduct!: number;

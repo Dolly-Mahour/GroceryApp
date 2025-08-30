@@ -2,33 +2,33 @@
     <!-- UPPER PART OF THE TAEL COLOR SHOWING THE TIMER ------------------- -->
     <div class="p-1 bg-teal d-flex align-items-center justify-content-between w-100">
         <div class="row g-0 p-0 m-0 w-100 justify-content-around">
-            <div class="col-lg-3 col-md-6 col-sm-6 d-flex justify-content-start align-items-center">
-                <h6 class="text-white tealbar-text fs-13px">Untill the sale ends : </h6>
+            <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-start align-items-center">
+                <h6 class="text-white tealbar-text fs-13px fw-semibold">Until the sale ends : </h6>
                 <div class="d-flex">
-                    <div class=" fs-13px center-elements text-white mx-1 center-elements">
-                        <countdown [config]="{leftTime: 69120000, format: ' dd '}">
+                    <div class="fs-13px center-elements text-white mx-1 center-elements">
+                        <countdown class="fw-bold" [config]="{leftTime: 69120000, format: ' dd '}">
                         </countdown>
-                        <p>D</p>
+                        <p class="fs-10px mx-1">Days</p>
                     </div>
                     <div class=" fs-13px center-elements text-white mx-1 center-elements">
-                        <countdown [config]="{leftTime: 69120000, format: ' HH '}">
+                        <countdown class="fw-bold" [config]="{leftTime: 69120000, format: ' HH '}">
                         </countdown>
-                        <p>H</p>
+                        <p class="fs-10px mx-1">Hours</p>
                     </div>
                     <div class=" fs-13px center-elements text-white mx-1 center-elements">
-                        <countdown [config]="{leftTime: 69120000, format: ' mm '}">
+                        <countdown class="fw-bold" [config]="{leftTime: 69120000, format: ' mm '}">
                         </countdown>
-                        <p>M</p>
+                        <p class="fs-10px mx-1">Minutes</p>
                     </div>
                     <div class=" fs-13px center-elements text-white mx-1 center-elements">
-                        <countdown [config]="{leftTime: 69120000, format: ' ss '}">
+                        <countdown class="fw-bold" [config]="{leftTime: 69120000, format: ' ss '}">
                         </countdown>
-                        <p>S</p>
+                        <p class="fs-10px mx-1">Sec.</p>
                     </div>
                 </div>
             </div>
             <!-- </div> -->
-            <div class="col-lg-5 col-md-0 col-sm-0 justify-content-center align-items-center d-lg-flex d-none">
+            <div class="col-lg-4 col-md-0 col-sm-0 justify-content-center align-items-center d-lg-flex d-none">
                 <p class="text-white tealbar-text">Buy one get one free on</p>
                 <p class="tealbar-text mx-1 text-warning">first order | </p>
                 <img class="h-10px m-0 p-0 " src="images/white-truck.png" alt="deliverytruck">
@@ -37,7 +37,7 @@
             <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-end">
                 <p class="text-white tealbar-text mx-2 d-lg-flex d-none">Order Tracking</p>
                 <p class="text-white tealbar-text mx-2 d-lg-flex d-none">About us</p>
-                <div class="dropdown NavItemHoverArrowAnimate m-0 p-0 g-0">
+                <div class="dropdown OpenDropDownOnLeft NavItemHoverArrowAnimate m-0 p-0 g-0">
                     <button class="text-white tealbar-text mx-2 btn m-0 p-0  dropdown-toggle center-elements"
                         type="button" data-bs-toggle="dropdown">
                         <p class="text-white">Eng</p>
@@ -78,7 +78,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="dropdown NavItemHoverArrowAnimate">
+                <div class="dropdown OpenDropDownOnLeft NavItemHoverArrowAnimate">
                     <button class="text-white tealbar-text mx-2 btn p-0 m-0 dropdown-toggle center-elements"
                         type="button" data-bs-toggle="dropdown">
                         <p class="text-white">USD</p>
@@ -125,8 +125,8 @@
     <!-- SEARCH BAR WITH THE LOGO OF THE GROCERY SHOP ------------------------ -->
     <div class="h-100px d-flex justify-content-around align-items-center">
         <app-logo></app-logo>
-        <div class="h-100 w-60 center-elements p-2 d-lg-flex d-none">
-            <div class="h-60 w-100 SearchCard center-elements">
+        <div class="h-100 w-60 center-elements p-2 d-lg-flex d-none p-1">
+            <div class="h-50px w-80 Bordergrey rounded-2 center-elements">
                 <div class="w-20 h-100">
                     <div class="dropdown h-100 w-100 center-elements">
                         <p class="btn dropdown-toggle fs-14px" type="button" data-bs-toggle="dropdown"
@@ -174,7 +174,7 @@
                     <div
                         class="h-20px w-20px BgTeal rounded-circle center-elements text-white position-absolute mb-4 me-4">
                         {{TotalNumberOFItemsInWishlist}}</div>
-                    <img class="h-20px mx-1" src="images/heart.png" alt="profileIcon">
+                    <img class="h-15px mx-1" src="images/heart.png" alt="profileIcon">
                     <p class="HoverTeal d-lg-flex d-none">Wishlist</p>
                 </div>
             </a>
@@ -182,7 +182,7 @@
                 <div class="h-100 center-elements position-relative">
                     <div class="h-20px w-20px BgTeal rounded-circle center-elements text-white position-absolute mb-4">
                         {{TotalNumberOFItemsInCart}}</div>
-                    <img class="h-20px mx-1" src="images/shopping-cart.png" alt="profileIcon">
+                    <img class="h-15px mx-1" src="images/shopping-cart.png" alt="profileIcon">
                     <p class="HoverTeal d-lg-flex d-none">cart</p>
                 </div>
             </a>
@@ -202,11 +202,10 @@
                 <div class="dropdown-menu m-0 p-2 CategoryMenu">
                     <div class="container-fluid h-100">
                         <div>
-                            <div *ngFor="let category of Categorieslist"
-                                class="col CategoryItem d-inline-block m-1">
+                            <div *ngFor="let category of Categorieslist" class="CategoryItem d-inline-block m-1">
                                 <div (click)="SearchingWithCategory(category)">
                                     <div class="center-elements">
-                                        <img class="h-50px w-60px img-fluid" [src]="category.CategoryImg" alt="Item1">
+                                        <img class="h-50px w-40px img-fluid" [src]="category.CategoryImg" alt="Item1">
                                     </div>
                                     <div class="center-elements align-items-start">
                                         <p class="fs-13px fw-bold">{{category.CategoryName}}</p>

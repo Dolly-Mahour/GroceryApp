@@ -8,15 +8,12 @@ import { MainContentPageComponent } from './main-content-page/main-content-page.
 
 @Component({
   selector: 'app-root',
-  imports: [NavbarComponent,FooterComponent,MainContentPageComponent],
+  imports: [NavbarComponent, FooterComponent, MainContentPageComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  standalone:true, 
+  standalone: true,
 })
-export class AppComponent implements OnInit{
-  ngOnInit(): void {
-    //  AOS.init()
-  }
+export class AppComponent {
   title = 'GroceryApp';
-  
+
 }

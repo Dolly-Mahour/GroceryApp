@@ -6,8 +6,10 @@ import { CountdownModule } from 'ngx-countdown';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SlickCarouselService } from '../slick-carousel.service';
 import AOS from 'aos';
+import * as bootstrap from 'bootstrap';
 import { Route, Router } from '@angular/router';
 import { ItemsInCartService } from '../items-in-cart.service';
+import Toast from 'bootstrap/js/dist/toast';
 
 @Component({
   selector: 'app-flash-sales',
@@ -25,7 +27,7 @@ export class FlashSalesComponent {
       duration: 1000,
       once: true
     });
-    this.S_ProductList.GetProductFromCart();
+    this.S_ProductList.BindWIthLocalstorage();
     this.S_ProductList.ProductObservableList.subscribe(products => {
       this.ProductList = products;
     });
@@ -43,7 +45,12 @@ export class FlashSalesComponent {
     else {
       console.log("THIS ITEM IS ALREADY ADDED TO CART --------------")
     }
-    this.router.navigate(['cart']);
+    const toastEl = document.getElementById('SucessToast');
+    if (toastEl) {
+      console.log("CALLING THE TOAST TO OPEN BUTTON ---")
+      const toast = new bootstrap.Toast(toastEl);
+      toast.show();
+    }
   }
   IncreaseQuantity(product: any) {
 

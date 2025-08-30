@@ -1,11 +1,8 @@
-/* .FooterWholeDiv{
-    height: 100vh;
-    background: #000;
-} */
- .SocialImage{
-    height: 20px !important;
-    transition: height 0.5s;
- }
- .SocialDivHover:hover .SocialImage{
-    height: 30px !important;
- }
+.SocialImage {
+   height: 20px !important;
+   transition: height 0.5s;
+}
+
+.SocialDivHover:hover .SocialImage {
+   height: 30px !important;
+}

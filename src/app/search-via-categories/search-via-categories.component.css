@@ -7,8 +7,8 @@
 }
 
 .CategoriesCard {
-    height: 450px;
-    width: 230px;
+    height: 400px;
+    width: 183px;
     border: 1px solid rgb(199, 192, 192);
     border-radius: 10px;
 }
@@ -79,7 +79,7 @@
     border-color: #600970;
 }
 
-.TealInput:checked{
+.TealInput:checked {
     background-color: #1c799b !important;
     /* border-color: #1c799b; */
 }

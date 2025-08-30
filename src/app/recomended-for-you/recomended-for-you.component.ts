@@ -23,7 +23,7 @@ export class RecomendedForYouComponent {
       duration: 1000,
       once: true
     });
-    this.S_ProductList.GetProductFromCart()
+    this.S_ProductList.BindWIthLocalstorage()
     this.S_ProductList.ProductObservableList.subscribe(products => {
       this.ProductList = products;
     })

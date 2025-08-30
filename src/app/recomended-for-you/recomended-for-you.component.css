@@ -1,80 +1,64 @@
-.Recomended{
+.Recomended {
     height: 30px;
     width: auto;
     color: rgb(136, 135, 135);
     /* background: #1c799b; */
     border-radius: 30px;
 }
-.Recomended:hover{
-    background: #1c799b;
-    color: white;
+
+.Recomended:hover {
+    border: 1px solid #1c799b;
+    color: #1c799b;
 }
 
-.WishlistButton{
+.WishlistButton {
     height: 35px;
     width: 35px;
     border: 1px solid rgb(161, 159, 159);
-    border-radius: 50%; 
+    border-radius: 50%;
     transition: height width 0.5s;
 }
-.FlashSalesCard{
-    height: 420px;
+
+.RecomendedCard {
+    height: 400px;
     width: 200px;
     border: 1px solid rgb(199, 192, 192);
     border-radius: 10px;
 }
-.FlashSalesCard:hover{
+
+.RecomendedCard:hover {
     border-color: #1c799b;
 }
-.ImageOfCard{
+
+.ImageOfCard {
     height: 150px;
     transition: height 0.5s;
 }
+
 /* WHEN I HAVE TO GO HOVER WITH ANOTHER TRANSITION I WILL USE IT    --------------- */
-.FlashSalesCard:hover .ImageOfCard {
- height: 180px;
-}
-.FlashSalesCard:hover .WishlistButton {
- height: 40px;
- width: 40px;
+.RecomendedCard:hover .ImageOfCard {
+    height: 180px;
 }
 
-.CountDownDiv{
+.RecomendedCard:hover .WishlistButton {
+    height: 40px;
+    width: 40px;
+}
+
+.CountDownDiv {
     border-radius: 10px;
 }
-.ShopNowbutton{
+
+.ShopNowbutton {
     background: #1c799b;
     border-radius: 30px;
     height: 40px;
     width: 130px;
 }
-.CountDownTimerDiv{
-    /* background-color: #1c799b; */
+
+.CountDownTimerDiv {
     box-shadow: 1px 1px 20px rgb(188, 187, 187);
     border-radius: 5px;
     height: 35px;
     width: auto;
-}
-@media screen and (max-width: 640px) {
-.CountDownAdd{
-    height: 120vw;
-}
-}
-
-@media screen and (min-width: 640px) {
-.CountDownAdd{
-    height: 30vw;
-}
-}
-
-@media screen and (min-width: 1007px) { 
-.CountDownAdd{
-    height: 20vw;
-}
-}
-
-@media screen and (min-width: 1400px) { 
-.CountDownAdd{
-    height: 20vw;
-}
 }

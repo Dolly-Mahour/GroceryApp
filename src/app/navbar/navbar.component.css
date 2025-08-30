@@ -1,5 +1,4 @@
 #WholeNavBarDiv {
-    /* height: 35%; */
     box-shadow: 5px 1px 30px rgb(213, 217, 218);
 }
 
@@ -10,11 +9,6 @@
 .tealbar-text {
     font-size: 13.5px;
 
-}
-
-.SearchCard {
-    border-radius: 5px;
-    border: 1px solid grey;
 }
 
 .SearchInput {
@@ -54,6 +48,7 @@
     width: 400px;
 }
 
+
 .h-10px {
     height: 10px;
 }
@@ -68,10 +63,17 @@
     font-weight: bold;
 }
 
-
+.OpenDropDownOnLeft:hover>.dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: auto;
+}
 
 .CategoryItem {
     width: 110px;
+    border: 1px solid transparent;
 }
 
 .CategoryItem:hover {
@@ -79,42 +81,44 @@
     border-radius: 5px;
     border: 1px solid #2a9cc574;
 }
-hr{
+
+hr {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
 @media screen and (max-width: 575px) {
-    .NavbarTealPart{
+    .NavbarTealPart {
         height: 30%;
     }
 }
 
 @media screen and (min-width: 576px) {
-    .NavbarTealPart{
+    .NavbarTealPart {
         height: 30%;
     }
 }
 
 @media screen and (min-width: 768px) {
-    .NavbarTealPart{
+    .NavbarTealPart {
         height: 15%;
     }
 }
 
 @media screen and (min-width: 992px) {
-    .NavbarTealPart{
+    .NavbarTealPart {
         height: 15%;
     }
 }
 
 @media screen and (min-width: 1200px) {
-   .NavbarTealPart{
+    .NavbarTealPart {
         height: 20%;
     }
 }
 
 @media screen and (min-width: 1400px) {
-    .NavbarTealPart{
+    .NavbarTealPart {
         height: 20%;
     }
 }

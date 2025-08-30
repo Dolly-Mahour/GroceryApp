@@ -1,11 +1,3 @@
-.DivOfContactPage {
-    height: 150vh;
-}
-
-.DivOfCards {
-    height: 85vh;
-}
-
 .InputDiv {
     border: 1px solid rgb(218, 216, 216) !important;
 }
@@ -31,44 +23,4 @@
 
 .Bg-Blue:hover {
     background-color: #c8e9f5 !important;
-}
-
-@media screen and (max-width: 640px) {
-    .DivOfContactPage {
-        height: 200vh;
-    }
-
-    .GetInTouchDiv {
-        height: 500px;
-    }
-}
-
-@media screen and (min-width: 640px) {
-    .DivOfContactPage {
-        height: 250vh;
-    }
-
-    .GetInTouchDiv {
-        height: 600px;
-    }
-}
-
-@media screen and (min-width: 1007px) {
-    .DivOfContactPage {
-        height: 150vh;
-    }
-
-    .GetInTouchDiv {
-        height: 500px;
-    }
-}
-
-@media screen and (min-width: 1400px) {
-    .DivOfContactPage {
-        height: 150vh;
-    }
-
-    .GetInTouchDiv {
-        height: 400px;
-    }
 }

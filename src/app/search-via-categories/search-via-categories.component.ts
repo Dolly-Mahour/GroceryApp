@@ -11,7 +11,7 @@ import { SearchCategoriesTopbarComponent } from '../search-categories-topbar/sea
 
 @Component({
   selector: 'app-search-via-categories',
-  imports: [NgFor, RouterLink, SupportLineComponent, CategoriesCrouselComponent,SearchCategoriesTopbarComponent,NgIf],
+  imports: [NgFor, RouterLink, SupportLineComponent, CategoriesCrouselComponent, SearchCategoriesTopbarComponent, NgIf],
   templateUrl: './search-via-categories.component.html',
   styleUrl: './search-via-categories.component.css'
 })
@@ -22,7 +22,6 @@ export class SearchViaCategoriesComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    // this.IdOfTheCategory = Number(this.route.snapshot.paramMap.get('id'))
     this.route.paramMap.subscribe(params => {
       this.IdOfTheCategory = Number(params.get('id'));
       console.log("Now on product:", this.IdOfTheCategory);
@@ -44,7 +43,7 @@ export class SearchViaCategoriesComponent implements OnInit {
     this.CategoryName = this.WholeCategory?.CategoryName;
     console.log("FROM THE SEARCH CATEGORY PAGE --- ", this.IdOfTheCategory, "\nITEMS WITH THE CATEGORY---", this.ListOfProductWithCategory);
   }
-  IdForTopBar:number = 0;
+  IdForTopBar: number = 0;
   IdOfTheCategoryStr!: string | null;
   IdOfTheCategory!: number;
   ListOfProductWithCategory!: ItemsClass[] | undefined;

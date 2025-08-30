@@ -1,8 +1,6 @@
 .MainBannerBg {
-    height: 70vh;
-    /* width: 100%; */
     background-color: #e9ffff;
-    border-radius: 15px;
+    /* border-radius: 15px; */
 }
 
 .BannerButton {
@@ -19,25 +17,13 @@
     font-style: italic;
 }
 
-.h-20px {
-    height: 20px;
-}
-
 .Startingat {
-    /* font-family: cursive; */
     font-style: italic;
 }
 
-.Price {
-    /* font-family: cursive; */
-    color: red;
-    font-weight: 600;
-    font-size: 20px;
-    font-style: italic;
-}
 
-.trapezoid {
-    border-bottom: 50px solid #e9ffff;
+/* .trapezoid {
+    border-bottom: 50px solid #10acac;
     border-left: 25px solid transparent;
     border-right: 25px solid transparent;
     border-top-left-radius: 65px;
@@ -45,7 +31,7 @@
     height: 0;
     width: 110px;
     rotate: 180deg;
-}
+} */
 
 #BannerArrowDiv {
     background: #1c799b;
@@ -53,10 +39,13 @@
     height: 70px;
     width: 70px;
     z-index: 1000;
+    margin-top: 100%;
 }
 
 #PositionOfArrow {
-    top: 92%;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 .ArrowUpDown {
@@ -66,55 +55,76 @@
 }
 
 @keyframes ArrowUpDown {
+    0% {
+        margin-top: 20px;
+    }
+
     50% {
-        margin-top: 25px;
+        margin-bottom: 70px;
+    }
+
+    100% {
+        margin-top: 20px;
     }
 }
 
-@media screen and (max-width: 640px) {
-    .MainBannerBg {
-        height: 90vh;
-        /* width: 100%; */
-        background-color: #e9ffff;
-        border-radius: 15px;
+@media screen and (max-width: 575px) {
+    .fruitBasketImage {
+        height: 200px;
     }
 
-    #PositionOfArrow {
-        top: 95%;
+    .BannerMainText {
+        font-size: 25px;
+    }
+
+}
+
+@media screen and (min-width: 576px) {
+    .fruitBasketImage {
+        height: 200px;
+    }
+
+    .BannerMainText {
+        font-size: 25px;
     }
 }
 
-@media screen and (min-width: 640px) {
-    .MainBannerBg {
-        height: 90vh;
-        /* width: 100%; */
-        background-color: #e9ffff;
-        border-radius: 15px;
+@media screen and (min-width: 768px) {
+    .fruitBasketImage {
+        height: 300px;
     }
 
-    #PositionOfArrow {
-        top: 93%;
+    .BannerMainText {
+        font-size: 35px;
     }
 }
 
-@media screen and (min-width: 1007px) {
-    .MainBannerBg {
-        height: 70vh;
-        /* width: 100%; */
-        background-color: #e9ffff;
-        border-radius: 15px;
+@media screen and (min-width: 992px) {
+    .fruitBasketImage {
+        height: 300px;
     }
 
-    #PositionOfArrow {
-        top: 92%;
+    .BannerMainText {
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .fruitBasketImage {
+        height: 300px;
+    }
+
+    .BannerMainText {
+        font-size: 45px;
     }
 }
 
 @media screen and (min-width: 1400px) {
-    .MainBannerBg {
-        height: 70vh;
-        /* width: 100%; */
-        background-color: #e9ffff;
-        border-radius: 15px;
+    .fruitBasketImage {
+        height: 300px;
+    }
+
+    .BannerMainText {
+        font-size: 45px;
     }
 }

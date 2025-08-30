@@ -1,16 +1,3 @@
-.HotDealsMainDiv {
-    height: 70vh;
-}
-
-.FlashSalesCarouselDiv {
-    height: 60vh;
-    overflow-x: auto;
-}
-
-.DivOfCarousel {
-    width: 100%;
-}
-
 .FlashSalesCarouselDiv {
     height: 60vh;
     width: 95vw;
@@ -26,14 +13,14 @@
     display: none;
 }
 
-.FlashSalesCard {
+.HotDealsCarouselCard {
     height: 350px;
     width: 175px;
     border: 1px solid rgb(199, 192, 192);
     border-radius: 10px;
 }
 
-.FlashSalesCard:hover {
+.HotDealsCarouselCard:hover {
     border-color: #1c799b;
 }
 
@@ -43,7 +30,7 @@
 }
 
 /* WHEN I HAVE TO GO HOVER WITH ANOTHER TRANSITION I WILL USE IT    --------------- */
-.FlashSalesCard:hover .ImageOfCard {
+.HotDealsCarouselCard:hover .ImageOfCard {
     height: 130px !important;
 }
 
@@ -82,19 +69,6 @@
     background: #e9ffff;
 }
 
-@media screen and (max-width: 640px) {
-    .CountDownAdd {
-        height: 100vh;
-    }
-
-    .DivOfCoupon {
-        height: 20vh;
-    }
-
-    .HotDealsMainDiv {
-        height: 100vh;
-    }
-}
 
 .BrandsImages {
     height: 130px;
@@ -140,27 +114,10 @@
     border: 1px solid rgb(164, 162, 162);
 }
 
-@media screen and (max-width: 640px) {
-    .FruitsImage {
-        height: 130px;
-    }
-
-    .Subscribe {
-        height: 60vh;
-    }
-
-    .DivAfterHotDeal {
-        height: 300vh;
-    }
-}
 
 .ImageOfCard {
     height: 160px;
     transition: height 0.5s;
-}
-
-.DailyBestSellersDiv {
-    height: 80vh;
 }
 
 /* WHEN I HAVE TO GO HOVER WITH ANOTHER TRANSITION I WILL USE IT    --------------- */
@@ -186,93 +143,30 @@
 }
 
 @media screen and (max-width: 640px) {
-    .CountDownAdd {
-        height: 30vh;
-    }
-
-    .DivAfterHotDeal {
-        height: 320vh;
-    }
-
-    .Subscribe {
-        height: 60vh;
-    }
 
     .FruitsImage {
         height: 130px;
     }
 
-    .DailyBestSellersDiv {
-        height: 200vh;
-    }
 }
 
 @media screen and (min-width: 640px) {
-    .CountDownAdd {
-        height: 30vh;
-    }
-
-    .DivAfterHotDeal {
-        height: 200vh;
-    }
-
-    .Subscribe {
-        height: 100vh;
-    }
 
     .FruitsImage {
         height: 200px;
-    }
-
-    .DailyBestSellersDiv {
-        height: 400vh;
     }
 }
 
 @media screen and (min-width: 1007px) {
-    .CountDownAdd {
-        height: 20vh;
-    }
 
     .FruitsImage {
         height: 300px;
-    }
-
-    .Subscribe {
-        height: 52vh;
-    }
-
-    .DivAfterHotDeal {
-        height: 100vh;
-    }
-
-    .DailyBestSellersDiv {
-        height: 80vh;
     }
 }
 
 @media screen and (min-width: 1400px) {
-    .CountDownAdd {
-        height: 20vh;
-    }
-
-    .FruitsImage {
-        height: 200px;
-    }
-
-    .Subscribe {
-        height: 52vh;
-    }
-
-    .DivAfterHotDeal {
-        height: 100vh;
-    }
-
     .FruitsImage {
         height: 300px;
     }
 
-    .DailyBestSellersDiv {
-        height: 80vh;
-    }
 }

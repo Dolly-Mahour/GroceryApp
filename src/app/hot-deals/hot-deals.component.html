@@ -1,105 +1,255 @@
-<!-- HOT DEALS CAROUSEL ------------------------------------------------  -->
-<div>
-    <div class="d-flex justify-content-between align-items-center">
-        <h2>Hot deals Today</h2>
-        <p class="text-secondary HoverTextTeal">view all details</p>
-    </div>
-    <div  class="HotDealsMainDiv center-elements">
-        <div class="container-fluid gx-0 m-0 p-0 h-100">
-            <div class="row gx-0 m-0 p-0 h-85">
-                <div  class="col-lg-4 col-md-5 p-2 py-3 bg-white center-elements ">
-                    <div data-aos="zoom-in-up" class="w-100 DivOfBasket position-relative BgTeal rounded-4">
-                        <div class="position-absolute h-100 w-100 d-flex justify-content-end align-items-end">
-                            <img class="h-50" src="images/bg-basket.png" alt="background basket of hotdeals countdown ">
+<div class="h-auto">
+    <!-- HOT DEALS CAROUSEL ------------------------------------------------  -->
+    <div>
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="HeadingFS fw-bold">Hot deals Today</h2>
+            <p class="text-secondary HoverTextTeal">view all details</p>
+        </div>
+        <div class="center-elements">
+            <div class="container-fluid gx-0 m-0 p-0">
+                <div class="row gx-0 m-0 p-0">
+                    <div class="col-lg-4 col-md-5 p-2 py-3 bg-white center-elements ">
+                        <div data-aos="zoom-in-up" class="w-100 DivOfBasket position-relative BgTeal rounded-4">
+                            <div class="position-absolute h-100 w-100 d-flex justify-content-end align-items-end">
+                                <img class="h-50" src="images/bg-basket.png"
+                                    alt="background basket of hotdeals countdown ">
+                            </div>
+                            <div class="h-90 p-3 position-absolute d-flex justify-content-start align-items-center">
+                                <div>
+                                    <div class="w-60 h-20px bg-warning center-elements rounded-1">
+                                        <p class="fs-12px">Medical Equipments</p>
+                                    </div>
+                                    <h3 class="italic text-white my-3">Deals of the day</h3>
+                                    <p class="text-green">Save up to 50% off on your first order</p>
+                                    <div class="d-flex my-3 ">
+                                        <div class="bg-white rounded-1 center-elements my-2 p-2 mx-1 center-elements">
+                                            <countdown [config]="{leftTime: 69120000, format: ' dd '}">
+                                            </countdown>
+                                            <p>D</p>
+                                        </div>
+                                        <div class="bg-white rounded-1 center-elements my-2 p-2 mx-1 center-elements">
+                                            <countdown [config]="{leftTime: 69120000, format: ' HH '}">
+                                            </countdown>
+                                            <p>H</p>
+                                        </div>
+                                        <div class="bg-white rounded-1 center-elements my-2 p-2 mx-1 center-elements">
+                                            <countdown [config]="{leftTime: 69120000, format: ' mm '}">
+                                            </countdown>
+                                            <p>M</p>
+                                        </div>
+                                        <div class="bg-white rounded-1 center-elements my-2 p-2 mx-1 center-elements">
+                                            <countdown [config]="{leftTime: 69120000, format: ' ss '}">
+                                            </countdown>
+                                            <p>S</p>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white h-40px w-70 rounded-5 center-elements btn">
+                                        <h6 class="TextTeal">Explore now</h6>
+                                        <div class="TextTeal mx-1">
+                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                                viewBox="0 0 24 24">
+                                                <path stroke="currentColor" stroke-linecap="round"
+                                                    stroke-linejoin="round" stroke-width="1"
+                                                    d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="h-90 p-3 position-absolute d-flex justify-content-start align-items-center">
-                            <div>
-                                <div class="w-60 h-20px bg-warning center-elements rounded-1">
-                                    <p class="fs-12px">Medical Equipments</p>
-                                </div>
-                                <h3 class="italic text-white my-3">Deals of the day</h3>
-                                <p class="text-green">Save up to 50% off on your first order</p>
-                                <div class="d-flex my-3 ">
-                                    <div class="bg-white rounded-1 center-elements my-2 p-2 mx-1 center-elements">
-                                        <countdown [config]="{leftTime: 69120000, format: ' dd '}">
-                                        </countdown>
-                                        <p>D</p>
-                                    </div>
-                                    <div class="bg-white rounded-1 center-elements my-2 p-2 mx-1 center-elements">
-                                        <countdown [config]="{leftTime: 69120000, format: ' HH '}">
-                                        </countdown>
-                                        <p>H</p>
-                                    </div>
-                                    <div class="bg-white rounded-1 center-elements my-2 p-2 mx-1 center-elements">
-                                        <countdown [config]="{leftTime: 69120000, format: ' mm '}">
-                                        </countdown>
-                                        <p>M</p>
-                                    </div>
-                                    <div class="bg-white rounded-1 center-elements my-2 p-2 mx-1 center-elements">
-                                        <countdown [config]="{leftTime: 69120000, format: ' ss '}">
-                                        </countdown>
-                                        <p>S</p>
-                                    </div>
-                                </div>
-                                <div class="bg-white h-40px w-70 rounded-5 center-elements btn">
-                                    <h6 class="TextTeal">Explore now</h6>
-                                    <img class="h-20px ms-2" src="images/shopping-cart.png" alt="arrow">
+
+                    </div>
+                    <div data-aos="fade-down-right" class="col-lg-8 col-md-7 col-sm-12 center-elements">
+                        <div class="w-100 center-elements my-3">
+                            <div class="FlashSalesCarouselDiv p-2">
+                                <div class="CarouselSlideDiv d-flex align-items-center">
+                                    <ngx-slick-carousel class="carousel w-100" [config]="slideConfig">
+                                        <div ngxSlickItem *ngFor="let p of ProductList" class="slide">
+
+                                            <div (click)="ProductDetails(p)" class="HotDealsCarouselCard mx-1 p-1">
+                                                <div class="h-15 d-flex justify-content-end align-items-center">
+                                                    <div *ngIf="p.QuantityAddedToCart==0"
+                                                        (click)="AddItemToCart(p); $event.stopPropagation()"
+                                                        class="AddToCartButton w-50 h-50 btn center-elements">
+                                                        <p class="TextTeal fs-12px TextWhiteOnHover">Add </p>
+                                                        <div class="TextTeal TextWhiteOnHover mx-1">
+                                                            <svg class="w-6 h-6 text-gray-800 dark:text-white"
+                                                                aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                                                width="15" height="15" fill="none" viewBox="0 0 24 24">
+                                                                <path stroke="currentColor" stroke-linecap="round"
+                                                                    stroke-linejoin="round" stroke-width="1"
+                                                                    d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
+                                                            </svg>
+                                                        </div>
+                                                    </div>
+                                                    <div *ngIf="p.QuantityAddedToCart>0"
+                                                        class="row gx-0 p-0 m-0 bg-white w-50 h-50 rounded-pill center-elements border-1 BorderTeal">
+                                                        <div (click)="DecreaseQuantity(p); $event.stopPropagation()"
+                                                            class="col-4 center-elements HoverBGTeal rounded-start-circle BlackToWhiteOnHover-Text">
+                                                            -</div>
+                                                        <div class="col-4 center-elements border-start fs-12px">
+                                                            {{p.QuantityAddedToCart}}</div>
+                                                        <div (click)="IncreaseQuantity(p); $event.stopPropagation()"
+                                                            class="col-4 center-elements border-start HoverBGTeal rounded-end-circle BlackToWhiteOnHover-Text">
+                                                            +</div>
+                                                    </div>
+                                                </div>
+                                                <div class="h-40 center-elements">
+                                                    <img class="ImageOfCard" [src]="p.Img1" alt="Images">
+                                                </div>
+                                                <div class="p-2 h-50">
+                                                    <div class="d-flex ">
+                                                        <h6>₹56</h6>
+                                                        <h6 class="text-secondary">/Qty</h6>
+                                                        <h6 class="text-secondary text-decoration-line-through mx-2">₹68
+                                                        </h6>
+                                                    </div>
+                                                    <div
+                                                        class="d-flex w-40 justify-content-between align-items-center my-2">
+                                                        <p class="fw-bold fs-12px">78</p>
+                                                        <img class="h-10px" src="images/star.png" alt="">
+                                                        <p class="fw-bold fs-12px">(15k)</p>
+                                                    </div>
+                                                    <h6 class="HoverTextTeal h-30">{{p.Name}}</h6>
+                                                    <div class="progress h-5px my-2">
+                                                        <div class="progress-bar BgTeal" role="progressbar"
+                                                            style="width: 25%" aria-valuenow="25" aria-valuemin="0"
+                                                            aria-valuemax="100"></div>
+                                                    </div>
+                                                    <p class="fw-semibold fs-12px text-secondary italic">Sold: 12/23</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ngx-slick-carousel>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <div data-aos="fade-down-right" class="col-lg-8 col-md-7 col-sm-12 h-lg-75 h-md-100 h-sm-75 center-elements">
-                    <div class="DivOfCarousel center-elements my-3">
-                        <div class="FlashSalesCarouselDiv p-2">
-                            <div class="CarouselSlideDiv d-flex align-items-center">
-                                <ngx-slick-carousel class="carousel w-100" [config]="slideConfig">
-                                    <div ngxSlickItem *ngFor="let p of ProductList" class="slide">
-
-                                        <div (click)="ProductDetails(p)" class="FlashSalesCard mx-1 p-1">
-                                            <div class="h-15 d-flex justify-content-end align-items-center">
-                                                <div *ngIf="p.QuantityAddedToCart==0"
-                                                    (click)="AddItemToCart(p); $event.stopPropagation()"
-                                                    class="AddToCartButton w-50 h-50 btn center-elements">
-                                                    <p class="TextTeal fs-12px TextWhiteOnHover">Add </p>
-                                                    <img class="h-10px mx-1" src="images/shopping-cart.png" alt="cart">
+            </div>
+        </div>
+    </div>
+    <!-- COUPON AND DISCOUNT CODE ------------------------------------------- -->
+    <div class="h-auto p-2 mb-5">
+        <div class="row p-2 gx-0 p-0 m-0 Coupon h-100 d-flex justify-content-around align-items-center ">
+            <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-center">
+                <p class="TextTeal fs-4">Super discount for your</p>
+                <a class="TextTeal fw-bold fs-5 mx-1" href="#">first purchase</a>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-12 ShopNowbutton center-elements">
+                <p class="fs-14px text-white">FREEJDFH1</p>
+                <img class="h-20px" src="images/white-copy.png" alt=" white copy text ">
+            </div>
+            <div class=" col-lg-4 col-md-12 col-sm-12 h-50 d-flex align-items-center">
+                <p class="TextTeal fs-14px">Use discount code to get</p>
+                <h6 class="TextTeal fw-bold fs-5 mx-1">20%</h6>
+                <p class="TextTeal fs-14px">discount for any item</p>
+            </div>
+        </div>
+    </div>
+    <!-- THREE CAROUSEL WITH DEAL OF THE WEEK AFTER THE HOT DEALS ------------ -->
+    <div class="h-auto p-2 w-100 center-elements">
+        <div class="container-fluid gx-0 m-0 p-0 h-90">
+            <div class="row gx-0 m-0 p-0">
+                <div *ngFor="let CarouselTitle of ListOfThreeCarousel" class="col-lg-3 col-md-4 col-sm-12 my-1">
+                    <div data-aos="fade-up" class="CardOfDealsCarousel h-100 mx-1 HoverTealBorder">
+                        <div class="h-20 center-elements p-3">
+                            <div class="ProductProgressbar h-100 w-100 p-3 rounded-4">
+                                <div>
+                                    <h5>{{CarouselTitle}}</h5>
+                                    <div class="progress h-5px w-75 my-3" role="progressbar"
+                                        aria-label="Success example" aria-valuenow="25" aria-valuemin="0"
+                                        aria-valuemax="100">
+                                        <div class="progress-bar BgTeal" style="width: 25%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="h-80 center-elements p-3">
+                            <div class="h-100 w-100 p-4 rounded-4">
+                                <ngx-slick-carousel class="carousel h-100 w-100 " [config]="slideConfig">
+                                    <div ngxSlickItem *ngFor="let p of ProductList">
+                                        <div class="container-fluid h-100 w-100 gx-0 p-0 m-0">
+                                            <div class="row gx-0 m-0 p-0 h-25 w-100 p-2">
+                                                <div class="w-50 justify-content-start align-items-center">
+                                                    <div class="ImageContainer center-elements rounded-2">
+                                                        <img class="h-75" src="images/jamun.png"
+                                                            alt="image of the carousel">
+                                                    </div>
                                                 </div>
-                                                <div *ngIf="p.QuantityAddedToCart>0"
-                                                    class="row gx-0 p-0 m-0 bg-white w-50 h-50 rounded-pill center-elements border-1 BorderTeal">
-                                                    <div (click)="DecreaseQuantity(p); $event.stopPropagation()"
-                                                        class="col-4 center-elements HoverBGTeal rounded-start-circle BlackToWhiteOnHover-Text">
-                                                        -</div>
-                                                    <div class="col-4 center-elements border-start fs-12px">
-                                                        {{p.QuantityAddedToCart}}</div>
-                                                    <div (click)="IncreaseQuantity(p); $event.stopPropagation()"
-                                                        class="col-4 center-elements border-start HoverBGTeal rounded-end-circle BlackToWhiteOnHover-Text">
-                                                        +</div>
+                                                <div class="w-50">
+                                                    <div
+                                                        class="d-flex w-40 justify-content-between align-items-center my-2">
+                                                        <p class="fw-bold fs-12px">78</p>
+                                                        <img class="h-10px" src="images/star.png" alt="">
+                                                        <p class="fw-bold fs-12px">(15k)</p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="fw-bold fs-12px">Fresh brocolly from the farm </p>
+                                                        <p class="fw-bold fs-12px">₹65</p>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="h-40 center-elements">
-                                                <img class="ImageOfCard" [src]="p.Img1" alt="Images">
+                                            <div class="row gx-0 m-0 p-0 h-25 w-100 p-2">
+                                                <div class="w-50 justify-content-start align-items-center">
+                                                    <div class="ImageContainer center-elements rounded-2">
+                                                        <img class="h-75" src="images/avacado.png"
+                                                            alt="image of the carousel">
+                                                    </div>
+                                                </div>
+                                                <div class="w-50">
+                                                    <div
+                                                        class="d-flex w-40 justify-content-between align-items-center my-2">
+                                                        <p class="fw-bold fs-12px">78</p>
+                                                        <img class="h-10px" src="images/star.png" alt="">
+                                                        <p class="fw-bold fs-12px">(15k)</p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="fw-bold fs-12px">Fresh brocolly from the farm </p>
+                                                        <p class="fw-bold fs-12px">₹65</p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="p-2 h-50">
-                                                <div class="d-flex ">
-                                                    <h6>₹56</h6>
-                                                    <h6 class="text-secondary">/Qty</h6>
-                                                    <h6 class="text-secondary text-decoration-line-through mx-2">₹68
-                                                    </h6>
+                                            <div class="row gx-0 m-0 p-0 h-25 w-100 p-2">
+                                                <div class="w-50 d-flex justify-content-start align-items-center">
+                                                    <div class="ImageContainer center-elements rounded-2">
+                                                        <img class="h-75" src="images/cabbage.png"
+                                                            alt="image of the carousel">
+                                                    </div>
                                                 </div>
-                                                <div
-                                                    class="d-flex w-40 justify-content-between align-items-center my-2">
-                                                    <p class="fw-bold fs-12px">78</p>
-                                                    <img class="h-10px" src="images/star.png" alt="">
-                                                    <p class="fw-bold fs-12px">(15k)</p>
+                                                <div class="w-50">
+                                                    <div
+                                                        class="d-flex w-40 justify-content-between align-items-center my-2">
+                                                        <p class="fw-bold fs-12px">78</p>
+                                                        <img class="h-10px" src="images/star.png" alt="">
+                                                        <p class="fw-bold fs-12px">(15k)</p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="fw-bold fs-12px">Fresh brocolly from the farm </p>
+                                                        <p class="fw-bold fs-12px">₹65</p>
+                                                    </div>
                                                 </div>
-                                                <h6 class="HoverTextTeal h-30">{{p.Name}}</h6>
-                                                <div class="progress h-5px my-2">
-                                                    <div class="progress-bar BgTeal" role="progressbar"
-                                                        style="width: 25%" aria-valuenow="25" aria-valuemin="0"
-                                                        aria-valuemax="100"></div>
+                                            </div>
+                                            <div class="row gx-0 m-0 p-0 h-25 w-100 p-2">
+                                                <div class="w-50 justify-content-start align-items-center">
+                                                    <div class="ImageContainer center-elements rounded-2">
+                                                        <img class="h-75" src="images/carrot.png"
+                                                            alt="image of the carousel">
+                                                    </div>
                                                 </div>
-                                                <p class="fw-semibold fs-12px text-secondary italic">Sold: 12/23</p>
+                                                <div class="w-50">
+                                                    <div
+                                                        class="d-flex w-40 justify-content-between align-items-center my-2">
+                                                        <p class="fw-bold fs-12px">78</p>
+                                                        <img class="h-10px" src="images/star.png" alt="">
+                                                        <p class="fw-bold fs-12px">(15k)</p>
+                                                    </div>
+                                                    <div>
+                                                        <p class="fw-bold fs-12px">Fresh brocolly from the farm </p>
+                                                        <p class="fw-bold fs-12px">₹65</p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -108,547 +258,228 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- COUPON AND DISCOUNT CODE ------------------------------------------- -->
-<div class="DivOfCoupon p-2 mb-5 ">
-    <div class="row p-2 gx-0 p-0 m-0 Coupon h-100 d-flex justify-content-around align-items-center ">
-        <div class="col-lg-4 col-md-6 col-sm-12 d-flex align-items-center">
-            <p class="TextTeal fs-4">Super discount for your</p>
-            <a class="TextTeal fw-bold fs-5 mx-1" href="#">first purchase</a>
-        </div>
-        <div class="col-lg-4 col-md-6 col-sm-12 ShopNowbutton center-elements">
-            <p class="fs-14px text-white">FREEJDFH1</p>
-            <img class="h-20px" src="images/white-copy.png" alt=" white copy text ">
-        </div>
-        <div class=" col-lg-4 col-md-12 col-sm-12 h-50 d-flex align-items-center">
-            <p class="TextTeal fs-14px">Use discount code to get</p>
-            <h6 class="TextTeal fw-bold fs-5 mx-1">20%</h6>
-            <p class="TextTeal fs-14px">discount for any item</p>
-        </div>
-    </div>
-</div>
-<!-- THREE CAROUSEL WITH DEAL OF THE WEEK AFTER THE HOT DEALS ------------ -->
-<div class="DivAfterHotDeal p-2 w-100  center-elements">
-    <div class="container-fluid gx-0 m-0 p-0 h-90">
-        <div class="row gx-0 m-0 p-0">
-            <div *ngFor="let CarouselTitle of ListOfThreeCarousel" class="col-lg-3 col-md-4 col-sm-12 my-1">
-                <div data-aos="fade-up" class="CardOfDealsCarousel h-100 mx-1 HoverTealBorder">
-                    <div class="h-20 center-elements p-3">
-                        <div class="ProductProgressbar h-100 w-100 p-3 rounded-4">
-                            <div>
-                                <h5>{{CarouselTitle}}</h5>
-                                <div class="progress h-5px w-75 my-3" role="progressbar" aria-label="Success example"
-                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                    <div class="progress-bar BgTeal" style="width: 25%"></div>
+                <div class="col-lg-3 col-md-4 col-sm-12 my-1">
+                    <div data-aos="fade-up" class="CardOfDealsCarousel h-100 mx-1 HoverTealBorder p-3">
+                        <div>
+                            <h5>Deal of the week </h5>
+                            <div class="d-flex my-3">
+                                <div class="BgTeal rounded-1 center-elements my-2 p-2 mx-1 center-elements">
+                                    <countdown class="text-white" [config]="{leftTime: 69120000, format: ' dd '}">
+                                    </countdown>
+                                    <p class="text-white">D</p>
+                                </div>
+                                <div class="BgTeal rounded-1 center-elements my-2 p-2 mx-1 center-elements">
+                                    <countdown class="text-white" [config]="{leftTime: 69120000, format: ' HH '}">
+                                    </countdown>
+                                    <p class="text-white">H</p>
+                                </div>
+                                <div class="BgTeal rounded-1 center-elements my-2 p-2 mx-1 center-elements">
+                                    <countdown class="text-white" [config]="{leftTime: 69120000, format: ' mm '}">
+                                    </countdown>
+                                    <p class="text-white">M</p>
+                                </div>
+                                <div class="BgTeal rounded-1 center-elements my-2 p-2 mx-1 center-elements">
+                                    <countdown class="text-white" [config]="{leftTime: 69120000, format: ' ss '}">
+                                    </countdown>
+                                    <p class="text-white">S</p>
+                                </div>
+                            </div>
+                            <p class="fs-12px text-secondary fw-semibold">Don't miss this opportunity at a special</p>
+                            <div class="h-200px my-2 center-elements p-4">
+                                <img class="ImageOfCard" src="images/chips.png" alt="Chips image">
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img class="h-10px" src="images/star.png" alt="rating">
+                                <img class="h-10px" src="images/star.png" alt="rating">
+                                <img class="h-10px" src="images/star.png" alt="rating">
+                                <img class="h-10px" src="images/star.png" alt="rating">
+                                <img class="h-10px" src="images/star.png" alt="rating">
+                                <p class="fs-10px fw-semibold mx-1">(15)</p>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <p class="text-danger fw-semibold">₹87.00</p>
+                                <p class="text-body-tertiary fw-semibold mx-2">₹99.00</p>
+                            </div>
+                            <h6 class="h-50px align-items-center d-flex">Delicious one for your kitchen</h6>
+                            <p class="fs-12px text-secondary fw-semibold my-1">This product is about to run out</p>
+                            <hr class="my-4">
+                            <div class="progress h-10px my-1">
+                                <div class="progress-bar Bg-Green" role="progressbar" style="width: 25%"
+                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <p class="fs-12px text-secondary fw-semibold my-1">available only : </p>
+                                <p class="text-danger fw-semibold fs-12px">₹87.00</p>
+                            </div>
+                            <div class="AddToCartButton Hover-Success Bg-Green w-100 h-40px btn center-elements">
+                                <p class="fs-14px TextWhiteOnHover">Add to cart</p>
+                                <div class=" TextWhiteOnHover">
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="1"
+                                            d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
+                                    </svg>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="h-80 center-elements p-3">
-                        <div class="h-100 w-100 p-4 rounded-4">
-                            <ngx-slick-carousel class="carousel h-100 w-100 " [config]="slideConfig">
-                                <div ngxSlickItem *ngFor="let p of ProductList">
-                                    <div class="container-fluid h-100 w-100 gx-0 p-0 m-0">
-                                        <div class="row gx-0 m-0 p-0 h-25 w-100 p-2">
-                                            <div class="w-50 justify-content-start align-items-center">
-                                                <div class="ImageContainer center-elements rounded-2">
-                                                    <img class="h-75" src="images/jamun.png"
-                                                        alt="image of the carousel">
-                                                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SHOP BY BRANDS SLICK CAROUSEL --------------------------------------- -->
+    <div class="my-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <h2 class="HeadingFS fw-bold">Shop by brands</h2>
+            <p class="text-secondary HoverTextTeal">view all details</p>
+        </div>
+        <ngx-slick-carousel class="carousel w-100 my-5" [config]="slideConfig">
+            <div data-aos="zoom-in-left" ngxSlickItem *ngFor="let b of Brands" class="slide">
+                <div class="mx-3">
+                    <img class="BrandsImages" [src]="b" alt="Images of categories">
+                </div>
+            </div>
+        </ngx-slick-carousel>
+    </div>
+    <!-- DAILY BEST SELLERS--------------------------------------------------- -->
+    <div class="my-5">
+        <div class="d-flex justify-content-start align-items-center my-3">
+            <h2 class="HeadingFS fw-bold">Daily best sellers</h2>
+        </div>
+        <div class="h-auto">
+            <div class="row gx-0 m-0 p-0 ">
+                <div class="col-lg-8 col-md-12 col-sm-12">
+                    <div class="row g-0 p-0 m-0 ">
+                        <div *ngFor="let seller of ListOFBestSellers"
+                            class="col-lg-6 col-md-6 col-sm-12 gx-0 m-0 p-0 p-1 center-elements">
+                            <div data-aos="zoom-in" class="row g-0 p-0 m-0 HoverTealBorder Bordergrey rounded-4">
+                                <div class="row gx-0 p-0 m-0 w-400px">
+                                    <div class="col-6 p-2">
+                                        <div>
+                                            <div class="center-elements w-40 h-20px bg-danger"
+                                                style="border-top-left-radius: 20px;border-bottom-right-radius: 20px;">
+                                                <p class="fs-12px text-white italic fw-semibold">Sale 50%</p>
                                             </div>
-                                            <div class="w-50">
+                                            <div class="h-150px my-1 center-elements p-1">
+                                                <img class="ImageHover" [src]="seller.Img" alt="Chips image">
+                                            </div>
+                                            <div class="d-flex justify-content-center my-1 w-100">
                                                 <div
-                                                    class="d-flex w-40 justify-content-between align-items-center my-2">
-                                                    <p class="fw-bold fs-12px">78</p>
-                                                    <img class="h-10px" src="images/star.png" alt="">
-                                                    <p class="fw-bold fs-12px">(15k)</p>
+                                                    class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
+                                                    <countdown class="TextTeal fs-12px fw-semibold"
+                                                        [config]="{leftTime: 69120000, format: ' dd '}">
+                                                    </countdown>
+                                                    <p class="TextTeal fs-12px fw-semibold">D</p>
                                                 </div>
-                                                <div>
-                                                    <p class="fw-bold fs-12px">Fresh brocolly from the farm </p>
-                                                    <p class="fw-bold fs-12px">₹65</p>
+                                                <div
+                                                    class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
+                                                    <countdown class="TextTeal fs-12px fw-semibold"
+                                                        [config]="{leftTime: 69120000, format: ' HH '}">
+                                                    </countdown>
+                                                    <p class="TextTeal fs-12px fw-semibold">H</p>
+                                                </div>
+                                                <div
+                                                    class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
+                                                    <countdown class="TextTeal fs-12px fw-semibold"
+                                                        [config]="{leftTime: 69120000, format: ' mm '}">
+                                                    </countdown>
+                                                    <p class="TextTeal fs-12px fw-semibold">M</p>
+                                                </div>
+                                                <div
+                                                    class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
+                                                    <countdown class="TextTeal fs-12px fw-semibold"
+                                                        [config]="{leftTime: 69120000, format: ' ss '}">
+                                                    </countdown>
+                                                    <p class="TextTeal fs-12px fw-semibold">S</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row gx-0 m-0 p-0 h-25 w-100 p-2">
-                                            <div class="w-50 justify-content-start align-items-center">
-                                                <div class="ImageContainer center-elements rounded-2">
-                                                    <img class="h-75" src="images/avacado.png"
-                                                        alt="image of the carousel">
-                                                </div>
+                                    </div>
+                                    <div class="col-6 p-3">
+                                        <div class="h-100 py-2">
+                                            <div class="d-flex my-1">
+                                                <h6>₹56</h6>
+                                                <h6 class="text-secondary">/Qty</h6>
+                                                <h6 class="text-secondary text-decoration-line-through mx-2">₹68</h6>
                                             </div>
-                                            <div class="w-50">
-                                                <div
-                                                    class="d-flex w-40 justify-content-between align-items-center my-2">
-                                                    <p class="fw-bold fs-12px">78</p>
-                                                    <img class="h-10px" src="images/star.png" alt="">
-                                                    <p class="fw-bold fs-12px">(15k)</p>
-                                                </div>
-                                                <div>
-                                                    <p class="fw-bold fs-12px">Fresh brocolly from the farm </p>
-                                                    <p class="fw-bold fs-12px">₹65</p>
-                                                </div>
+                                            <div class="d-flex w-40 justify-content-between align-items-center my-2">
+                                                <p class="fw-bold fs-12px">78</p>
+                                                <img class="h-10px" src="images/star.png" alt="">
+                                                <p class="fw-bold fs-12px">(15k)</p>
                                             </div>
-                                        </div>
-                                        <div class="row gx-0 m-0 p-0 h-25 w-100 p-2">
-                                            <div class="w-50 d-flex justify-content-start align-items-center">
-                                                <div class="ImageContainer center-elements rounded-2">
-                                                    <img class="h-75" src="images/cabbage.png"
-                                                        alt="image of the carousel">
-                                                </div>
+                                            <h6 class="HoverTextTeal h-20px my-3">{{seller.Name}}</h6>
+                                            <div class="d-flex align-items-center">
+                                                <img class="h-10px mx-1" src="images/shop.png" alt="shop">
+                                                <p class="fs-10px text-secondary fw-semibold"> By Dolly supermart</p>
                                             </div>
-                                            <div class="w-50">
-                                                <div
-                                                    class="d-flex w-40 justify-content-between align-items-center my-2">
-                                                    <p class="fw-bold fs-12px">78</p>
-                                                    <img class="h-10px" src="images/star.png" alt="">
-                                                    <p class="fw-bold fs-12px">(15k)</p>
-                                                </div>
-                                                <div>
-                                                    <p class="fw-bold fs-12px">Fresh brocolly from the farm </p>
-                                                    <p class="fw-bold fs-12px">₹65</p>
-                                                </div>
+                                            <div class="progress h-5px my-1">
+                                                <div class="progress-bar BgTeal" role="progressbar" style="width: 25%"
+                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
-                                        </div>
-                                        <div class="row gx-0 m-0 p-0 h-25 w-100 p-2">
-                                            <div class="w-50 justify-content-start align-items-center">
-                                                <div class="ImageContainer center-elements rounded-2">
-                                                    <img class="h-75" src="images/carrot.png"
-                                                        alt="image of the carousel">
-                                                </div>
-                                            </div>
-                                            <div class="w-50">
-                                                <div
-                                                    class="d-flex w-40 justify-content-between align-items-center my-2">
-                                                    <p class="fw-bold fs-12px">78</p>
-                                                    <img class="h-10px" src="images/star.png" alt="">
-                                                    <p class="fw-bold fs-12px">(15k)</p>
-                                                </div>
-                                                <div>
-                                                    <p class="fw-bold fs-12px">Fresh brocolly from the farm </p>
-                                                    <p class="fw-bold fs-12px">₹65</p>
+                                            <p class="fw-semibold fs-12px text-secondary italic">Sold: 12/23</p>
+                                            <div class="AddToCartButton w-100 h-40px btn center-elements my-2">
+                                                <p class="TextTeal fs-12px TextWhiteOnHover">Add to cart</p>
+                                                <div class="TextTeal TextWhiteOnHover mx-1">
+                                                    <svg class="w-6 h-6 text-gray-800 dark:text-white"
+                                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="20"
+                                                        height="20" fill="none" viewBox="0 0 24 24">
+                                                        <path stroke="currentColor" stroke-linecap="round"
+                                                            stroke-linejoin="round" stroke-width="1"
+                                                            d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
+                                                    </svg>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </ngx-slick-carousel>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-12 px-3">
+                    <div data-aos="zoom-in" class="h-520px BGImage img-fluid w-100 rounded-4"
+                        style="background-image: url('images/bsBg.png');">
+                        <div class="h-50 w-100 p-5">
+                            <div class="bg-white center-elements WhiteDiv80px">
+                                <img class="h-80 BgImage" src="images/offer-logo.png" alt="offer logo">
+                            </div>
+                            <h4>$5 off your first order</h4>
+                            <div class="d-flex align-items-center">
+                                <p class="fs-12px fw-semibold my-2">Delivery by 6:15am</p>
+                                <p class="fs-10px fw-semibold my-2 mx-1"> Expire Aug 5</p>
+                            </div>
+                            <div class="ShopNowbutton center-elements Bg-Green">
+                                <h6 class="text-white">Shop Now</h6>
+                                <img class="h-20px ms-2" src="images/white-arrow-right.png" alt="arrow">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-12 my-1">
-                <div data-aos="fade-up" class="CardOfDealsCarousel h-100 mx-1 HoverTealBorder p-3">
+        </div>
+    </div>
+    <!-- .ABOVE THE FOOTER DIV OF SUBSCRIBE WITH THE EMALE ------------------- -->
+    <div class="p-3">
+        <div class="h-auto BgLightGrey rounded-4 p-4">
+            <div class="row gx-0 p-0 m-0 w-100 h-100 p-2">
+                <div class="col-lg-7 col-md-6 col-sm-12 p-5 center-elements">
                     <div>
-                        <h5>Deal of the week </h5>
-                        <div class="d-flex my-3">
-                            <div class="BgTeal rounded-1 center-elements my-2 p-2 mx-1 center-elements">
-                                <countdown class="text-white" [config]="{leftTime: 69120000, format: ' dd '}">
-                                </countdown>
-                                <p class="text-white">D</p>
-                            </div>
-                            <div class="BgTeal rounded-1 center-elements my-2 p-2 mx-1 center-elements">
-                                <countdown class="text-white" [config]="{leftTime: 69120000, format: ' HH '}">
-                                </countdown>
-                                <p class="text-white">H</p>
-                            </div>
-                            <div class="BgTeal rounded-1 center-elements my-2 p-2 mx-1 center-elements">
-                                <countdown class="text-white" [config]="{leftTime: 69120000, format: ' mm '}">
-                                </countdown>
-                                <p class="text-white">M</p>
-                            </div>
-                            <div class="BgTeal rounded-1 center-elements my-2 p-2 mx-1 center-elements">
-                                <countdown class="text-white" [config]="{leftTime: 69120000, format: ' ss '}">
-                                </countdown>
-                                <p class="text-white">S</p>
+                        <h2 class="fw-semibold">Stay home & get your daily needs from our shop</h2>
+                        <div class="d-flex justify-content-between my-3">
+                            <input class="h-50px w-75 p-3 border-0 rounded-1" type="text" placeholder="Enter your mail">
+                            <div class="Bg-green h-50px w-25 rounded-1 mx-2 center-elements">
+                                <p class="fs-14px text-white">Subscribe now</p>
                             </div>
                         </div>
-                        <p class="fs-12px text-secondary fw-semibold">Don't miss this opportunity at a special</p>
-                        <div class="h-200px my-2 center-elements p-4">
-                            <img class="ImageOfCard" src="images/chips.png" alt="Chips image">
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <img class="h-10px" src="images/star.png" alt="rating">
-                            <img class="h-10px" src="images/star.png" alt="rating">
-                            <img class="h-10px" src="images/star.png" alt="rating">
-                            <img class="h-10px" src="images/star.png" alt="rating">
-                            <img class="h-10px" src="images/star.png" alt="rating">
-                            <p class="fs-10px fw-semibold mx-1">(15)</p>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <p class="text-danger fw-semibold">₹87.00</p>
-                            <p class="text-body-tertiary fw-semibold mx-2">₹99.00</p>
-                        </div>
-                        <h6 class="h-50px align-items-center d-flex">Delicious one for your kitchen</h6>
-                        <p class="fs-12px text-secondary fw-semibold my-1">This product is about to run out</p>
-                        <hr class="my-4">
-                        <div class="progress h-10px my-1">
-                            <div class="progress-bar Bg-Green" role="progressbar" style="width: 25%" aria-valuenow="25"
-                                aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <p class="fs-12px text-secondary fw-semibold my-1">available only : </p>
-                            <p class="text-danger fw-semibold fs-12px">₹87.00</p>
-                        </div>
-                        <div class="AddToCartButton Hover-Success Bg-Green w-100 h-40px btn center-elements">
-                            <p class="text-white fs-14px TextWhiteOnHover">Add to cart</p>
-                            <img class="h-15px mx-1" src="images/shopping-cart.png" alt="cart">
-                        </div>
+                        <p class="fw-semibold fs-12px">I agree that my submitted data is being collected and stored.</p>
                     </div>
+                </div>
+                <div class="col-lg-5 col-md-4 col-sm-12 center-elements">
+                    <img class="FruitsImage" src="images/BottomFruits.png" alt="fruits image">
                 </div>
             </div>
-        </div>
-    </div>
-</div>
-<!-- SHOP BY BRANDS SLICK CAROUSEL --------------------------------------- -->
-<div class="my-3">
-    <div class="d-flex justify-content-between align-items-center">
-        <h3>Shop by brands</h3>
-        <p class="text-secondary HoverTextTeal">view all details</p>
-    </div>
-    <ngx-slick-carousel class="carousel w-100 my-5" [config]="slideConfig">
-        <div data-aos="zoom-in-left" ngxSlickItem *ngFor="let b of Brands" class="slide">
-            <div class="mx-3">
-                <img class="BrandsImages" [src]="b" alt="Images of categories">
-            </div>
-        </div>
-    </ngx-slick-carousel>
-</div>
-<!-- DAILY BEST SELLERS--------------------------------------------------- -->
-<div class="my-5">
-    <div class="d-flex justify-content-start align-items-center my-3">
-        <h2>Daily best sellers</h2>
-    </div>
-    <div class="DailyBestSellersDiv">
-        <div class="row gx-0 m-0 p-0 h-100">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="row gx-0 m-0 p-0 h-50 p-1 center-elements">
-                    <div data-aos="zoom-in" class="h-90 HoverTealBorder DivOfSellerCard rounded-4">
-                        <div class="row gx-0 p-0 m-0 h-100">
-                            <div class="col-6 p-2">
-                                <div>
-                                    <div class="center-elements w-40 h-20px bg-danger"
-                                        style="border-top-left-radius: 20px;border-bottom-right-radius: 20px;">
-                                        <p class="fs-12px text-white italic fw-semibold">Sale 50%</p>
-                                    </div>
-                                    <div class="h-150px my-1 center-elements p-1">
-                                        <img class="ImageHover" src="images/bsImg1.png" alt="Chips image">
-                                    </div>
-                                    <div class="d-flex justify-content-center my-1 w-100">
-                                        <div class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
-                                            <countdown class="TextTeal fs-12px fw-semibold"
-                                                [config]="{leftTime: 69120000, format: ' dd '}">
-                                            </countdown>
-                                            <p class="TextTeal fs-12px fw-semibold">D</p>
-                                        </div>
-                                        <div class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
-                                            <countdown class="TextTeal fs-12px fw-semibold"
-                                                [config]="{leftTime: 69120000, format: ' HH '}">
-                                            </countdown>
-                                            <p class="TextTeal fs-12px fw-semibold">H</p>
-                                        </div>
-                                        <div class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
-                                            <countdown class="TextTeal fs-12px fw-semibold"
-                                                [config]="{leftTime: 69120000, format: ' mm '}">
-                                            </countdown>
-                                            <p class="TextTeal fs-12px fw-semibold">M</p>
-                                        </div>
-                                        <div class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
-                                            <countdown class="TextTeal fs-12px fw-semibold"
-                                                [config]="{leftTime: 69120000, format: ' ss '}">
-                                            </countdown>
-                                            <p class="TextTeal fs-12px fw-semibold">S</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 p-3">
-                                <div class="h-100 py-2">
-                                    <div class="d-flex my-1">
-                                        <h6>₹56</h6>
-                                        <h6 class="text-secondary">/Qty</h6>
-                                        <h6 class="text-secondary text-decoration-line-through mx-2">₹68</h6>
-                                    </div>
-                                    <div class="d-flex w-40 justify-content-between align-items-center my-2">
-                                        <p class="fw-bold fs-12px">78</p>
-                                        <img class="h-10px" src="images/star.png" alt="">
-                                        <p class="fw-bold fs-12px">(15k)</p>
-                                    </div>
-                                    <h6 class="HoverTextTeal h-20px my-3">NameOf the product</h6>
-                                    <div class="d-flex align-items-center">
-                                        <img class="h-10px mx-1" src="images/shop.png" alt="shop">
-                                        <p class="fs-10px text-secondary fw-semibold"> By Dolly supermart</p>
-                                    </div>
-                                    <div class="progress h-5px my-1">
-                                        <div class="progress-bar BgTeal" role="progressbar" style="width: 25%"
-                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <p class="fw-semibold fs-12px text-secondary italic">Sold: 12/23</p>
-                                    <div class="AddToCartButton w-100 h-40px btn center-elements my-2">
-                                        <p class="TextTeal fs-12px TextWhiteOnHover">Add to cart</p>
-                                        <img class="h-10px mx-1" src="images/shopping-cart.png" alt="cart">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row gx-0 m-0 p-0 h-50 p-1 center-elements">
-                    <div data-aos="zoom-in" class="h-90 HoverTealBorder DivOfSellerCard rounded-4">
-                        <div class="row gx-0 p-0 m-0 h-100">
-                            <div class="col-6 p-2">
-                                <div>
-                                    <div class="center-elements w-40 h-20px bg-danger"
-                                        style="border-top-left-radius: 20px;border-bottom-right-radius: 20px;">
-                                        <p class="fs-12px text-white italic fw-semibold">Sale 50%</p>
-                                    </div>
-                                    <div class="h-150px my-1 center-elements p-1">
-                                        <img class="ImageHover" src="images/bsImg2.png" alt="Chips image">
-                                    </div>
-                                    <div class="d-flex justify-content-center my-1 w-100">
-                                        <div class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
-                                            <countdown class="TextTeal fs-12px fw-semibold"
-                                                [config]="{leftTime: 69120000, format: ' dd '}">
-                                            </countdown>
-                                            <p class="TextTeal fs-12px fw-semibold">D</p>
-                                        </div>
-                                        <div class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
-                                            <countdown class="TextTeal fs-12px fw-semibold"
-                                                [config]="{leftTime: 69120000, format: ' HH '}">
-                                            </countdown>
-                                            <p class="TextTeal fs-12px fw-semibold">H</p>
-                                        </div>
-                                        <div class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
-                                            <countdown class="TextTeal fs-12px fw-semibold"
-                                                [config]="{leftTime: 69120000, format: ' mm '}">
-                                            </countdown>
-                                            <p class="TextTeal fs-12px fw-semibold">M</p>
-                                        </div>
-                                        <div class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
-                                            <countdown class="TextTeal fs-12px fw-semibold"
-                                                [config]="{leftTime: 69120000, format: ' ss '}">
-                                            </countdown>
-                                            <p class="TextTeal fs-12px fw-semibold">S</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 p-3">
-                                <div class="h-100 py-2">
-                                    <div class="d-flex my-1">
-                                        <h6>₹56</h6>
-                                        <h6 class="text-secondary">/Qty</h6>
-                                        <h6 class="text-secondary text-decoration-line-through mx-2">₹68</h6>
-                                    </div>
-                                    <div class="d-flex w-40 justify-content-between align-items-center my-2">
-                                        <p class="fw-bold fs-12px">78</p>
-                                        <img class="h-10px" src="images/star.png" alt="">
-                                        <p class="fw-bold fs-12px">(15k)</p>
-                                    </div>
-                                    <h6 class="HoverTextTeal h-20px my-3">NameOf the product</h6>
-                                    <div class="d-flex align-items-center">
-                                        <img class="h-10px mx-1" src="images/shop.png" alt="shop">
-                                        <p class="fs-10px text-secondary fw-semibold"> By Dolly supermart</p>
-                                    </div>
-                                    <div class="progress h-5px my-1">
-                                        <div class="progress-bar BgTeal" role="progressbar" style="width: 25%"
-                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <p class="fw-semibold fs-12px text-secondary italic">Sold: 12/23</p>
-                                    <div class="AddToCartButton w-100 h-40px btn center-elements my-2">
-                                        <p class="TextTeal fs-12px TextWhiteOnHover">Add to cart</p>
-                                        <img class="h-10px mx-1" src="images/shopping-cart.png" alt="cart">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div class="row gx-0 m-0 p-0 h-50 p-1 center-elements">
-                    <div data-aos="zoom-in" class="h-90 HoverTealBorder DivOfSellerCard rounded-4">
-                        <div class="row gx-0 p-0 m-0 h-100">
-                            <div class="col-6 p-2">
-                                <div>
-                                    <div class="center-elements w-40 h-20px bg-danger"
-                                        style="border-top-left-radius: 20px;border-bottom-right-radius: 20px;">
-                                        <p class="fs-12px text-white italic fw-semibold">Sale 50%</p>
-                                    </div>
-                                    <div class="h-150px my-1 center-elements p-1">
-                                        <img class="ImageHover" src="images/bsImg3.png" alt="Chips image">
-                                    </div>
-                                    <div class="d-flex justify-content-center my-1 w-100">
-                                        <div class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
-                                            <countdown class="TextTeal fs-12px fw-semibold"
-                                                [config]="{leftTime: 69120000, format: ' dd '}">
-                                            </countdown>
-                                            <p class="TextTeal fs-12px fw-semibold">D</p>
-                                        </div>
-                                        <div class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
-                                            <countdown class="TextTeal fs-12px fw-semibold"
-                                                [config]="{leftTime: 69120000, format: ' HH '}">
-                                            </countdown>
-                                            <p class="TextTeal fs-12px fw-semibold">H</p>
-                                        </div>
-                                        <div class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
-                                            <countdown class="TextTeal fs-12px fw-semibold"
-                                                [config]="{leftTime: 69120000, format: ' mm '}">
-                                            </countdown>
-                                            <p class="TextTeal fs-12px fw-semibold">M</p>
-                                        </div>
-                                        <div class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
-                                            <countdown class="TextTeal fs-12px fw-semibold"
-                                                [config]="{leftTime: 69120000, format: ' ss '}">
-                                            </countdown>
-                                            <p class="TextTeal fs-12px fw-semibold">S</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 p-3">
-                                <div class="h-100 py-2">
-                                    <div class="d-flex my-1">
-                                        <h6>₹56</h6>
-                                        <h6 class="text-secondary">/Qty</h6>
-                                        <h6 class="text-secondary text-decoration-line-through mx-2">₹68</h6>
-                                    </div>
-                                    <div class="d-flex w-40 justify-content-between align-items-center my-2">
-                                        <p class="fw-bold fs-12px">78</p>
-                                        <img class="h-10px" src="images/star.png" alt="">
-                                        <p class="fw-bold fs-12px">(15k)</p>
-                                    </div>
-                                    <h6 class="HoverTextTeal h-20px my-3">NameOf the product</h6>
-                                    <div class="d-flex align-items-center">
-                                        <img class="h-10px mx-1" src="images/shop.png" alt="shop">
-                                        <p class="fs-10px text-secondary fw-semibold"> By Dolly supermart</p>
-                                    </div>
-                                    <div class="progress h-5px my-1">
-                                        <div class="progress-bar BgTeal" role="progressbar" style="width: 25%"
-                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <p class="fw-semibold fs-12px text-secondary italic">Sold: 12/23</p>
-                                    <div class="AddToCartButton w-100 h-40px btn center-elements my-2">
-                                        <p class="TextTeal fs-12px TextWhiteOnHover">Add to cart</p>
-                                        <img class="h-10px mx-1" src="images/shopping-cart.png" alt="cart">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row gx-0 m-0 p-0 h-50 p-1  center-elements">
-                    <div data-aos="zoom-in" class="h-90 HoverTealBorder DivOfSellerCard rounded-4">
-                        <div class="row gx-0 p-0 m-0 h-100">
-                            <div class="col-6 p-2">
-                                <div>
-                                    <div class="center-elements w-40 h-20px bg-danger"
-                                        style="border-top-left-radius: 20px;border-bottom-right-radius: 20px;">
-                                        <p class="fs-12px text-white italic fw-semibold">Sale 50%</p>
-                                    </div>
-                                    <div class="h-100px my-1 center-elements p-1">
-                                        <img class="ImageHover" src="images/bsImg4.png" alt="Chips image">
-                                    </div>
-                                    <div class="d-flex justify-content-center my-1 w-100">
-                                        <div class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
-                                            <countdown class="TextTeal fs-12px fw-semibold"
-                                                [config]="{leftTime: 69120000, format: ' dd '}">
-                                            </countdown>
-                                            <p class="TextTeal fs-12px fw-semibold">D</p>
-                                        </div>
-                                        <div class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
-                                            <countdown class="TextTeal fs-12px fw-semibold"
-                                                [config]="{leftTime: 69120000, format: ' HH '}">
-                                            </countdown>
-                                            <p class="TextTeal fs-12px fw-semibold">H</p>
-                                        </div>
-                                        <div class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
-                                            <countdown class="TextTeal fs-12px fw-semibold"
-                                                [config]="{leftTime: 69120000, format: ' mm '}">
-                                            </countdown>
-                                            <p class="TextTeal fs-12px fw-semibold">M</p>
-                                        </div>
-                                        <div class="Bg-SkyBlue rounded-1 center-elements my-2 p-1 mx-1 center-elements">
-                                            <countdown class="TextTeal fs-12px fw-semibold"
-                                                [config]="{leftTime: 69120000, format: ' ss '}">
-                                            </countdown>
-                                            <p class="TextTeal fs-12px fw-semibold">S</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-6 p-3">
-                                <div class="h-100 py-2">
-                                    <div class="d-flex my-1">
-                                        <h6>₹56</h6>
-                                        <h6 class="text-secondary">/Qty</h6>
-                                        <h6 class="text-secondary text-decoration-line-through mx-2">₹68</h6>
-                                    </div>
-                                    <div class="d-flex w-40 justify-content-between align-items-center my-2">
-                                        <p class="fw-bold fs-12px">78</p>
-                                        <img class="h-10px" src="images/star.png" alt="">
-                                        <p class="fw-bold fs-12px">(15k)</p>
-                                    </div>
-                                    <h6 class="HoverTextTeal h-20px my-3">NameOf the product</h6>
-                                    <div class="d-flex align-items-center">
-                                        <img class="h-10px mx-1" src="images/shop.png" alt="shop">
-                                        <p class="fs-10px text-secondary fw-semibold"> By Dolly supermart</p>
-                                    </div>
-                                    <div class="progress h-5px my-1">
-                                        <div class="progress-bar BgTeal" role="progressbar" style="width: 25%"
-                                            aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                    <p class="fw-semibold fs-12px text-secondary italic">Sold: 12/23</p>
-                                    <div class="AddToCartButton w-100 h-40px btn center-elements my-2">
-                                        <p class="TextTeal fs-12px TextWhiteOnHover">Add to cart</p>
-                                        <img class="h-10px mx-1" src="images/shopping-cart.png" alt="cart">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12 p-3 center-elements">
-                <div data-aos="zoom-in" class="h-560px w-100 rounded-4" style="background-image: url('images/bsBg.png');">
-                    <div class="h-50 w-100 p-5">
-                        <div class="bg-white center-elements WhiteDiv80px">
-                            <img class="h-80 BgImage" src="images/offer-logo.png" alt="offer logo">
-                        </div>
-                        <h4>$5 off your first order</h4>
-                        <div class="d-flex align-items-center">
-                            <p class="fs-12px fw-semibold my-2">Delivery by 6:15am</p>
-                            <p class="fs-10px fw-semibold my-2 mx-1"> Expire Aug 5</p>
-                        </div>
-                        <div class="ShopNowbutton center-elements Bg-Green">
-                            <h6 class="text-white">Shop Now</h6>
-                            <img class="h-20px ms-2" src="images/white-arrow-right.png" alt="arrow">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- .ABOVE THE FOOTER DIV OF SUBSCRIBE WITH THE EMALE ------------------- -->
-<div class="Subscribe ">
-    <div class="row gx-0 p-0 m-0 w-100 h-100 p-2">
-        <div class="col-lg-7 col-md-6 col-sm-12 p-5 center-elements">
-            <div>
-                <h2 class="fw-semibold">Stay home & get your daily needs from our shop</h2>
-                <div class="d-flex justify-content-between my-3">
-                    <input class="h-50px w-75 p-3 border-0 rounded-1" type="text" placeholder="Enter your mail">
-                    <div class="Bg-green h-50px w-25 rounded-1 mx-2 center-elements">
-                        <p class="fs-14px text-white">Subscribe now</p>
-                    </div>
-                </div>
-                <p class="fw-semibold fs-12px">I agree that my submitted data is being collected and stored.</p>
-            </div>
-        </div>
-        <div class="col-lg-5 col-md-4 col-sm-12 center-elements">
-            <img class="FruitsImage" src="images/BottomFruits.png" alt="fruits image">
         </div>
     </div>
 </div>

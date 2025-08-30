@@ -6,7 +6,6 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { SlickCarouselService } from '../slick-carousel.service';
 import { Router } from '@angular/router'
 import { AddAfterCarouselComponent } from '../add-after-carousel/add-after-carousel.component';
-// import { ItemsListService } from '../items-list.service';
 @Component({
   selector: 'app-categories-crousel',
   imports: [CommonModule, SlickCarouselModule],
@@ -26,7 +25,6 @@ export class CategoriesCrouselComponent implements OnInit {
   slideConfig: any;
   CategoriesList: ItemsCategoriesClass[] = [];
   SearchViaParticularCategory(category: any) {
-    console.log("THIS IS THE CATEGORY CLICKED--", category.CategoryId);
     this.router.navigate(['SearchViaCategory',category.CategoryId]);
   }
 }

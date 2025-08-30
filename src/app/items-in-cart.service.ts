@@ -86,14 +86,14 @@ export class ItemsInCartService {
     CurrentProduct.QuantityAddedToCart = CurrentProduct.QuantityAddedToCart--;
     this.S_ItemsList.UpdateProduct(CurrentProduct);
   }
-  RemoveProductFromCart(CurrentProduct:ItemsClass){
+  RemoveProductFromCart(CurrentProduct: ItemsClass) {
     let cart = this.SyncProductlistWithCartStorage();
     let index = cart.findIndex(x => x.ProductId === CurrentProduct.ProductId);
     if (index != -1) {
       cart[index].QuantityAddedToCart--;
       // if (cart[index].QuantityAddedToCart <= 0) {
-        cart[index].IsAdded = false;
-        cart.splice(index, 1);
+      cart[index].IsAdded = false;
+      cart.splice(index, 1);
       // }
     }
     this.UpdateCart(cart);

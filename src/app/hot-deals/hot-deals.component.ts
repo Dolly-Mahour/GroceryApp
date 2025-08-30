@@ -8,6 +8,7 @@ import { SlickCarouselService } from '../slick-carousel.service';
 import { Router } from '@angular/router';
 import { ItemsInCartService } from '../items-in-cart.service';
 import AOS from 'aos';
+import { Vendors } from '../Classes/VendorsClass';
 
 @Component({
   selector: 'app-hot-deals',
@@ -34,6 +35,28 @@ export class HotDealsComponent {
   slideConfig: any;
   ProductList: ItemsClass[] = [];
   ListOfThreeCarousel: string[] = ["Featured Products", "Top Selling Products", "On-sale Products"]
+  ListOFBestSellers: Vendors[] = [
+    {
+      Name: 'This is Seller 1',
+      Img: 'images/bsImg1.png',
+      BgColor: ''
+    },
+    {
+      Name: 'This is Seller 2',
+      Img: 'images/bsImg2.png',
+      BgColor: ''
+    },
+    {
+      Name: 'This is Seller 3',
+      Img: 'images/bsImg3.png',
+      BgColor: ''
+    },
+    {
+      Name: 'This is Seller 4',
+      Img: 'images/bsImg4.png',
+      BgColor: ''
+    },
+  ]
   AddItemToCart(p: any) {
     console.log("ADDING THE ITEM TO CART IS --", p);
     if (!p.IsAdded) {

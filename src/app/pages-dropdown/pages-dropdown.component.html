@@ -6,11 +6,11 @@
             <div class="position-absolute h-25px bg-warning w-50px rounded-2 text-white mb-5 Bulb">New</div>
         </button>
         <ul class="dropdown-menu">
-            <li><a class="dropdown-item" [routerLink]="['cart']">Cart</a></li>
-            <li><a class="dropdown-item" [routerLink]="['wishlist']">Wishlist</a></li>
+            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" [routerLink]="['cart']">Cart</a></li>
+            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" [routerLink]="['wishlist']">Wishlist</a></li>
             <li><a class="dropdown-item" href="#">Checkout</a></li>
             <li><a class="dropdown-item" href="#">Become Seller</a></li>
-            <li><a class="dropdown-item" [routerLink]="['profile']">Account</a></li>
+            <li><a class="dropdown-item" data-bs-dismiss="offcanvas" [routerLink]="['profile']">Account</a></li>
         </ul>
     </div>
 </div>

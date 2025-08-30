@@ -1,4 +1,4 @@
-<div *ngIf="(IdForTopBar!=100)" >
+<div *ngIf="(IdForTopBar!=100)">
     <app-search-categories-topbar></app-search-categories-topbar>
 </div>
 <div class="row d-flex m-0 p-0 gx-0 my-5">
@@ -372,9 +372,9 @@
         </div>
     </div>
     <div class="col-lg-9 col-md-12 col-sm-12 p-3">
-        <div class="h-150px d-flex justify-content-between p-2 align-items-center">
-            <p class="fw-semibold">Showing 1-20 of 85 result</p>
-            <div class="d-flex align-items-center">
+        <div class="row g-0 p-0 m-0 d-flex align-items-center">
+            <p class="fw-semibold col-lg-8 col-md-6 col-sm-12 my-2">Showing 1-20 of 85 result</p>
+            <div class="col-lg-4 col-md-6 col-sm-12 my-2 d-flex justify-content-start align-items-center">
                 <div class="h-50px w-50px Bordergrey rounded-3 mx-1 center-elements">
                     <svg class="h-80" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         fill="none" viewBox="0 0 24 24">
@@ -407,10 +407,9 @@
                 </div>
             </div>
         </div>
-        <div class="d-lg-flex d-md-flex d-sm-block flex-wrap ">
-            <div class="col-lg-3 col-md-3 col-sm-6 d-flex justify-content-center align-items-center px-2 p-1 m-0 "
-                *ngFor="let p of ListOfProductWithCategory">
-                <div class="CategoriesCard p-2 BottomToTop">
+        <div class="row g-0 p-0 m-0">
+            <div class="w-auto my-2 m-0 mx-2" *ngFor="let p of ListOfProductWithCategory">
+                <div class="CategoriesCard p-2">
                     <div class="h-10 d-flex justify-content-between">
                         <div class="center-elements w-40 h-80 bg-danger"
                             style="border-top-left-radius: 20px;border-bottom-right-radius: 20px;">

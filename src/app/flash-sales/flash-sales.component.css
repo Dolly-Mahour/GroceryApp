@@ -1,81 +1,48 @@
-.FlashSalesCarouselDiv{
-    height: 60vh;
-    /* background: #000; */
-    overflow-x: auto;
-}
-.DivOfCarousel {
-    width: 100%;
-}
-
-.FlashSalesCarouselDiv {
-    height: 60vh;
-    width: 95vw;
-    overflow-x: auto;
-}
-
 .CarouselSlideDiv {
-    width: 105vw;
+    width: 95vw;
     height: 100%;
-}   
+}
 
 .FlashSalesCarouselDiv::-webkit-scrollbar {
     display: none;
 }
 
-.FlashSalesCard{
-    height: 400px;
-    width: 220px;
+.FlashSalesCard {
+    height: 350px;
+    width: 200px;
     border: 1px solid rgb(199, 192, 192);
     border-radius: 10px;
 }
-.FlashSalesCard:hover{
+
+.FlashSalesCard:hover {
     border-color: #1c799b;
 }
-.ImageOfCard{
+
+.ImageOfCard {
     height: 130px;
     transition: height 0.5s;
 }
+
 /* WHEN I HAVE TO GO HOVER WITH ANOTHER TRANSITION I WILL USE IT    --------------- */
 .FlashSalesCard:hover .ImageOfCard {
- height: 150px;
+    height: 150px;
 }
 
-.CountDownDiv{
+.CountDownDiv {
     border-radius: 10px;
 }
-.ShopNowbutton{
+
+.ShopNowbutton {
     background: #1c799b;
     border-radius: 30px;
     height: 40px;
     width: 130px;
 }
-.CountDownTimerDiv{
+
+.CountDownTimerDiv {
     /* background-color: #1c799b; */
     box-shadow: 1px 1px 20px rgb(188, 187, 187);
     border-radius: 5px;
     height: 35px;
     width: auto;
-}
-@media screen and (max-width: 640px) {
-.CountDownAdd{
-    height: 120vw;
-}
-}
-
-@media screen and (min-width: 640px) {
-.CountDownAdd{
-    height: 30vw;
-}
-}
-
-@media screen and (min-width: 1007px) { 
-.CountDownAdd{
-    height: 20vw;
-}
-}
-
-@media screen and (min-width: 1400px) { 
-.CountDownAdd{
-    height: 20vw;
-}
 }

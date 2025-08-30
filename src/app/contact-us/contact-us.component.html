@@ -1,123 +1,120 @@
-<div class="DivOfContactPage">
-    <div class="h-100px Bg-LightBlue p-2">
-        <div class="d-flex h-100 justify-content-between align-items-center">
-            <h5>Contact</h5>
-            <div class="d-flex align-items-center">
-                <a class="text-decoration-none text-black" [routerLink]="['/']">
-                    <div class="d-flex align-items-center">
-                        <img class="h-15px mx-1" src="images/home.png" alt="home">
-                        <p class="fs-12px fw-semibold">Home</p>
-                    </div>
-                </a>
-                <div class="d-flex align-items-center ">
-                    <img class="h-20px mx-2" src="images/arrow.png" alt="home">
-                    <p class="TextTeal fs-12px fw-semibold">Contact</p>
+<!-- TOP BAR OF SHOWING THE PAGE NAVIGATIONS ------ -->
+<div class="h-100px Bg-LightBlue p-2">
+    <div class="d-flex h-100 justify-content-between align-items-center">
+        <h5>Contact</h5>
+        <div class="d-flex align-items-center">
+            <a class="text-decoration-none text-black" [routerLink]="['/']">
+                <div class="d-flex align-items-center">
+                    <img class="h-15px mx-1" src="images/home.png" alt="home">
+                    <p class="fs-12px fw-semibold">Home</p>
                 </div>
+            </a>
+            <div class="d-flex align-items-center ">
+                <img class="h-20px mx-2" src="images/arrow.png" alt="home">
+                <p class="TextTeal fs-12px fw-semibold">Contact</p>
             </div>
         </div>
-    </div>
-    <div class="DivOfInfoCards h-90">
-        <div class="row gx-0 p-0 m-0 DivOfCards">
-            <div class="col-lg-8 col-md-12 col-sm-12 p-3">
-                <div class="CustomRequestCard Bordergrey h-100 w-100 rounded-4 p-4">
-                    <h5 class="ms-3 my-3">Make Custom Request</h5>
-                    <div class="row gx-0 m-0 p-0 ">
-                        <div class="col-6 p-3">
-                            <div class="d-flex">
-                                <p class="fw-semibold fs-12px">Full Name</p>
-                                <p class="text-danger">*</p>
-                            </div>
-                            <input class="InputDiv rounded-2 w-100 p-3 h-50px fs-12px" type="text"
-                                placeholder="Full name">
-                        </div>
-                        <div class="col-6 p-3">
-                            <div class="d-flex">
-                                <p class="fw-semibold fs-12px">Email Address</p>
-                                <p class="text-danger">*</p>
-                            </div>
-                            <input class="InputDiv rounded-2 w-100 p-3 h-50px fs-12px" type="text"
-                                placeholder="Email Address">
-                        </div>
-                    </div>
-                    <div class="row gx-0 m-0 p-0 ">
-                        <div class="col-6 p-3">
-                            <div class="d-flex">
-                                <p class="fw-semibold fs-12px">Phone Number</p>
-                                <p class="text-danger">*</p>
-                            </div>
-                            <input class="InputDiv rounded-2 w-100 p-3 h-50px fs-12px" type="text"
-                                placeholder="Phone Number">
-                        </div>
-                        <div class="col-6 p-3">
-                            <div class="d-flex">
-                                <p class="fw-semibold fs-12px ">Subject</p>
-                                <p class="text-danger">*</p>
-                            </div>
-                            <input class="InputDiv rounded-2 w-100 p-3 h-50px fs-12px" type="text"
-                                placeholder="Subject">
-                        </div>
-                    </div>
-                    <div class="row gx-0 m-0 p-0">
-                        <div class="col-12 p-3">
-                            <div class="d-flex">
-                                <p class="fw-semibold fs-12px">Message</p>
-                                <p class="text-danger">*</p>
-                            </div>
-                            <input class="InputDiv rounded-2 w-100 p-3 h-100px fs-12px" type="text"
-                                placeholder="Type Your Message">
-                        </div>
-                    </div>
-                    <div class="row gx-0 m-0 p-0 my-2">
-                        <div class="GetQuoteButton btn w-120px BgTeal h-50px text-white center-elements fw-semibold">
-                            Get a Quote
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-12 col-sm-12 p-3 GetInTouchDiv">
-                <div class="row h-70 gx-0 m-0 p-0 rounded-4 Bordergrey p-3">
-                    <h5>Get In Touch</h5>
-                    <div class="d-flex align-items-center h-50px w-100">
-                        <div class="GreayBorderCircle Bordergrey center-elements">
-                            <img class="h-50" src="images/blue-call.png" alt="location">
-                        </div>
-                        <p class="mx-2">+00 123 456 789</p>
-                    </div>
-                    <div class="d-flex align-items-center h-50px w-100">
-                        <div class="GreayBorderCircle Bordergrey center-elements">
-                            <img class="h-50" src="images/blue-message.png" alt="location">
-                        </div>
-                        <p class="mx-2">support24arketpro.com</p>
-                    </div>
-                    <div class="d-flex align-items-center h-50px w-100">
-                        <div class="GreayBorderCircle Bordergrey center-elements">
-                            <img class="h-50" src="images/blue-location.png" alt="location">
-                        </div>
-                        <p class="mx-2">789 Inner Lane, California, USA</p>
-                    </div>
-                </div>
-                <div class="row gx-0 m-0 p-0 h-15 my-3">
-                    <div class="col-7 p-1">
-                        <div class="h-50px bg-black rounded-2 HoverBGTeal center-elements">
-                            <p class="text-white fw-semibold">Get Support on Call</p>
-                            <div class="h-w-30 rounded-1 BgTeal mx-1 center-elements">
-                                <img class="h-50" src="images/white-help.png" alt="help">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-5 p-1">
-                        <div class="h-50px bg-black rounded-2 HoverBGTeal center-elements">
-                            <p class="text-white fw-semibold">Get Direction</p>
-                            <div class="h-w-30 rounded-1 BgTeal mx-1 center-elements">
-                                <img class="h-50" src="images/white-location.png" alt="help">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-
     </div>
 </div>
+<!-- DIV OF CONTANCT PAGE THAT SHOWS THE CARD TO FILL INFORMATION ----------------------------->
+<div class="py-5">
+    <div class="row gx-0 p-0 m-0 DivOfCards">
+        <div class="col-lg-8 col-md-12 col-sm-12 p-3">
+            <div class="CustomRequestCard Bordergrey h-100 w-100 rounded-4 p-4">
+                <h5 class="ms-3 my-3">Make Custom Request</h5>
+                <div class="row gx-0 m-0 p-0 ">
+                    <div class="col-6 p-3">
+                        <div class="d-flex">
+                            <p class="fw-semibold fs-12px">Full Name</p>
+                            <p class="text-danger">*</p>
+                        </div>
+                        <input class="InputDiv rounded-2 w-100 p-3 h-50px fs-12px" type="text" placeholder="Full name">
+                    </div>
+                    <div class="col-6 p-3">
+                        <div class="d-flex">
+                            <p class="fw-semibold fs-12px">Email Address</p>
+                            <p class="text-danger">*</p>
+                        </div>
+                        <input class="InputDiv rounded-2 w-100 p-3 h-50px fs-12px" type="text"
+                            placeholder="Email Address">
+                    </div>
+                </div>
+                <div class="row gx-0 m-0 p-0 ">
+                    <div class="col-6 p-3">
+                        <div class="d-flex">
+                            <p class="fw-semibold fs-12px">Phone Number</p>
+                            <p class="text-danger">*</p>
+                        </div>
+                        <input class="InputDiv rounded-2 w-100 p-3 h-50px fs-12px" type="text"
+                            placeholder="Phone Number">
+                    </div>
+                    <div class="col-6 p-3">
+                        <div class="d-flex">
+                            <p class="fw-semibold fs-12px ">Subject</p>
+                            <p class="text-danger">*</p>
+                        </div>
+                        <input class="InputDiv rounded-2 w-100 p-3 h-50px fs-12px" type="text" placeholder="Subject">
+                    </div>
+                </div>
+                <div class="row gx-0 m-0 p-0">
+                    <div class="col-12 p-3">
+                        <div class="d-flex">
+                            <p class="fw-semibold fs-12px">Message</p>
+                            <p class="text-danger">*</p>
+                        </div>
+                        <input class="InputDiv rounded-2 w-100 p-3 h-100px fs-12px" type="text"
+                            placeholder="Type Your Message">
+                    </div>
+                </div>
+                <div class="row gx-0 m-0 p-0 my-2">
+                    <div class="GetQuoteButton btn w-120px BgTeal h-50px text-white center-elements fw-semibold">
+                        Get a Quote
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-12 col-sm-12 p-3 GetInTouchDiv">
+            <div class="row h-70 gx-0 m-0 p-0 rounded-4 Bordergrey p-3">
+                <h5>Get In Touch</h5>
+                <div class="d-flex align-items-center h-50px w-100">
+                    <div class="GreayBorderCircle Bordergrey center-elements">
+                        <img class="h-50" src="images/blue-call.png" alt="location">
+                    </div>
+                    <p class="mx-2">+00 123 456 789</p>
+                </div>
+                <div class="d-flex align-items-center h-50px w-100">
+                    <div class="GreayBorderCircle Bordergrey center-elements">
+                        <img class="h-50" src="images/blue-message.png" alt="location">
+                    </div>
+                    <p class="mx-2">support24arketpro.com</p>
+                </div>
+                <div class="d-flex align-items-center h-50px w-100">
+                    <div class="GreayBorderCircle Bordergrey center-elements">
+                        <img class="h-50" src="images/blue-location.png" alt="location">
+                    </div>
+                    <p class="mx-2">789 Inner Lane, California, USA</p>
+                </div>
+            </div>
+            <div class="row gx-0 m-0 p-0 h-15 my-3">
+                <div class="col-7 p-1">
+                    <div class="h-50px bg-black rounded-2 HoverBGTeal center-elements">
+                        <p class="text-white fw-semibold">Get Support on Call</p>
+                        <div class="h-w-30 rounded-1 BgTeal mx-1 center-elements">
+                            <img class="h-50" src="images/white-help.png" alt="help">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-5 p-1">
+                    <div class="h-50px bg-black rounded-2 HoverBGTeal center-elements">
+                        <p class="text-white fw-semibold">Get Direction</p>
+                        <div class="h-w-30 rounded-1 BgTeal mx-1 center-elements">
+                            <img class="h-50" src="images/white-location.png" alt="help">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- SUPPORT LINE COMPONENT ---------------- -->
 <app-support-line></app-support-line>

@@ -1,26 +1,53 @@
 <div class="d-flex justify-content-between align-items-center">
-    <h2>Flash Sales Today</h2>
+    <h2 class="fw-bold HeadingFS">Flash Sales Today</h2>
     <p class="text-secondary HoverTextTeal">view all details</p>
 </div>
 
 <div class="DivOfCarousel center-elements my-3">
+    <!-- toast ------------------ -->
+    <div class=" toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="SucessToast" class="BgToast toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <img src="images/success.png" class="rounded me-2 h-20px" alt="success tick image">
+                <strong class="me-auto text-success">Success</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body fw-bold text-white">
+                Item Added to cart Successfully !!
+            </div>
+        </div>
+    </div>
     <div class="FlashSalesCarouselDiv p-2">
         <div class="CarouselSlideDiv d-flex align-items-center">
             <ngx-slick-carousel class="carousel w-100" [config]="slideConfig" aria-hidden="false">
-                <div ngxSlickItem *ngFor="let p of ProductList" class="slide">
+                <div ngxSlickItem *ngFor="let p of ProductList">
 
                     <div data-aos="fade-up" (click)="ProductDetails(p)" class="FlashSalesCard mx-1 p-1">
                         <div class="h-15 d-flex justify-content-end align-items-center">
                             <div *ngIf="p.QuantityAddedToCart==0" (click)="AddItemToCart(p); $event.stopPropagation()"
                                 class="AddToCartButton w-50 h-50 btn center-elements">
                                 <p class="TextTeal fs-12px TextWhiteOnHover">Add </p>
-                                <img class="h-10px mx-1" src="images/shopping-cart.png" alt="cart">
+                                <div class="TextTeal TextWhiteOnHover mx-1">
+                                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="1"
+                                            d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312" />
+                                    </svg>
+                                </div>
                             </div>
+
                             <div *ngIf="p.QuantityAddedToCart>0"
-                                class="row gx-0 p-0 m-0 bg-white w-50 h-50 rounded-pill center-elements border-1 BorderTeal">
-                                <div (click)="DecreaseQuantity(p); $event.stopPropagation()" class="col-4 center-elements HoverBGTeal rounded-start-circle BlackToWhiteOnHover-Text">-</div>
+                                class="row gx-0 p-0 m-0 center-elements border-1 BorderTeal rounded-pill w-50 h-30px  center-elements">
+                                <div (click)="DecreaseQuantity(p); $event.stopPropagation()"
+                                    class="col-4 h-100 center-elements HoverBGTeal rounded-start-pill BlackToWhiteOnHover-Text">
+                                    -
+                                </div>
                                 <div class="col-4 center-elements border-start fs-12px">{{p.QuantityAddedToCart}}</div>
-                                <div (click)="IncreaseQuantity(p); $event.stopPropagation()" class="col-4 center-elements border-start HoverBGTeal rounded-end-circle BlackToWhiteOnHover-Text">+</div>
+                                <div (click)="IncreaseQuantity(p); $event.stopPropagation()"
+                                    class="col-4 h-100 center-elements border-start HoverBGTeal rounded-end-pill BlackToWhiteOnHover-Text">
+                                    +</div>
                             </div>
                         </div>
                         <div class="h-40 center-elements">
@@ -50,76 +77,74 @@
         </div>
     </div>
 </div>
-<div class="CountDownAdd">
-    <div class="container-fluid h-100 w-100">
-        <div class="row h-100 w-100 justify-content-between m-0 p-0 ">
-            <div data-aos="fade-up" class="col mx-1 py-2">
-                <div style="background-image: url('images/CountdownAddBg1.png');"
-                    class="CountDownDiv h-100 w-100 BgImage p-2 px-5 d-flex justify-content-end align-items-center">
-                    <div>
-                        <h3 class="italic">X-Connect Smart Television</h3>
-                        <p class="text-secondary">Time remaining until the end of the offer.</p>
-                        <div class="d-flex my-3 ">
-                            <div class="CountDownTimerDiv center-elements my-2 p-2 mx-1 center-elements">
-                                <countdown [config]="{leftTime: 69120000, format: ' dd '}">
-                                </countdown>
-                                <p>D</p>
-                            </div>
-                            <div class="CountDownTimerDiv center-elements my-2 p-2 mx-1 center-elements">
-                                <countdown [config]="{leftTime: 69120000, format: ' HH '}">
-                                </countdown>
-                                <p>H</p>
-                            </div>
-                            <div class="CountDownTimerDiv center-elements my-2 p-2 mx-1 center-elements">
-                                <countdown [config]="{leftTime: 69120000, format: ' mm '}">
-                                </countdown>
-                                <p>M</p>
-                            </div>
-                            <div class="CountDownTimerDiv center-elements my-2 p-2 mx-1 center-elements">
-                                <countdown [config]="{leftTime: 69120000, format: ' ss '}">
-                                </countdown>
-                                <p>S</p>
-                            </div>
+<div class="container-fluid">
+    <div class="row h-100 w-100 justify-content-between m-0 p-0 g-0">
+        <div class="col mx-1 py-2">
+            <div style="background-image: url('images/CountdownAddBg1.png');"
+                class="CountDownDiv h-100 w-100 BgImage px-5 py-4 d-flex justify-content-end align-items-center">
+                <div>
+                    <h3 class="italic fw-bold">X-Connect Smart Television</h3>
+                    <p class="text-secondary">Time remaining until the end of the offer.</p>
+                    <div class="d-flex my-3 ">
+                        <div class="CountDownTimerDiv center-elements my-2 p-2 mx-1 center-elements">
+                            <countdown [config]="{leftTime: 69120000, format: ' dd '}">
+                            </countdown>
+                            <p>D</p>
                         </div>
-                        <div class="ShopNowbutton center-elements">
-                            <h6 class="text-white">Shop Now</h6>
-                            <img class="h-20px ms-2" src="images/white-arrow-right.png" alt="arrow">
+                        <div class="CountDownTimerDiv center-elements my-2 p-2 mx-1 center-elements">
+                            <countdown [config]="{leftTime: 69120000, format: ' HH '}">
+                            </countdown>
+                            <p>H</p>
                         </div>
+                        <div class="CountDownTimerDiv center-elements my-2 p-2 mx-1 center-elements">
+                            <countdown [config]="{leftTime: 69120000, format: ' mm '}">
+                            </countdown>
+                            <p>M</p>
+                        </div>
+                        <div class="CountDownTimerDiv center-elements my-2 p-2 mx-1 center-elements">
+                            <countdown [config]="{leftTime: 69120000, format: ' ss '}">
+                            </countdown>
+                            <p>S</p>
+                        </div>
+                    </div>
+                    <div class="ShopNowbutton center-elements">
+                        <h6 class="text-white">Shop Now</h6>
+                        <img class="h-20px ms-2" src="images/white-arrow-right.png" alt="arrow">
                     </div>
                 </div>
             </div>
-            <div data-aos="fade-up" class="col mx-1 py-2">
-                <div style="background-image: url('images/CountdownAddBg2.png');"
-                    class="CountDownDiv h-100 w-100 BgImage p-2 px-5 d-flex justify-content-start align-items-center">
-                    <div>
-                        <h3 class="italic">Vegetables Combo Box</h3>
-                        <p class="text-secondary">Time remaining until the end of the offer.</p>
-                        <div class="d-flex my-3 ">
-                            <div class="CountDownTimerDiv BgTeal center-elements my-2 p-2 mx-1 center-elements">
-                                <countdown [config]="{leftTime: 69120000, format: ' dd '}">
-                                </countdown>
-                                <p>D</p>
-                            </div>
-                            <div class="CountDownTimerDiv BgTeal center-elements my-2 p-2 mx-1 center-elements">
-                                <countdown [config]="{leftTime: 69120000, format: ' HH '}">
-                                </countdown>
-                                <p>H</p>
-                            </div>
-                            <div class="CountDownTimerDiv BgTeal center-elements my-2 p-2 mx-1 center-elements">
-                                <countdown [config]="{leftTime: 69120000, format: ' mm '}">
-                                </countdown>
-                                <p>M</p>
-                            </div>
-                            <div class="CountDownTimerDiv BgTeal center-elements my-2 p-2 mx-1 center-elements">
-                                <countdown [config]="{leftTime: 69120000, format: ' ss '}">
-                                </countdown>
-                                <p>S</p>
-                            </div>
+        </div>
+        <div class="col mx-1 py-2">
+            <div style="background-image: url('images/CountdownAddBg2.png');"
+                class="CountDownDiv h-100 w-100 BgImage px-5 py-4 d-flex justify-content-start align-items-center">
+                <div>
+                    <h3 class="italic fw-bold">Vegetables Combo Box</h3>
+                    <p class="text-secondary">Time remaining until the end of the offer.</p>
+                    <div class="d-flex my-3 ">
+                        <div class="CountDownTimerDiv BgTeal text-white center-elements my-2 p-2 mx-1 center-elements">
+                            <countdown [config]="{leftTime: 69120000, format: ' dd '}">
+                            </countdown>
+                            <p>D</p>
                         </div>
-                        <div class="ShopNowbutton center-elements">
-                            <h6 class="text-white">Shop Now</h6>
-                            <img class="h-20px ms-2" src="images/white-arrow-right.png" alt="arrow">
+                        <div class="CountDownTimerDiv BgTeal text-white center-elements my-2 p-2 mx-1 center-elements">
+                            <countdown [config]="{leftTime: 69120000, format: ' HH '}">
+                            </countdown>
+                            <p>H</p>
                         </div>
+                        <div class="CountDownTimerDiv BgTeal text-white center-elements my-2 p-2 mx-1 center-elements">
+                            <countdown [config]="{leftTime: 69120000, format: ' mm '}">
+                            </countdown>
+                            <p>M</p>
+                        </div>
+                        <div class="CountDownTimerDiv BgTeal text-white center-elements my-2 p-2 mx-1 center-elements">
+                            <countdown [config]="{leftTime: 69120000, format: ' ss '}">
+                            </countdown>
+                            <p>S</p>
+                        </div>
+                    </div>
+                    <div class="ShopNowbutton center-elements">
+                        <h6 class="text-white">Shop Now</h6>
+                        <img class="h-20px ms-2" src="images/white-arrow-right.png" alt="arrow">
                     </div>
                 </div>
             </div>
