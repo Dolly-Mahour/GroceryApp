@@ -6,11 +6,12 @@ import { Router } from '@angular/router';
 import { ItemsInCartService } from '../items-in-cart.service';
 import { ItemsInWishlistService } from '../items-in-wishlist.service';
 import AOS from 'aos';
-// import { Router } from 'express';
+import * as bootstrap from 'bootstrap';
+import { SuccessToastComponent } from '../success-toast/success-toast.component';
 
 @Component({
   selector: 'app-recomended-for-you',
-  imports: [NgFor, NgIf],
+  imports: [NgFor, NgIf,SuccessToastComponent],
   templateUrl: './recomended-for-you.component.html',
   styleUrl: './recomended-for-you.component.css'
 })
@@ -44,7 +45,12 @@ export class RecomendedForYouComponent {
     else {
       console.log("THIS ITEM IS ALREADY ADDED TO CART --------------")
     }
-    this.router.navigate(['cart']);
+    const toastEl = document.getElementById('SucessToast');
+    if (toastEl) {
+      console.log("CALLING THE TOAST TO OPEN BUTTON ---")
+      const toast = new bootstrap.Toast(toastEl);
+      toast.show();
+    }
   }
   IncreaseQuantity(product: any) {
 

@@ -4,19 +4,7 @@
 </div>
 
 <div class="DivOfCarousel center-elements my-3">
-    <!-- toast ------------------ -->
-    <div class=" toast-container position-fixed bottom-0 end-0 p-3">
-        <div id="SucessToast" class="BgToast toast" role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-header">
-                <img src="images/success.png" class="rounded me-2 h-20px" alt="success tick image">
-                <strong class="me-auto text-success">Success</strong>
-                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-            </div>
-            <div class="toast-body fw-bold text-white">
-                Item Added to cart Successfully !!
-            </div>
-        </div>
-    </div>
+    <app-success-toast></app-success-toast>
     <div class="FlashSalesCarouselDiv p-2">
         <div class="CarouselSlideDiv d-flex align-items-center">
             <ngx-slick-carousel class="carousel w-100" [config]="slideConfig" aria-hidden="false">

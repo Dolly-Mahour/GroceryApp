@@ -1,4 +1,5 @@
 <div class="h-auto">
+    <app-success-toast></app-success-toast>
     <!-- HOT DEALS CAROUSEL ------------------------------------------------  -->
     <div>
         <div class="d-flex justify-content-between align-items-center">
@@ -166,11 +167,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="h-80 center-elements p-3">
-                            <div class="h-100 w-100 p-4 rounded-4">
-                                <ngx-slick-carousel class="carousel h-100 w-100 " [config]="slideConfig">
-                                    <div ngxSlickItem *ngFor="let p of ProductList">
-                                        <div class="container-fluid h-100 w-100 gx-0 p-0 m-0">
+                        <div class="h-80 w-100 center-elements px-1">
+                            <div class="w-100 rounded-4 px-3">
+                                <ngx-slick-carousel class="carousel center-elements" [config]="slideConfig">
+                                    <div ngxSlickItem style="width: auto;" class="h-450px px-3" *ngFor="let p of ProductList">
+                                        <div class="container-fluid h-100 w-100 g-0 p-0 m-0">
                                             <div class="row gx-0 m-0 p-0 h-25 w-100 p-2">
                                                 <div class="w-50 justify-content-start align-items-center">
                                                     <div class="ImageContainer center-elements rounded-2">

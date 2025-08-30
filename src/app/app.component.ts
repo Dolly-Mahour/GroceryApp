@@ -4,7 +4,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { MainContentPageComponent } from './main-content-page/main-content-page.component';
-// import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',

@@ -1,4 +1,4 @@
-<div *ngIf="0 > LengthOfCart">
+<div *ngIf="LengthOfCart > 0">
     <!-- TOP NAIVGATION BAR SHOWING THE PATH NAVIGATION WITH HOME AND CART -->
     <div class="h-100px Bg-LightBlue p-2">
         <div class="d-flex h-100 justify-content-between align-items-center">
@@ -138,6 +138,7 @@
             </div>
         </div>
     </div>
+    
 </div>
 
 <div *ngIf="LengthOfCart >= 0 bg-danger" class="w-100 center-elements p-5">

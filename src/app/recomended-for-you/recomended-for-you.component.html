@@ -1,4 +1,5 @@
 <div class="container-fluid m-0 p-0 my-3 p-1 gx-0">
+    <app-success-toast></app-success-toast>
     <div class="row my-5 w-100 m-0 p-0 gx-0 ">
         <div class="col-lg-6 col-md-6 col-sm-12 d-flex align-items-center">
             <h2 class="fw-bold HeadingFS">Recomended for you</h2>
@@ -82,7 +83,7 @@
                         <img class="h-10px mx-1" src="images/shop.png" alt="shop">
                         <p class="fs-10px text-secondary fw-semibold"> By Dolly supermart</p>
                     </div>
-                    <div *ngIf="p.QuantityAddedToCart==0" (click)="AddItemToCart(p)"
+                    <div *ngIf="p.QuantityAddedToCart==0" (click)="AddItemToCart(p); $event.stopPropagation()"
                         class="AddToCartButton w-100 h-30px btn center-elements">
                         <p class="TextTeal fs-12px TextWhiteOnHover">Add to cart</p>
                         <img class="h-10px mx-1" src="images/shopping-cart.png" alt="cart">

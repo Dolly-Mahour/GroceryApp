@@ -25,13 +25,13 @@
 }
 
 .ImageOfCard {
-    height: 110px !important;
+    height: 90px !important;
     transition: height 0.5s;
 }
 
 /* WHEN I HAVE TO GO HOVER WITH ANOTHER TRANSITION I WILL USE IT    --------------- */
 .HotDealsCarouselCard:hover .ImageOfCard {
-    height: 130px !important;
+    height: 110px !important;
 }
 
 .CountDownDiv {
@@ -137,6 +137,7 @@
     height: 120px;
     transition: height 0.5s;
 }
+
 
 .DivOfSellerCard:hover .ImageHover {
     height: 130px;

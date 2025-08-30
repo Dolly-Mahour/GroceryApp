@@ -340,7 +340,7 @@ input {
 
 #Logo {
     color: #1c799b;
-    font-size: 30px;
+    font-size: 24px;
     font-family: cursive;
     font-weight: bold;
 }
@@ -554,11 +554,17 @@ input {
     .HeadingFS {
         font-size: 20px !important;
     }
+    .NavbarIcon{
+        height: 12px;
+    }
 }
 
 @media screen and (min-width: 576px) {
     .CommonResponsiveText {
         font-size: 10px;
+    }
+    .NavbarIcon{
+        height: 15px;
     }
 }
 
@@ -566,11 +572,17 @@ input {
     .CommonResponsiveText {
         font-size: 12px;
     }
+    .NavbarIcon{
+        height: 15px;
+    }
 }
 
 @media screen and (min-width: 992px) {
     .CommonResponsiveText {
         font-size: 15px;
+    }
+    .NavbarIcon{
+        height: 15px;
     }
 }
 
@@ -578,10 +590,16 @@ input {
     .CommonResponsiveText {
         font-size: 15px;
     }
+    .NavbarIcon{
+        height: 15px;
+    }
 }
 
 @media screen and (min-width: 1400px) {
     .CommonResponsiveText {
         font-size: 15px;
+    }
+    .NavbarIcon{
+        height: 15px;
     }
 }

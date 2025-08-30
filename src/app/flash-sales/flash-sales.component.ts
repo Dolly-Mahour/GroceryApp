@@ -10,10 +10,11 @@ import * as bootstrap from 'bootstrap';
 import { Route, Router } from '@angular/router';
 import { ItemsInCartService } from '../items-in-cart.service';
 import Toast from 'bootstrap/js/dist/toast';
+import { SuccessToastComponent } from '../success-toast/success-toast.component';
 
 @Component({
   selector: 'app-flash-sales',
-  imports: [CommonModule, CountdownModule, SlickCarouselModule, NgIf],
+  imports: [CommonModule, CountdownModule, SlickCarouselModule, NgIf,SuccessToastComponent],
   templateUrl: './flash-sales.component.html',
   styleUrl: './flash-sales.component.css'
 

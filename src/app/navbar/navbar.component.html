@@ -2,39 +2,40 @@
     <!-- UPPER PART OF THE TAEL COLOR SHOWING THE TIMER ------------------- -->
     <div class="p-1 bg-teal d-flex align-items-center justify-content-between w-100">
         <div class="row g-0 p-0 m-0 w-100 justify-content-around">
-            <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-start align-items-center">
-                <h6 class="text-white tealbar-text fs-13px fw-semibold">Until the sale ends : </h6>
-                <div class="d-flex">
-                    <div class="fs-13px center-elements text-white mx-1 center-elements">
-                        <countdown class="fw-bold" [config]="{leftTime: 69120000, format: ' dd '}">
-                        </countdown>
-                        <p class="fs-10px mx-1">Days</p>
-                    </div>
-                    <div class=" fs-13px center-elements text-white mx-1 center-elements">
-                        <countdown class="fw-bold" [config]="{leftTime: 69120000, format: ' HH '}">
-                        </countdown>
-                        <p class="fs-10px mx-1">Hours</p>
-                    </div>
-                    <div class=" fs-13px center-elements text-white mx-1 center-elements">
-                        <countdown class="fw-bold" [config]="{leftTime: 69120000, format: ' mm '}">
-                        </countdown>
-                        <p class="fs-10px mx-1">Minutes</p>
-                    </div>
-                    <div class=" fs-13px center-elements text-white mx-1 center-elements">
-                        <countdown class="fw-bold" [config]="{leftTime: 69120000, format: ' ss '}">
-                        </countdown>
-                        <p class="fs-10px mx-1">Sec.</p>
+            <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-start align-items-center">
+                <div class="row m-0 p-0 g-0">
+                    <h6 class="col-lg-5 col-sm-12 col-md-12 text-white tealbar-text fs-13px fw-semibold m-1">Until the sale ends : </h6>
+                    <div class="col-lg-6 col-sm-12 col-md-12 d-flex my-1">
+                        <div class="fs-13px center-elements text-white mx-1 center-elements">
+                            <countdown class="fw-bold" [config]="{leftTime: 69120000, format: ' dd '}">
+                            </countdown>
+                            <p class="fs-10px mx-1">Days</p>
+                        </div>
+                        <div class=" fs-13px center-elements text-white mx-1 center-elements">
+                            <countdown class="fw-bold" [config]="{leftTime: 69120000, format: ' HH '}">
+                            </countdown>
+                            <p class="fs-10px mx-1">Hours</p>
+                        </div>
+                        <div class=" fs-13px center-elements text-white mx-1 center-elements">
+                            <countdown class="fw-bold" [config]="{leftTime: 69120000, format: ' mm '}">
+                            </countdown>
+                            <p class="fs-10px mx-1">Minutes</p>
+                        </div>
+                        <div class=" fs-13px center-elements text-white mx-1 center-elements">
+                            <countdown class="fw-bold" [config]="{leftTime: 69120000, format: ' ss '}">
+                            </countdown>
+                            <p class="fs-10px mx-1">Sec.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- </div> -->
-            <div class="col-lg-4 col-md-0 col-sm-0 justify-content-center align-items-center d-lg-flex d-none">
+            <div class="col-lg-5 col-md-0 col-sm-0 justify-content-center align-items-center d-lg-flex d-none">
                 <p class="text-white tealbar-text">Buy one get one free on</p>
                 <p class="tealbar-text mx-1 text-warning">first order | </p>
                 <img class="h-10px m-0 p-0 " src="images/white-truck.png" alt="deliverytruck">
                 <p class="text-white tealbar-text"> Track your order</p>
             </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-end">
+            <div class="col-lg-3 col-md-6 col-sm-6 d-flex justify-content-start">
                 <p class="text-white tealbar-text mx-2 d-lg-flex d-none">Order Tracking</p>
                 <p class="text-white tealbar-text mx-2 d-lg-flex d-none">About us</p>
                 <div class="dropdown OpenDropDownOnLeft NavItemHoverArrowAnimate m-0 p-0 g-0">
@@ -161,28 +162,28 @@
         </div>
         <div class="h-100 d-flex justify-content-around align-items-center">
             <div class="h-100 center-elements d-sm-flex d-md-flex d-lg-none">
-                <img class="h-15 mx-1" src="images/searchIcon.png" alt="profileIcon">
+                <img class="h-15 mx-1" src="images/searchIcon.png" alt="searchIcon">
             </div>
-            <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black" [routerLink]="['profile']">
+            <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black mx-2" [routerLink]="['profile']">
                 <div class="h-100 center-elements">
                     <img class="h-20px mx-1" src="images/profile-outline.png" alt="profileIcon">
                     <p class="HoverTeal d-lg-flex d-none">Profile</p>
                 </div>
             </a>
-            <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black" [routerLink]="['wishlist']">
+            <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black mx-2" [routerLink]="['wishlist']">
                 <div class="h-100 center-elements position-relative">
                     <div
                         class="h-20px w-20px BgTeal rounded-circle center-elements text-white position-absolute mb-4 me-4">
                         {{TotalNumberOFItemsInWishlist}}</div>
-                    <img class="h-15px mx-1" src="images/heart.png" alt="profileIcon">
+                    <img class="NavbarIcon mx-1" src="images/heart.png" alt="profileIcon">
                     <p class="HoverTeal d-lg-flex d-none">Wishlist</p>
                 </div>
             </a>
-            <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black" [routerLink]="['cart']">
+            <a class="text-decoration-none fs-14px HoverTeal fw-semibold text-black mx-2" [routerLink]="['cart']">
                 <div class="h-100 center-elements position-relative">
                     <div class="h-20px w-20px BgTeal rounded-circle center-elements text-white position-absolute mb-4">
                         {{TotalNumberOFItemsInCart}}</div>
-                    <img class="h-15px mx-1" src="images/shopping-cart.png" alt="profileIcon">
+                    <img class="NavbarIcon mx-1" src="images/shopping-cart.png" alt="profileIcon">
                     <p class="HoverTeal d-lg-flex d-none">cart</p>
                 </div>
             </a>

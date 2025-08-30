@@ -9,10 +9,12 @@ import { Router } from '@angular/router';
 import { ItemsInCartService } from '../items-in-cart.service';
 import AOS from 'aos';
 import { Vendors } from '../Classes/VendorsClass';
+import { SuccessToastComponent } from '../success-toast/success-toast.component';
+import * as bootstrap from 'bootstrap';
 
 @Component({
   selector: 'app-hot-deals',
-  imports: [CountdownModule, NgFor, SlickCarouselModule, NgIf],
+  imports: [CountdownModule, NgFor, SlickCarouselModule, NgIf, SuccessToastComponent],
   templateUrl: './hot-deals.component.html',
   styleUrl: './hot-deals.component.css'
 })
@@ -66,7 +68,12 @@ export class HotDealsComponent {
     else {
       console.log("THIS ITEM IS ALREADY ADDED TO CART --------------")
     }
-    this.router.navigate(['cart']);
+    const toastEl = document.getElementById('SucessToast');
+    if (toastEl) {
+      console.log("CALLING THE TOAST TO OPEN BUTTON ---")
+      const toast = new bootstrap.Toast(toastEl);
+      toast.show();
+    }
   }
   IncreaseQuantity(product: any) {
 
