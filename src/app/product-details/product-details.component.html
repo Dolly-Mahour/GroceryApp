@@ -16,6 +16,7 @@
     </div>
 </div>
 <div class="bg-white  p-2">
+    <app-success-toast></app-success-toast>
     <div class="row gx-0 p-0 m-0 h-100">
         <div class="col-lg-4 col-md-6 col-sm-12 p-3">
             <div class="ProductImageDiv Bordergrey rounded-5 center-elements">
@@ -128,13 +129,13 @@
             <div class="h-200px py-3 px-2">
                 <p>Quantity :</p>
                 <div class="d-flex align-items-center my-2">
-                    <div
+                    <div *ngIf="Product.QuantityAddedToCart>0"
                         class="w-120px h-50px Bordergrey rounded-pill d-flex align-items-center justify-content-around">
-                        <p class="fs-1">-</p>
-                        <p class="fs-4">1</p>
-                        <p class="fs-3">+</p>
+                        <p class="fs-1" (click)="DecreaseQuantity(Product)" >-</p>
+                        <p class="fs-4">{{Product.QuantityAddedToCart}}</p>
+                        <p class="fs-3" (click)="IncreaseQuantity(Product)" >+</p>
                     </div>
-                    <div class="w-200px h-50px BgTeal mx-3 rounded-pill center-elements p-3">
+                    <div (click)="AddProductToCart(Product)" *ngIf="0==Product.QuantityAddedToCart" class="w-200px h-50px BgTeal rounded-pill center-elements p-3">
                         <img class="h-20px" src="images/cart-white.png" alt="">
                         <p class="text-white mx-3">Add to Cart</p>
                     </div>

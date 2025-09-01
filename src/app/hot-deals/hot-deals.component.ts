@@ -8,7 +8,7 @@ import { SlickCarouselService } from '../slick-carousel.service';
 import { Router } from '@angular/router';
 import { ItemsInCartService } from '../items-in-cart.service';
 import AOS from 'aos';
-import { Vendors } from '../Classes/VendorsClass';
+import { NameImgClass } from '../Classes/CommonClass';
 import { SuccessToastComponent } from '../success-toast/success-toast.component';
 import * as bootstrap from 'bootstrap';
 
@@ -37,7 +37,7 @@ export class HotDealsComponent {
   slideConfig: any;
   ProductList: ItemsClass[] = [];
   ListOfThreeCarousel: string[] = ["Featured Products", "Top Selling Products", "On-sale Products"]
-  ListOFBestSellers: Vendors[] = [
+  ListOFBestSellers: NameImgClass[] = [
     {
       Name: 'This is Seller 1',
       Img: 'images/bsImg1.png',

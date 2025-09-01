@@ -54,7 +54,6 @@ export class FlashSalesComponent {
     }
   }
   IncreaseQuantity(product: any) {
-
     this.S_Cart.AddProductQuantity(product)
     product.QuantityAddedToCart++;
     this.S_ProductList.UpdateProduct(product);

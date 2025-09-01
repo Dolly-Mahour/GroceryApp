@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import AOS from 'aos';
-import { Vendors } from '../Classes/VendorsClass';
+import { NameImgClass } from '../Classes/CommonClass';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-add-after-carousel',
@@ -15,7 +15,7 @@ export class AddAfterCarouselComponent implements OnInit {
       once: true
     });
   }
-  ListOfAdds: Vendors[] = [
+  ListOfAdds: NameImgClass[] = [
     {
       Name: 'Everyday Fresh Meat',
       Img: 'url("images/B1.png")',

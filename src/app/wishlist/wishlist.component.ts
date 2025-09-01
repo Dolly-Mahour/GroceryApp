@@ -23,10 +23,13 @@ export class WishlistComponent implements OnInit {
     this.S_ProductList.ProductObservableList.subscribe(products => {
       this.WishlistProducts = products
     })
-    this.LengthOfWishlist = this.WishlistProducts!.length
-    console.log("THIS IS THE PRODUCT LIST THAT ARE WISHLISTED --->", this.WishlistProducts)
+    this.S_Wishlist.CurrentItemsInWishlist.subscribe(num =>
+      this.LengthOfWishlist = num
+    )
+    // this.LengthOfWishlist = this.WishlistProducts.length
+    console.log("THIS IS THE PRODUCT LIST THAT ARE WISHLISTED --->", this.LengthOfWishlist)
   }
-  WishlistProducts!: ItemsClass[] | undefined;
+  WishlistProducts: ItemsClass[] = [];
   LengthOfWishlist: number = 0;
   RemoveFromWishlist(CurrentProduct: ItemsClass) {
     this.S_Wishlist.RemoveProductFromWishlist(CurrentProduct);
@@ -40,6 +43,6 @@ export class WishlistComponent implements OnInit {
     else {
       console.log("THIS ITEM IS ALREADY ADDED TO CART --------------")
     }
-    this.router.navigate(['cart']);
+    // this.router.navigate(['cart']);
   }
 }

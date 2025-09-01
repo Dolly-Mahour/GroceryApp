@@ -1,4 +1,4 @@
-<div *ngIf="LengthOfCart > 0">
+<div *ngIf="LengthOfCart>0">
     <!-- TOP NAIVGATION BAR SHOWING THE PATH NAVIGATION WITH HOME AND CART -->
     <div class="h-100px Bg-LightBlue p-2">
         <div class="d-flex h-100 justify-content-between align-items-center">
@@ -91,7 +91,7 @@
                                     </div>
                                 </div>
                                 <div class="col-2 h-150px center-elements">
-                                    <h5>₹{{p.Price}}</h5>
+                                    <h5>₹{{p.Price*p.QuantityAddedToCart}}</h5>
                                 </div>
                             </div>
                         </div>
@@ -141,7 +141,7 @@
     
 </div>
 
-<div *ngIf="LengthOfCart >= 0 bg-danger" class="w-100 center-elements p-5">
+<div *ngIf="0>=LengthOfCart" class="w-100 center-elements p-5">
     <div>
         <img class="h-400px img-fluid w-100" src="images/EmptyIllustration.png" alt="">
         <h3 class="center-elements fw-semibold">No item found</h3>

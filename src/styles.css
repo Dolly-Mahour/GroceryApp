@@ -495,12 +495,6 @@ input {
     animation-iteration-count: infinite;
 }
 
-.dropdown:hover>.dropdown-menu {
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-}
 
 @keyframes bulb {
     0% {
@@ -514,6 +508,13 @@ input {
     100% {
         opacity: 10%;
     }
+}
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
 }
 
 /* CIRCULAR SHAPE DIVS------------------------------------------- */

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SupportLineComponent } from '../support-line/support-line.component';
-import { Vendors } from '../Classes/VendorsClass';
+import { NameImgClass } from '../Classes/CommonClass';
 import { NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './vendor-page.component.css'
 })
 export class VendorPageComponent {
-  Vendorslist: Vendors[] = [
+  Vendorslist: NameImgClass[] = [
     {
       Name: 'Organic Market',
       Img: 'images/VImg1.png',
