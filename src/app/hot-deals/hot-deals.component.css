@@ -75,7 +75,9 @@
     width: auto;
     transition: height 0.5s;
 }
-
+.h-380px{
+    width: 380px;
+}
 .carousel {
     /* width: 90%; */
     display: flex;
